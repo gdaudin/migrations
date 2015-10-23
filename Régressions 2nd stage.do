@@ -145,6 +145,8 @@ drop blouk
 ******
 
 local outreg_file results/2ndstage_`source'_`sample'_`instr'_`controls'_`Paris'
+rm results/2ndstage_`source'_`sample'_`instr'_`controls'_`Paris'.txt
+rm results/2ndstage_`source'_`sample'_`instr'_`controls'_`Paris'.xml
 
 
 ***************************************************************************************************
@@ -254,13 +256,12 @@ foreach j of num 0 1 {
 	
 end
 
+*********Appel des programmes
+*reg_me TRAR t o P standard
+*reg_me TRAR t p P standard
+*reg_me TRAR t p P none
+*reg_me TRAR t p P bad
 
-reg_me TRAR t o P standard
-reg_me TRAR t p P standard
-reg_me TRAR t p P none
-reg_me TRAR t p P bad
-
-end
 
 
 
