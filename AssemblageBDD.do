@@ -476,7 +476,6 @@ if "`instrument'"=="p" {
 	*/
 	
 	
-	
 
 		display "// PANEL //"
 *		poisson nbr_`j' ln_cout_transport  ln_cout_ref i.dptorigine i.dptresid i.annee_obs if sexe=="`s'", robust cluster(numpanel)
@@ -484,6 +483,16 @@ if "`instrument'"=="p" {
 		predict nbr_predict_PANELv1
 		replace nbr_predict_PANELv1= nbr_predict_PANELv1
 		replace nbr_predict_PANELv1=0 if nbr_predict_PANELv1 <=0 | nbr_predict_PANELv1 ==.
+	
+		
+		*Pour interprétation
+		gen delta_cout_transport = (cout_transport-L.cout_transport)/cout_transport
+		gen delta_nbr = (nbr-L.nbr)/nbr
+		summarize delta_cout_transport delta_nbr, det
+		drop delta_cout
+		drop delta_nbr
+	
+	
 		
 
 
@@ -644,7 +653,7 @@ save "$dir/BDD_`data'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", re
 
 use "$dir/blouk.dta", clear
 
-ollapse (mean) f_dest [iw=`iw'], by(dptorigine annee_obs)
+collapse (mean) f_dest [iw=`iw'], by(dptorigine annee_obs)
 rename dptorigine dptresid
 fillin dptresid annee_obs
 rename f_dest norme_dest
