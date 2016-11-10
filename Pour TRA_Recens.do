@@ -99,10 +99,10 @@ foreach i of numlist 1861 1871  1881 1891 1901 1911 {
 		quietly tabulate dptresid, generate(dptresid_)
 		drop dptorigine_1
 		drop dptresid_1
-*		capture noisily maxentropy dptorigine_* dptresid_*, matrix(contraintes_`i'_`j') prior(nbr_TRA) generate(nbr_TRA_recens_CEM)  total(`tot_migr_`i'_`j'') 
-*		capture replace nbr_TRA_recens_CEM=pop_origine if dptorigine==dptresid
+		capture noisily maxentropy dptorigine_* dptresid_*, matrix(contraintes_`i'_`j') prior(nbr_TRA) generate(nbr_TRA_recens_CEM)  total(`tot_migr_`i'_`j'') 
+		capture replace nbr_TRA_recens_CEM=pop_origine if dptorigine==dptresid
 		drop dptorigine_* dptresid_*
-		mstdize nbr_TRA emigr immigr, by(dptorigine dptresid) generate(nbr_TRA_recens_RAS) tol(0.2)
+		mstdize nbr_TRA emigr immigr, by(dptorigine dptresid) generate(nbr_TRA_recens_RAS) tol(0.1)
 		replace nbr_TRA_recens_RAS=pop_immob if dptorigine==dptresid
 		save "~/Documents/Recherche/Migrations/Construction BDD/Donnees migrations/Pour TRA_Recens_`i'_`j'.dta", replace
 		restore
@@ -125,14 +125,15 @@ foreach i of numlist 1871 1881 1891 1901 1911 {
 }
 
 
-*generate ratio = nbr_TRA_recens_CEM/nbr_TRA_recens_RAS
-*summarize ratio
-*assert r(min)>=0.999 & r(max)<1.001
-*drop nbr_TRA_recens_CEM
+generate ratio = nbr_TRA_recens_CEM/nbr_TRA_recens_RAS
+replace ratio=. if ratio==0
+summarize ratio
+assert r(min)>=0.999 & r(max)<1.001
+drop nbr_TRA_recens_CEM
 rename nbr_TRA_recens_RAS nbr_TRA_recens
 
 
-*drop ratio
+drop ratio
 drop    nbr_TRA pop_immob immigr emigr
 save "~/Documents/Recherche/Migrations/Construction BDD/Donnees migrations/Matrices_TRA_Recens.dta", replace
 
