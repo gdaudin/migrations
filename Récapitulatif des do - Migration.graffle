@@ -1560,7 +1560,7 @@ Pour matrices et marges recensement.do}</string>
 		<key>TopSlabHeight</key>
 		<real>250</real>
 		<key>VisibleRegion</key>
-		<string>{{779.5, -142}, {886, 1067}}</string>
+		<string>{{628, -142}, {886, 1067}}</string>
 		<key>Zoom</key>
 		<real>1</real>
 		<key>ZoomValues</key>
