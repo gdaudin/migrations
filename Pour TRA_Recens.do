@@ -10,7 +10,7 @@ use "~/Documents/Recherche/Migrations/Construction BDD/Donnees TRA/Migr_TRA.dta"
 
 *Mise ensemble des datasets
 
-
+recast double nbr_TRA
 
 replace annee=1871 if annee==1872
 rename dptresid dpt
@@ -26,8 +26,8 @@ keep dptresid dptorigine year sexe immigr_ssAL_recens nbr_TRA
 rename dptorigine dpt
 joinby dpt year sexe using "~/Documents/Recherche/Migrations/Construction BDD/Marges_migrations_done.dta"
 rename dpt dptorigine
-gen pop_immob=pop_fr_ssAL-immigr_ssAL_recens
-label var pop_immob "Population immobile française"
+gen pop_immob=pop_tot-immigr_ssAL_recens
+label var pop_immob "Population totale - les immigrés Français venant d'ailleurs que l'Alsace"
 
 keep dptresid dptorigine year sexe immigr_ssAL_recens emigr_recens_basic pop_immob nbr_TRA
 
@@ -57,7 +57,6 @@ drop if dptorigine==90 & annee==1861
 *Dans la méthode CEM, leur nombre se retrouve dans les immigrants vers le département 1
 *Alors que dans la méthode RAS, il n'y a pas de transferts...
 replace nbr_TRA = 0.001 if nbr_TRA==0
-
 
 
 
@@ -103,7 +102,7 @@ foreach i of numlist 1861 1871  1881 1891 1901 1911 {
 *		capture noisily maxentropy dptorigine_* dptresid_*, matrix(contraintes_`i'_`j') prior(nbr_TRA) generate(nbr_TRA_recens_CEM)  total(`tot_migr_`i'_`j'') 
 *		capture replace nbr_TRA_recens_CEM=pop_origine if dptorigine==dptresid
 		drop dptorigine_* dptresid_*
-		mstdize nbr_TRA emigr immigr, by(dptorigine dptresid) generate(nbr_TRA_recens_RAS) tol(1)
+		mstdize nbr_TRA emigr immigr, by(dptorigine dptresid) generate(nbr_TRA_recens_RAS) tol(0.2)
 		replace nbr_TRA_recens_RAS=pop_immob if dptorigine==dptresid
 		save "~/Documents/Recherche/Migrations/Construction BDD/Donnees migrations/Pour TRA_Recens_`i'_`j'.dta", replace
 		restore
