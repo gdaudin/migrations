@@ -53,7 +53,7 @@ rename dcdept dptresid
 generate annee=`1'
 generate sexe="`2'"
 
-if annee == 1841 & sexe =="T" {
+if annee == 1811 & sexe =="T" {
 	}
 else {
 	append using "$dir/Migr_TRA.dta"
@@ -64,7 +64,7 @@ save "$dir/Migr_TRA.dta", replace
 end
 ***********
 
-foreach i in 1841 1851 1861 1872 1881 1891 1901 1911 {
+foreach i of num 1811(10)1861 1872 1881(10)1911 {
 	foreach j in T M F {
 		TRAuneannee `i' `j'
 	}
