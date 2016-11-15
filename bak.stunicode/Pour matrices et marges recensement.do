@@ -1,6 +1,6 @@
 version 12
 
-**Travail sur les matrices de recensement genr√©es 1901 et 1911
+**Travail sur les matrices de recensement genrées 1901 et 1911
 
 global dir "/Users/guillaumedaudin/Documents/Recherche/Migrations/Construction BDD"
 set more off
@@ -71,13 +71,13 @@ replace year = 1901 if year ==.
 replace dptorigine="al" if dptorigine=="Alsace_Lorraine"
 
 generate migr_recens = nbr_recens if dptorigine != dptresid
-label variable migr_recens "Migrants d'apr√®s le recensement"
+label variable migr_recens "Migrants d'après le recensement"
 
 ****Il faut traiter les dpt origine unknown... Nous allons supposer que ce sont tous des immigrants
-****Et que leurs origines sont les m√™mes que les autres
+****Et que leurs origines sont les mêmes que les autres
 
 generate migr_ssunknown = migr_recens if dptorigine!="unknown"
-label variable migr_ssunknown "Migrants d'apr√®s le recensement, mais sans les unknown"
+label variable migr_ssunknown "Migrants d'après le recensement, mais sans les unknown"
 egen total_immigr_ssunknown = total(migr_ssunknown), by(year dptresid sexe)
 generate migr_unknown = migr_recens if dptorigine=="unknown"
 egen total_immigr_unknown = total(migr_unknown), by(year dptresid sexe)
@@ -85,7 +85,7 @@ egen total_immigr_unknown = total(migr_unknown), by(year dptresid sexe)
 drop migr_unknown migr_ssunknown
 
 generate migr_recens_avecunknown = migr_recens + total_immigr_unknown*(migr_recens/total_immigr_ssunknown) if dptorigine !="unknown"
-label variable migr_recens_avecunknown "Migrants d'apr√®s le recensement, unknown r√©partis"
+label variable migr_recens_avecunknown "Migrants d'après le recensement, unknown répartis"
 
 
 drop total_immigr_unknown total_immigr_ssunknown
@@ -98,31 +98,31 @@ drop total_immigr_unknown total_immigr_ssunknown
 save "$dir/Matrice_complete_1901+1911.dta", replace
 
 ***************************************************************
-**Puis les donn√©es hors matrices
+**Puis les données hors matrices
 ***************************************************************
 
 use "$dir/Matrice_complete_1901+1911.dta", clear
 
-**Cr√©ation des variables d√©partementales
+**Création des variables départementales
 sort year dptresid dptorigine
 
 egen emigr_recens = total (migr_recens), by(year dptorigine sexe)
-label variable emigr_recens "√âmigrants d'apr√®s le recensement - sans les unknowns"
+label variable emigr_recens "Émigrants d'après le recensement - sans les unknowns"
 egen emigr_recens_avecunknown =  total (migr_recens_avecunknown), by(year dptorigine sexe)
-label variable emigr_recens_avecunknown "√âmigrants d'apr√®s le recensement - unknown r√©partis tous des migrants"
+label variable emigr_recens_avecunknown "Émigrants d'après le recensement - unknown répartis tous des migrants"
 
 
 egen immigr_tot_recens = total (migr_recens), by (year dptresid sexe)
 egen tot_immigr_avecunknown = total (migr_recens_avecunknown), by (year dptresid sexe)
 assert tot_immigr_avecunknown==immigr_tot_recens
 drop tot_immigr_avecunknown 
-label variable immigr_tot_recens "Immigrants d'apr√®s le recensement - y compris Alsace-Lorraine"
-*C'est bien les m√™me avec unknown et ss unknown
+label variable immigr_tot_recens "Immigrants d'après le recensement - y compris Alsace-Lorraine"
+*C'est bien les même avec unknown et ss unknown
 
 
 generate blouf = migr_recens_avecunknown  if dptorigine!="al"
 egen immigr_ssAL_recens = total (blouf), by(year dptresid sexe)
-label variable immigr_ssAL_recens "Immigrants d'apr√®s le recensement - sans Alsace-Lorraine"
+label variable immigr_ssAL_recens "Immigrants d'après le recensement - sans Alsace-Lorraine"
 drop blouf
 
 *Creation variable annuelle/sexe
@@ -133,10 +133,10 @@ drop blouf
 egen migr_tot=total(migr_recens_avecunknown), by (year sexe)
 
 egen inhabit = total (nbr_recens), by(year dptresid sexe)
-label variable inhabit "Habitants fran√ßais d'origine"
+label variable inhabit "Habitants français d'origine"
 replace migr_recens_avecunknown = nbr_recens if dptorigine==dptresid
 egen native = total (migr_recens_avecunknown), by(year dptorigine sexe)
-label variable native "Natifs du d√©partement"
+label variable native "Natifs du département"
 drop native
 replace migr_recens_avecunknown = 0 if dptorigine==dptresid
 
@@ -151,7 +151,7 @@ drop dptresid
 save "$dir/Marges_migrations.dta", replace
 
 
-**Ajout du reste des donn√©es******************************************************************
+**Ajout du reste des données******************************************************************
 
 *1891 : Pas par genre, mais nous aide pour la suite :)
 insheet using "$dir/Recensement_1891/Emigrants1891PourStata1891.txt", tab clear
@@ -170,7 +170,7 @@ drop nom_dpt
 drop if dpt==.
 merge 1:1 dpt sexe year using "$dir/Marges_migrations.dta"
 drop if dpt==.
-label variable accroissnaturel10ans "Accroissement naturel de t √† t+10"
+label variable accroissnaturel10ans "Accroissement naturel de t à t+10"
 save "$dir/Marges_migrations.dta", replace
 
 insheet using "$dir/Donnees migrations/share of migrants male female v5.txt", tab clear
@@ -202,7 +202,7 @@ rename inhabit pop_fr
 replace pop_fr=pop_fr_guillaume if pop_fr==.
 drop pop_fr_guillaume
 format pop_fr %11.0gc
-label variable pop_fr "Population fran√ßaise n√©e en m√©tropole, yc AL"
+label variable pop_fr "Population française née en métropole, yc AL"
 *format pop_fr_guillaume %11.0gc
 drop _merge v6-v10
 
@@ -213,7 +213,7 @@ generate emig_frg = 0.124 if year==1861
 replace  emig_frg = 0.173 if year==1871
 replace  emig_frg = 0.279 if year==1881
 replace  emig_frg = 0.177 if year==1891
-label variable emig_frg "Taux d'√©migration brut des fran√ßais vers l'√©tranger de t √† t+10 en pour mille"
+label variable emig_frg "Taux d'émigration brut des français vers l'étranger de t à t+10 en pour mille"
 
 *1901 : 0.15
 */
@@ -238,11 +238,11 @@ drop blouk
 
 **Traitement AL
 
-*Il faut que dans la matrice, le nombre d'√©migrants soit √©gal au nombre d'immigrants
+*Il faut que dans la matrice, le nombre d'émigrants soit égal au nombre d'immigrants
 *Pour 1872, 1901 et 1911, on a les deux (avec AL et sans AL)
 *Pour 1891, on a que sans AL
 *Pour 1881, on a que avec AL
-*Il faut donc compl√©ter 1881. Ce qu'on va faire avec 1901 et 1872.
+*Il faut donc compléter 1881. Ce qu'on va faire avec 1901 et 1872.
 
 generate ratio_ssAL=immigr_ssAL_recens/immigr_recens
 generate blink_1901 = ratio_ssAL if year==1901
@@ -256,9 +256,9 @@ generate blink_1881= ratio_ssAL if year==1881
 bysort dpt sexe : egen ratio_ssAL_1881=max(blink_1881)
 replace immigr_recens=immigr_ssAL_recens/ratio_ssAL_1901^0.5/ratio_ssAL_1881^0.5 if year==1891
 
-*Pour 1861, il faut aussi le faire car nous n'aurons pas le nombre d'√©migrants pour l'AL (ni m√™me la Meurthe-et-Moselle).
-*Mais il n'y a pas de liens logique entre le nombre d'immigrants d'AL avant 1871 et celui d'apr√®s
-*On va supposer que la structure reste la m√™me, mais que le nombre change pas.
+*Pour 1861, il faut aussi le faire car nous n'aurons pas le nombre d'émigrants pour l'AL (ni même la Meurthe-et-Moselle).
+*Mais il n'y a pas de liens logique entre le nombre d'immigrants d'AL avant 1871 et celui d'après
+*On va supposer que la structure reste la même, mais que le nombre change pas.
 *Et que les immigrants viennent d'AL en proportion de la population
 
 **Identification AL
@@ -284,15 +284,15 @@ generate pop_fr_ssAL=pop_fr-immigr_recens+immigr_ssAL_recens
 
 
 /*
-*Pour le calcul num√©ro 1 : en utilisant les diff√©rences
-*Mais c'est compliqu√© d'utiliser des diff√©rences avec ce genre de donnn√©es !
-*Pop(t)=Pop(t-1)+acc_nat-emigration vers l'√©tranger
-*		- (√©migr√©s vers la France(t)-√©migr√©s vers la France(t-1))
-*		+ (immigr√©s depuis la France(t)-immigr√©s depuis la France(t-1))
-*Modulo le fait que les gens peuvent √©migrer puis mourrir. Donc on fera un r√®gle de trois √† la fin (?) Ou autre solution
-*<=> √©migr√©s vers la France (t-1) = Pop(t)-Pop(t-1)-acc_nat+emigration vers l'√©tranger+√©migr√©s vers la France(t)
-*	-(immigr√©s depuis la France(t)-immigr√©s depuis la France(t-1))
-**L'accroissement naturel l√† ne devrait √™tre que celui des natives (pour les morts en tous les cas). Restent les enfants quand m√™me...
+*Pour le calcul numéro 1 : en utilisant les différences
+*Mais c'est compliqué d'utiliser des différences avec ce genre de donnnées !
+*Pop(t)=Pop(t-1)+acc_nat-emigration vers l'étranger
+*		- (émigrés vers la France(t)-émigrés vers la France(t-1))
+*		+ (immigrés depuis la France(t)-immigrés depuis la France(t-1))
+*Modulo le fait que les gens peuvent émigrer puis mourrir. Donc on fera un règle de trois à la fin (?) Ou autre solution
+*<=> émigrés vers la France (t-1) = Pop(t)-Pop(t-1)-acc_nat+emigration vers l'étranger+émigrés vers la France(t)
+*	-(immigrés depuis la France(t)-immigrés depuis la France(t-1))
+**L'accroissement naturel là ne devrait être que celui des natives (pour les morts en tous les cas). Restent les enfants quand même...
 
 tsset panvar year, delta(10)
 
@@ -307,11 +307,11 @@ generate accroissnaturel10ans_nat = nc10ans*(pop_tot/pop_tot)-dc10ans/2*((pop_fr
 
 
 *************************************
-***Traitement √©migration √©trang√®re
-*On utilise ce qu'on sait de 1901-1911 pour calculer la part de chq d√©partement dans l'√©migration vers l'√©tranger
+***Traitement émigration étrangère
+*On utilise ce qu'on sait de 1901-1911 pour calculer la part de chq département dans l'émigration vers l'étranger
 *generate emig_frg_ssAL = emigr_recens - F.emigr_recens - delta_pop_fr_ssAL + accroissnaturel10ans_fr_ssAL + delta_immigr_ssAL if year==1901
-*Cela aurait √©t√© bien, mais cela ne marche pas : beaucoup de chiffres n√©gatifs.
-*Dur, dur de travailler avec plusieurs ann√©es de recensement
+*Cela aurait été bien, mais cela ne marche pas : beaucoup de chiffres négatifs.
+*Dur, dur de travailler avec plusieurs années de recensement
 *******************************
 
 
@@ -327,13 +327,13 @@ foreach i of numlist 1891 1881 1871 {
 *	codebook emigr_recens if year==`i'
 
 	bysort sexe year : egen tot_immigr=total(immigr_ssAL_recens)
-	*Pour √©viter les chiffres n√©gatifs !
+	*Pour éviter les chiffres négatifs !
 	quietly tsset panvar year, delta(10)
 	*replace emigr_recens = F.emigr_recens *(tot_immigr/F.tot_immigr) if emigr_recens<=0
 	replace emigr_recens_temp = 100 if emigr_recens_temp<=0
 	**(3 modif en 1891, 21 en modification en 1881, 24 en 1871)
 
-	**Mise en proportion pour que la somme des √©migrants soit celle des immigrants
+	**Mise en proportion pour que la somme des émigrants soit celle des immigrants
 	bysort sexe year :  egen tot_emigr=total(emigr_recens_temp)
 	replace blink= tot_immigr/tot_emigr if year ==`i'
 	
@@ -356,20 +356,20 @@ replace emigr_recens = 100 if emigr_recens<=0
 
 
 replace emigr_recens=. if AL==1 & year ==1861
-*Ne devrait √™tre utile que pour la Meurthe, qui ne peut pas √™tre mise en lien avec la Meurthe et Moselle (toutes les deux 54)
+*Ne devrait être utile que pour la Meurthe, qui ne peut pas être mise en lien avec la Meurthe et Moselle (toutes les deux 54)
 bysort sexe year : egen pop_tot_AL = total(pop_tot*AL) if year ==1861
 bysort sexe year : egen pop_tot_FR = total(pop_tot) if year ==1861
 
 	
 bysort sexe year :  egen tot_emigr=total(emigr_recens)
-*Il faut enlever les immigrants qui viennent des d√©partements d'AL pour que l'√©quilibre se fasse bien.
-*On fait l'hypoth√®se qu'ils viennent des d√©partements d'AL en % de la population de cette derni√®re
+*Il faut enlever les immigrants qui viennent des départements d'AL pour que l'équilibre se fasse bien.
+*On fait l'hypothèse qu'ils viennent des départements d'AL en % de la population de cette dernière
 replace emigr_recens = emigr_recens *tot_immigr/tot_emigr*(pop_tot_FR-pop_tot_AL)/pop_tot_FR if year==1861
 drop tot_immigr tot_emigr
 
 */
 ***************************************************************************************
-*Deuxi√®me m√©thode, plus simple, sans utiliser l'accroissement naturel
+*Deuxième méthode, plus simple, sans utiliser l'accroissement naturel
 
 generate float double emigr_recens_basic = emigr_recens if year ==1901 | year==1911 
 generate ratio_emigr_basic = emigr_recens_basic/(pop_fr-immigr_recens) if year ==1901 | year==1911 
@@ -377,11 +377,11 @@ generate ratio_emigr_basic = emigr_recens_basic/(pop_fr-immigr_recens) if year =
 
 quietly tsset panvar year, delta(10)
 
-*D'abord pour 1891 (on dispose du nombre de migrants, sexes m√©lang√©s)
+*D'abord pour 1891 (on dispose du nombre de migrants, sexes mélangés)
 replace emigr_recens_basic= F.ratio_emigr_basic*(F.ratio_emigr_basic/FF.ratio_emigr_basic)*(pop_fr-immigr_recens) if year==1891
 
-*Je le fais tourner plusieurs fois pour r√©pondre √† la fois aux contraintes li√©es au nombres d'immigrants de chq sexe et √† celles li√©es 
-*au nombre d'emigrants de chq d√©partement
+*Je le fais tourner plusieurs fois pour répondre à la fois aux contraintes liées au nombres d'immigrants de chq sexe et à celles liées 
+*au nombre d'emigrants de chq département
 
 foreach i of numlist 1/4 {
 
@@ -425,11 +425,11 @@ bysort sexe year : egen float tot_immigr=total(immigr_ssAL_recens) if year==1861
 **traitement AL
 
 replace emigr_recens_basic=. if AL==1 & year ==1861
-*Ne devrait √™tre utile que pour la Meurthe, qui ne peut pas √™tre mise en lien avec la Meurthe et Moselle (toutes les deux 54)
+*Ne devrait être utile que pour la Meurthe, qui ne peut pas être mise en lien avec la Meurthe et Moselle (toutes les deux 54)
 
 	
 bysort sexe year :  egen float tot_emigr=total(emigr_recens_basic) if year==1861
-*Il faut enlever les immigrants qui viennent des d√©partements d'AL pour que l'√©quilibre se fasse bien.
+*Il faut enlever les immigrants qui viennent des départements d'AL pour que l'équilibre se fasse bien.
 
 replace emigr_recens_basic = emigr_recens_basic *tot_immigr/tot_emigr if year==1861
 bysort sexe year :  egen float test=total(emigr_recens_basic) if year==1861
@@ -446,7 +446,7 @@ replace ratio_emigr_basic = emigr_recens_basic/(pop_fr-immigr_recens) if year==1
 
 /*	
 ***************************************************************************************
-*Pour v√©rifier les r√©sultats
+*Pour vérifier les résultats
 
 replace ratio_emigr_basic = emigr_recens_basic/(pop_fr-immigr_recens)
 generate ratio_emigr = emigr_recens/(pop_fr-immigr_recens)
@@ -482,9 +482,9 @@ exit
 list dpt year sexe pop_fr_ssAL emigr_recens immigr_recens emig_frg_ssAL delta_immigr_ssAL /*
 */ delta_pop_fr_ssAL accroissnaturel10ans_fr_ssAL if emigr_recens<=0 
 
-*Pour 1871, les d√©partements avec emigrants n√©gatifs sont le 20, 64, 66, 74 (Corse, Pyr√©nn√©es Atlantiques, Pyr√©nn√©es Orientales, Savoie)
-*Tous des d√©partements avec probablement pas mal d'√©migration vers l'√©tranger. 
-*Et le 22 et 40 (C√¥tes-du-Nord et Dordogne) : des marins qui partent ?
+*Pour 1871, les départements avec emigrants négatifs sont le 20, 64, 66, 74 (Corse, Pyrénnées Atlantiques, Pyrénnées Orientales, Savoie)
+*Tous des départements avec probablement pas mal d'émigration vers l'étranger. 
+*Et le 22 et 40 (Côtes-du-Nord et Dordogne) : des marins qui partent ?
 
 
 
