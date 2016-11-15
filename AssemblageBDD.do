@@ -61,6 +61,8 @@ local ponderation log
 *ou lin
 local norme migr
 *ou tous migr30
+local fert Coal
+*ou TFR
 
 *_`data'_`sexe'_`paris'_`instrument'
 
@@ -81,33 +83,52 @@ set matsize 8000
 
 capture program drop faire_BDD
 program faire_BDD
-	args data sexe paris instrument ponderation norme
-	**Exemple : faire_BDD TRAR t P p log migr
+	args data fert sexe paris instrument norme ponderation 
+	**Exemple : faire_BDD Coal TRAR t P p migr log 
+	
+	
+	
+	*data: TRAR, RE ou TRA
+	*fert: Coal ou TFR
+	*sexe: t m f
+	*paris: P ou SP
+	*instrument: p (predicted / instrumented) or o (original / not instrumented)
+	*ponderation : log ou lin
+	*norme migr ou migr30
 
+if "`fert'"=="Coal" {
+	use "$dir/Données fécondité/bonneuil.dta", clear
+	replace var2=v6 if var2==""
+	rename var2 dpt
+	replace dptresid = 54 if dpt=="MEURTHE"
+	replace dptresid = 90 if dpt=="BELFORT"
+	replace dptresid = 68 if dpt=="RHIN(HAUT-)"
+	replace dptresid = 67 if dpt=="RHIN(BAS-)"
+	drop var30 var1 var3 coaleindex1911 v6
+	reshape long fert_bon, i(dpt) j(year)
+	rename dptresid dpt_num
+	rename year annee
+	drop if fert_bon==.
+	foreach i of numlist 1806 (10) 1906 {
+		drop if annee==`i'
+	}
+	rename fert_bon f_obs
+}
 
+if "`fert'"=="TFR" {
+	use "$dir/Données fécondité/totalfertilityrate1811-1911.dta", clear
+	rename dptresid dpt_num
+	rename annee_obs annee
+	rename dpt_nom dpt
+	rename totalfertilityrate f_obs
+	drop yearid naissances population
 
-use "$dir/Bonneuil/bonneuil.dta", clear
-
-
-replace var2=v6 if var2==""
-rename var2 dpt
-
-replace dptresid = 54 if dpt=="MEURTHE"
-replace dptresid = 90 if dpt=="BELFORT"
-replace dptresid = 68 if dpt=="RHIN(HAUT-)"
-replace dptresid = 67 if dpt=="RHIN(BAS-)"
-drop var30 var1 var3 coaleindex1911 v6
-
-reshape long fert_bon, i(dpt) j(year)
-rename dptresid dpt_num
-rename year annee
-drop if fert_bon==.
-foreach i of numlist 1806 (10) 1906 {
- drop if annee==`i'
 }
 
 
-save "$dir/BDD_prov_fert.dta", replace
+
+save "$dir/BDD_prov_fert_`fert'.dta", replace
+
 
 ***************************************************
 
@@ -221,11 +242,9 @@ use "$dir/BDD_prov1_`data'_`sexe'.dta", clear
 **La fertilité observée
 rename dptresid dpt_num
 replace annee=1871 if annee==1872
-joinby dpt_num annee using "$dir/BDD_prov_fert.dta", unmatched(master) _merge(_merge)
+joinby dpt_num annee using "$dir/BDD_prov_fert_`fert'.dta", unmatched(master) _merge(_merge)
 *v25 : unmatched(both)
 
-
-rename fert_bon f_obs
 drop if f_obs==.
 rename dpt_num dptresid
 drop _merge
@@ -240,9 +259,9 @@ replace annee=1831 if annee_obs==1881
 replace annee=1841 if annee_obs==1891
 replace annee=1851 if annee_obs==1901
 replace annee=1861 if annee_obs==1911
-joinby dpt_num annee using "$dir/BDD_prov_fert.dta", unmatched(master) _merge(_merge)
+joinby dpt_num annee using "$dir/BDD_prov_fert_`fert'.dta", unmatched(master) _merge(_merge)
 rename dpt_num dptresid
-rename fert_bon f_obs_min50y
+rename f_obs f_obs_min50y
 drop _merge annee
 
 
@@ -263,13 +282,13 @@ replace annee=1881 if annee_obs==1911
 
 *generate annee=annee_obs
 
-joinby dpt_num annee using "$dir/BDD_prov_fert.dta", unmatched(master) _merge(_merge)
+joinby dpt_num annee using "$dir/BDD_prov_fert_`fert'.dta", unmatched(master) _merge(_merge)
 *v25 : unmatched(both) 
 
 
 rename dpt_num dptorigine
 rename dpt dptresid_nom
-rename fert_bon f_ori3
+rename f_obs f_ori3
 rename annee annee_origine
 drop _merge
 
@@ -307,22 +326,22 @@ label var fert_moy30 "Fertilité moyenne 30 ans avant"
 *Ici, je prends la fertilité de destination
 rename dptresid dpt_num
 generate annee = annee_obs
-joinby dpt_num annee using "$dir/BDD_prov_fert.dta", unmatched(master) _merge(_merge)
+joinby dpt_num annee using "$dir/BDD_prov_fert_`fert'.dta", unmatched(master) _merge(_merge)
 rename dpt_num dptresid
 drop annee _merge dpt
-rename fert_bon f_dest
+rename f_obs f_dest
 
 *Ici, je prends la fécondité d'origine contemporaine
 rename dptorigine dpt_num
 generate annee = annee_obs
-joinby dpt_num annee using "$dir/BDD_prov_fert.dta", unmatched(master) _merge(_merge)
+joinby dpt_num annee using "$dir/BDD_prov_fert_`fert'.dta", unmatched(master) _merge(_merge)
 rename dpt_num dptorigine
 drop annee _merge dpt
-rename fert_bon f_ori
+rename f_obs f_ori
 
 
 
-save "$dir/BDD_prov2_`data'_`sexe'.dta", replace
+save "$dir/BDD_prov2_`data'_`fert'_`sexe'.dta", replace
 *******************************************************************************************
 
 
@@ -330,7 +349,7 @@ if "`instrument'"=="p" {
 	*-----------------------
 	*Prise de la variable IV
 	
-	use "$dir/BDD_prov2_`data'_`sexe'.dta", clear
+	use "$dir/BDD_prov2_`data'_`fert'_`sexe'.dta", clear
 	
 	
 	set obs `=_N+1'
@@ -366,13 +385,13 @@ if "`instrument'"=="p" {
 	
 	
 	
-	save "$dir/BDD_prov2b_`data'_`sexe'_`instrument'.dta", replace
+	save "$dir/BDD_prov2b_`data'_`fert'_`sexe'_`instrument'.dta", replace
 	
 	*-----------------------------
 	*INSTRUMENTATION
 	*--------------------------
 	
-	use "$dir/BDD_prov2b_`data'_`sexe'_`instrument'.dta", clear
+	use "$dir/BDD_prov2b_`data'_`fert'_`sexe'_`instrument'.dta", clear
 
 
 	generate str panel = string(dptorigine)+"/"+string(dptresid)
@@ -527,17 +546,19 @@ if "`instrument'"=="p" {
 	
 	***************************************Fin Panel
 	
-	erase "$dir/BDD_prov2b_`data'_`sexe'_`instrument'.dta"
+	
+	
+	
 	
 
 
 }
-save "$dir/BDD_prov2_`data'_`sexe'_`instrument'.dta", replace
+save "$dir/BDD_prov2b_`data'_`fert'_`sexe'_`instrument'.dta", replace
 
 
 *---------------------------------------------------------------------------------
 *Calcul des populations d'immigrés et d'émigrés par département
-use "$dir/BDD_prov2_`data'_`sexe'_`instrument'.dta", clear
+use "$dir/BDD_prov2b_`data'_`fert'_`sexe'_`instrument'.dta", clear
 
 
 **Introducton du sans paris
@@ -559,11 +580,11 @@ replace pop_immob = nbr 	if dptresid==dptorigine
 
 
 *Calcul du total de population immigrée
-save "$dir/BDD_prov3_`data'_`sexe'_`instrument'_`paris'.dta", replace
+save "$dir/BDD_prov3_`data'_`fert'_`sexe'_`instrument'_`paris'.dta", replace
 
 
 
-use "$dir/BDD_prov3_`data'_`sexe'_`instrument'_`paris'", clear
+use "$dir/BDD_prov3_`data'_`fert'_`sexe'_`instrument'_`paris'", clear
 
 drop if f_obs==.
 drop if f_obs_min50y==.
@@ -577,13 +598,13 @@ collapse (sum) pop_migr pop_immob, by(dptresid annee_obs f_obs f_obs_min50y)
 rename pop_migr pop_immigr
 
 
-save "$dir/BDD_`data'_`sexe'_`instrument'_`paris'.dta", replace
+save "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'.dta", replace
 
 
 
 
 *Calcul du total de population émigrée
-use "$dir/BDD_prov3_`data'_`sexe'_`instrument'_`paris'", clear
+use "$dir/BDD_prov3_`data'_`fert'_`sexe'_`instrument'_`paris'", clear
 
 collapse (sum) pop_migr, by (dptorigine annee_obs)
 rename dptorigine dptresid
@@ -592,9 +613,9 @@ rename dptorigine dptresid
 rename pop_migr pop_emigr
 
 
-joinby dptresid annee_obs using "$dir/BDD_`data'_`sexe'_`instrument'_`paris'.dta", unmatched (both)
+joinby dptresid annee_obs using "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'.dta", unmatched (both)
 drop _merge
-save "$dir/BDD_`data'_`sexe'_`instrument'_`paris'.dta", replace
+save "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'.dta", replace
 
 
 
@@ -607,7 +628,7 @@ save "$dir/BDD_`data'_`sexe'_`instrument'_`paris'.dta", replace
 
 ******Norme calculée suivant l'origine de la population
 
-use "$dir/BDD_prov3_`data'_`sexe'_`instrument'_`paris'", clear
+use "$dir/BDD_prov3_`data'_`fert'_`sexe'_`instrument'_`paris'", clear
 
 if "`norme'"=="migr" {
 	local iw pop_migr 
@@ -643,9 +664,9 @@ save "$dir/blouk.dta", replace
 
 collapse (mean) `f_ori' [iw=`iw'], by(dptresid annee_obs)
 rename f_ori norme_ori
-joinby dptresid annee_obs using "$dir/BDD_`data'_`sexe'_`instrument'_`paris'.dta", unmatched (both)
+joinby dptresid annee_obs using "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'.dta", unmatched (both)
 drop _merge
-save "$dir/BDD_`data'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", replace
+save "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", replace
 	
 	
 
@@ -661,7 +682,7 @@ drop _fillin
 
 
 
-joinby dptresid annee_obs using "$dir/BDD_`data'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", unmatched (both)
+joinby dptresid annee_obs using "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", unmatched (both)
 
 drop _merge
 
@@ -670,7 +691,7 @@ drop _merge
 
 drop if (dpt==54 | dpt==90) & annee_obs==1861
 	
-save "$dir/BDD_`data'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", replace
+save "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", replace
 
 erase "$dir/blouk.dta"
 *****************************************************************************************************************************************
@@ -686,18 +707,19 @@ drop departement yearid autrenom
 collapse (mean) p_industrie p_professionsliberales, by(id year)
 save "$dir/Prof.dta", replace
 
-use "$dir/BDD_`data'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", clear
+use "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", clear
 rename dptresid id
 rename annee_obs year
 replace year = 1872 if year == 1871
 joinby id year using "$dir/Prof.dta", unmatched (master)
+erase "$dir/Prof.dta"
 replace year= 1871 if year == 1872
 rename id dptresid
 rename year annee_obs
 
 drop _merge
 
-save "$dir/BDD_`data'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", replace
+save "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", replace
 *----------------------------VARIABLES DÉMOGRAPHIQUES SUPPLÉMENTAIRES
 
 
@@ -711,8 +733,8 @@ reshape wide pop, i(dptresid annee_obs) j(sexe) string
 rename popf pop_f
 rename popm pop_m
 generate pop_t = pop_f+pop_m
-joinby dptresid annee_obs using "$dir/BDD_`data'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta"
-save "$dir/BDD_`data'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", replace
+joinby dptresid annee_obs using "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta"
+save "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", replace
 
  
  
@@ -738,48 +760,49 @@ drop if annee_obs==.
 *collapse (mean)  urban lifeexpectancy15 mortalityratio_15 survival_15, by(id annee_obs)
 save "$dir/urb_mort.dta", replace
 
-use "$dir/BDD_`data'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", replace
+use "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", replace
 rename dptresid id
 joinby id annee_obs using "$dir/urb_mort.dta", unmatched (master)
 drop _merge
 rename id dptresid
-save "$dir/BDD_`data'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", replace
+erase "$dir/urb_mort.dta"
+save "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", replace
 
-use "$dir/BDD_`data'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", replace
+use "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", replace
 rename dptresid id
 joinby id annee_obs using "$dir/educationfille_10yb.dta", unmatched (master)
 drop _merge
 rename id dptresid
-save "$dir/BDD_`data'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", replace
+save "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", replace
 
-use "$dir/BDD_`data'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", replace
+use "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", replace
 rename dptresid id
 joinby id annee_obs using "$dir/educationhomme_10yb.dta", unmatched (master)
 drop _merge
 rename id dptresid
-save "$dir/BDD_`data'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", replace
+save "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", replace
 
 *------------------------VARIABLE CHOIX ÉDUCATION
 
-use "$dir/BDD_`data'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", replace
+use "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", replace
 
 joinby dptresid annee_obs using "$dir/Correlates school choice fertility/eleves_pourBDD.dta", unmatched (master)
 drop _merge
 
-save "$dir/BDD_`data'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", replace
+save "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", replace
 
 
 *drop _merge
 
 sort dptresid annee_obs
 
-save "$dir/BDD_`data'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", replace
+save "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", replace
 
 
 
 *--------------------------	VARIABLES POUR LES RÉGRESSIONS
 
-use "$dir/BDD_`data'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", replace
+use "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", replace
 
 ***Créer des lags
 
@@ -863,7 +886,7 @@ foreach i in emigr immigr {
 }
 
 
-save "$dir/BDD_`data'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", replace
+save "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", replace
 
 
 
@@ -871,7 +894,7 @@ save "$dir/BDD_`data'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", re
 *************************
 ** Share of population working in the industrial sector and as professionals et éducation et autre
 
-use "$dir/BDD_`data'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", clear
+use "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", clear
 
 *** in log
 
@@ -889,13 +912,13 @@ drop _merge
 tabulate annee_obs
 
 
-save "$dir/BDD_`data'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'_var.dta", replace
+save "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'_var.dta", replace
 
 
 ***********************
 ** Création des variables pour inclusion dans les régressions
 
-use "$dir/BDD_`data'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'_var.dta", replace
+use "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'_var.dta", replace
 
 
 *Vérifie s'il y a de variables manquantes sur une ligne
@@ -952,35 +975,64 @@ drop blink blouk blof
 
 drop year
 
-label data "data `data' sexe `sexe' paris `paris' instrument `instrument' pondération `ponderation' norme `norme'"
+label data "data `data' sexe `sexe' paris `paris' instrument `instrument' pondération `ponderation' norme `norme' fécondité `fert'"
 
 
-erase  "$dir/BDD_prov_fert.dta"
+
+save "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'_var.dta", replace
+
+
+erase  "$dir/BDD_prov_fert_`fert'.dta"
 
 erase  "$dir/BDD_prov1_`data'_`sexe'.dta"
 
-erase "$dir/BDD_prov2_`data'_`sexe'.dta"
+erase "$dir/BDD_prov2_`data'_`fert'_`sexe'.dta"
 
-erase "$dir/BDD_prov2_`data'_`sexe'_`instrument'.dta"
+erase "$dir/BDD_prov2b_`data'_`fert'_`sexe'_`instrument'.dta"
 
-erase "$dir/BDD_prov3_`data'_`sexe'_`instrument'_`paris'.dta"
+erase "$dir/BDD_prov3_`data'_`fert'_`sexe'_`instrument'_`paris'.dta"
 
-erase "$dir/BDD_`data'_`sexe'_`instrument'_`paris'.dta"
+erase "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'.dta"
 
-erase "$dir/BDD_`data'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta"
+erase "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta"
 
-save "$dir/BDD_`data'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'_var.dta", replace
+
 
 
 end
 
 
 
-*faire_BDD TRAR t P o log migr
-*faire_BDD TRAR t P p log migr
+faire_BDD TRAR TFR t P p migr lin
 
-faire_BDD TRAR t P p lin migr
-faire_BDD TRAR t P o lin migr
+
+foreach data in TRAR RE TRA {
+	foreach fert in Coal TFR {
+		foreach sexe in t m f {
+			foreach instrument in o p {
+				foreach paris in P SP {
+					foreach norme in migr migr30 {
+						foreach ponderation in log lin {
+							faire_BDD `data' `fert' `sexe' `paris' `instrument' `norme' `ponderation'
+	
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+/*
+
+
+faire_BDD TRAR t P p lin migr 
+
 
 faire_BDD TRAR t P p lin migr30
 faire_BDD TRAR t P o lin migr30

@@ -14,7 +14,7 @@
 	<key>BackgroundGraphic</key>
 	<dict>
 		<key>Bounds</key>
-		<string>{{0, 0}, {2795.0001239776611, 783}}</string>
+		<string>{{0, 0}, {4472.0001983642578, 783}}</string>
 		<key>Class</key>
 		<string>SolidGraphic</string>
 		<key>ID</key>
@@ -62,11 +62,891 @@
 				<integer>295</integer>
 			</dict>
 			<key>ID</key>
+			<integer>320</integer>
+			<key>Points</key>
+			<array>
+				<string>{3382, 576.51600000000008}</string>
+				<string>{1752, 685.51599999999996}</string>
+			</array>
+			<key>Style</key>
+			<dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>HeadArrow</key>
+					<string>FilledArrow</string>
+					<key>Legacy</key>
+					<false/>
+					<key>TailArrow</key>
+					<string>0</string>
+				</dict>
+			</dict>
+			<key>Tail</key>
+			<dict>
+				<key>ID</key>
+				<integer>319</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>Bounds</key>
+			<string>{{3227.5118096219271, 522.65773179480038}, {308.97638075614537, 107.71653641039927}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>FontInfo</key>
+			<dict>
+				<key>Size</key>
+				<real>12</real>
+			</dict>
+			<key>ID</key>
+			<integer>319</integer>
+			<key>Shape</key>
+			<string>HorizontalTriangle</string>
+			<key>Style</key>
+			<dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+			</dict>
+			<key>Text</key>
+			<dict>
+				<key>Text</key>
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;\csgray\c100000;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
+
+\f0\fs24 \cf0 Dpt Noms-Nums.dta}</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Class</key>
+			<string>LineGraphic</string>
+			<key>FontInfo</key>
+			<dict>
+				<key>Font</key>
+				<string>Helvetica</string>
+				<key>Size</key>
+				<real>12</real>
+			</dict>
+			<key>Head</key>
+			<dict>
+				<key>ID</key>
+				<integer>295</integer>
+			</dict>
+			<key>ID</key>
+			<integer>318</integer>
+			<key>Points</key>
+			<array>
+				<string>{3056, 576.51599999999985}</string>
+				<string>{1752, 685.51599999999996}</string>
+			</array>
+			<key>Style</key>
+			<dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>HeadArrow</key>
+					<string>FilledArrow</string>
+					<key>Legacy</key>
+					<false/>
+					<key>TailArrow</key>
+					<string>0</string>
+				</dict>
+			</dict>
+			<key>Tail</key>
+			<dict>
+				<key>ID</key>
+				<integer>317</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>Bounds</key>
+			<string>{{2901.5118096219271, 522.65773179480027}, {308.97638075614537, 107.71653641039927}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>FontInfo</key>
+			<dict>
+				<key>Size</key>
+				<real>12</real>
+			</dict>
+			<key>ID</key>
+			<integer>317</integer>
+			<key>Shape</key>
+			<string>HorizontalTriangle</string>
+			<key>Style</key>
+			<dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+			</dict>
+			<key>Text</key>
+			<dict>
+				<key>Text</key>
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;\csgray\c100000;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
+
+\f0\fs24 \cf0 eleves_pourBDD.dta}</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Class</key>
+			<string>LineGraphic</string>
+			<key>FontInfo</key>
+			<dict>
+				<key>Font</key>
+				<string>Helvetica</string>
+				<key>Size</key>
+				<real>12</real>
+			</dict>
+			<key>Head</key>
+			<dict>
+				<key>ID</key>
+				<integer>295</integer>
+			</dict>
+			<key>ID</key>
+			<integer>314</integer>
+			<key>Points</key>
+			<array>
+				<string>{2730, 576.51600000000008}</string>
+				<string>{1752, 685.51599999999996}</string>
+			</array>
+			<key>Style</key>
+			<dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>HeadArrow</key>
+					<string>FilledArrow</string>
+					<key>Legacy</key>
+					<false/>
+					<key>TailArrow</key>
+					<string>0</string>
+				</dict>
+			</dict>
+			<key>Tail</key>
+			<dict>
+				<key>ID</key>
+				<integer>313</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>Bounds</key>
+			<string>{{2575.5118096219271, 522.65773179480038}, {308.97638075614537, 107.71653641039927}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>FontInfo</key>
+			<dict>
+				<key>Size</key>
+				<real>12</real>
+			</dict>
+			<key>ID</key>
+			<integer>313</integer>
+			<key>Shape</key>
+			<string>HorizontalTriangle</string>
+			<key>Style</key>
+			<dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+			</dict>
+			<key>Text</key>
+			<dict>
+				<key>Text</key>
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;\csgray\c100000;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
+
+\f0\fs24 \cf0 urban6.dta}</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Class</key>
+			<string>LineGraphic</string>
+			<key>FontInfo</key>
+			<dict>
+				<key>Font</key>
+				<string>Helvetica</string>
+				<key>Size</key>
+				<real>12</real>
+			</dict>
+			<key>Head</key>
+			<dict>
+				<key>ID</key>
+				<integer>295</integer>
+			</dict>
+			<key>ID</key>
+			<integer>312</integer>
+			<key>Points</key>
+			<array>
+				<string>{2404, 576.51599999999985}</string>
+				<string>{1752, 685.51599999999996}</string>
+			</array>
+			<key>Style</key>
+			<dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>HeadArrow</key>
+					<string>FilledArrow</string>
+					<key>Legacy</key>
+					<false/>
+					<key>TailArrow</key>
+					<string>0</string>
+				</dict>
+			</dict>
+			<key>Tail</key>
+			<dict>
+				<key>ID</key>
+				<integer>311</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>Bounds</key>
+			<string>{{2249.5118096219271, 522.65773179480027}, {308.97638075614537, 107.71653641039927}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>FontInfo</key>
+			<dict>
+				<key>Size</key>
+				<real>12</real>
+			</dict>
+			<key>ID</key>
+			<integer>311</integer>
+			<key>Shape</key>
+			<string>HorizontalTriangle</string>
+			<key>Style</key>
+			<dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+			</dict>
+			<key>Text</key>
+			<dict>
+				<key>Text</key>
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;\csgray\c100000;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
+
+\f0\fs24 \cf0 Population masculine et feminine francaise v6.csv}</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Class</key>
+			<string>LineGraphic</string>
+			<key>FontInfo</key>
+			<dict>
+				<key>Font</key>
+				<string>Helvetica</string>
+				<key>Size</key>
+				<real>12</real>
+			</dict>
+			<key>Head</key>
+			<dict>
+				<key>ID</key>
+				<integer>295</integer>
+			</dict>
+			<key>ID</key>
+			<integer>310</integer>
+			<key>Points</key>
+			<array>
+				<string>{2078, 576.51600000000008}</string>
+				<string>{1752, 685.51599999999996}</string>
+			</array>
+			<key>Style</key>
+			<dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>HeadArrow</key>
+					<string>FilledArrow</string>
+					<key>Legacy</key>
+					<false/>
+					<key>TailArrow</key>
+					<string>0</string>
+				</dict>
+			</dict>
+			<key>Tail</key>
+			<dict>
+				<key>ID</key>
+				<integer>309</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>Bounds</key>
+			<string>{{1923.5118096219273, 522.65773179480038}, {308.97638075614537, 107.71653641039927}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>FontInfo</key>
+			<dict>
+				<key>Size</key>
+				<real>12</real>
+			</dict>
+			<key>ID</key>
+			<integer>309</integer>
+			<key>Shape</key>
+			<string>HorizontalTriangle</string>
+			<key>Style</key>
+			<dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+			</dict>
+			<key>Text</key>
+			<dict>
+				<key>Text</key>
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;\csgray\c100000;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
+
+\f0\fs24 \cf0 industries professions liberales.dta}</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Class</key>
+			<string>LineGraphic</string>
+			<key>FontInfo</key>
+			<dict>
+				<key>Font</key>
+				<string>Helvetica</string>
+				<key>Size</key>
+				<real>12</real>
+			</dict>
+			<key>Head</key>
+			<dict>
+				<key>ID</key>
+				<integer>295</integer>
+			</dict>
+			<key>ID</key>
+			<integer>308</integer>
+			<key>Points</key>
+			<array>
+				<string>{1752, 576.51600000000008}</string>
+				<string>{1752, 685.51599999999996}</string>
+			</array>
+			<key>Style</key>
+			<dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>HeadArrow</key>
+					<string>FilledArrow</string>
+					<key>Legacy</key>
+					<false/>
+					<key>TailArrow</key>
+					<string>0</string>
+				</dict>
+			</dict>
+			<key>Tail</key>
+			<dict>
+				<key>ID</key>
+				<integer>307</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>Bounds</key>
+			<string>{{1597.5118096219273, 522.65773179480038}, {308.97638075614537, 107.71653641039927}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>FontInfo</key>
+			<dict>
+				<key>Size</key>
+				<real>12</real>
+			</dict>
+			<key>ID</key>
+			<integer>307</integer>
+			<key>Shape</key>
+			<string>HorizontalTriangle</string>
+			<key>Style</key>
+			<dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+			</dict>
+			<key>Text</key>
+			<dict>
+				<key>Text</key>
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;\csgray\c100000;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
+
+\f0\fs24 \cf0 dist_culturelle_full.dta}</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Class</key>
+			<string>LineGraphic</string>
+			<key>FontInfo</key>
+			<dict>
+				<key>Font</key>
+				<string>Helvetica</string>
+				<key>Size</key>
+				<real>12</real>
+			</dict>
+			<key>Head</key>
+			<dict>
+				<key>ID</key>
+				<integer>295</integer>
+			</dict>
+			<key>ID</key>
+			<integer>306</integer>
+			<key>Points</key>
+			<array>
+				<string>{1426, 576.51599999999985}</string>
+				<string>{1752, 685.51599999999996}</string>
+			</array>
+			<key>Style</key>
+			<dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>HeadArrow</key>
+					<string>FilledArrow</string>
+					<key>Legacy</key>
+					<false/>
+					<key>TailArrow</key>
+					<string>0</string>
+				</dict>
+			</dict>
+			<key>Tail</key>
+			<dict>
+				<key>ID</key>
+				<integer>305</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>Bounds</key>
+			<string>{{1271.5118096219273, 522.65773179480027}, {308.97638075614537, 107.71653641039927}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>FontInfo</key>
+			<dict>
+				<key>Size</key>
+				<real>12</real>
+			</dict>
+			<key>ID</key>
+			<integer>305</integer>
+			<key>Shape</key>
+			<string>HorizontalTriangle</string>
+			<key>Style</key>
+			<dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+			</dict>
+			<key>Text</key>
+			<dict>
+				<key>Text</key>
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;\csgray\c100000;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
+
+\f0\fs24 \cf0 iv.dta}</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Class</key>
+			<string>LineGraphic</string>
+			<key>FontInfo</key>
+			<dict>
+				<key>Font</key>
+				<string>Helvetica</string>
+				<key>Size</key>
+				<real>12</real>
+			</dict>
+			<key>Head</key>
+			<dict>
+				<key>ID</key>
+				<integer>295</integer>
+			</dict>
+			<key>ID</key>
+			<integer>304</integer>
+			<key>Points</key>
+			<array>
+				<string>{92, 354.51599999999996}</string>
+				<string>{1752, 685.51599999999996}</string>
+			</array>
+			<key>Style</key>
+			<dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>HeadArrow</key>
+					<string>FilledArrow</string>
+					<key>Legacy</key>
+					<false/>
+					<key>TailArrow</key>
+					<string>0</string>
+				</dict>
+			</dict>
+			<key>Tail</key>
+			<dict>
+				<key>ID</key>
+				<integer>288</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>Class</key>
+			<string>LineGraphic</string>
+			<key>FontInfo</key>
+			<dict>
+				<key>Font</key>
+				<string>Helvetica</string>
+				<key>Size</key>
+				<real>12</real>
+			</dict>
+			<key>Head</key>
+			<dict>
+				<key>ID</key>
+				<integer>295</integer>
+			</dict>
+			<key>ID</key>
+			<integer>303</integer>
+			<key>Points</key>
+			<array>
+				<string>{3632, 576.51599999999996}</string>
+				<string>{1752, 685.51599999999996}</string>
+			</array>
+			<key>Style</key>
+			<dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>HeadArrow</key>
+					<string>FilledArrow</string>
+					<key>Legacy</key>
+					<false/>
+					<key>TailArrow</key>
+					<string>0</string>
+				</dict>
+			</dict>
+			<key>Tail</key>
+			<dict>
+				<key>ID</key>
+				<integer>223</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>Class</key>
+			<string>LineGraphic</string>
+			<key>FontInfo</key>
+			<dict>
+				<key>Font</key>
+				<string>Helvetica</string>
+				<key>Size</key>
+				<real>12</real>
+			</dict>
+			<key>Head</key>
+			<dict>
+				<key>ID</key>
+				<integer>295</integer>
+			</dict>
+			<key>ID</key>
+			<integer>302</integer>
+			<key>Points</key>
+			<array>
+				<string>{1100, 576.51600000000008}</string>
+				<string>{1752, 685.51599999999996}</string>
+			</array>
+			<key>Style</key>
+			<dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>HeadArrow</key>
+					<string>FilledArrow</string>
+					<key>Legacy</key>
+					<false/>
+					<key>TailArrow</key>
+					<string>0</string>
+				</dict>
+			</dict>
+			<key>Tail</key>
+			<dict>
+				<key>ID</key>
+				<integer>301</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>Bounds</key>
+			<string>{{945.51180962192723, 522.65773179480038}, {308.97638075614537, 107.71653641039927}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>FontInfo</key>
+			<dict>
+				<key>Size</key>
+				<real>12</real>
+			</dict>
+			<key>ID</key>
+			<integer>301</integer>
+			<key>Shape</key>
+			<string>HorizontalTriangle</string>
+			<key>Style</key>
+			<dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+			</dict>
+			<key>Text</key>
+			<dict>
+				<key>Text</key>
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;\csgray\c100000;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
+
+\f0\fs24 \cf0 Deux_Matrices_Recensement.dta}</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Class</key>
+			<string>LineGraphic</string>
+			<key>FontInfo</key>
+			<dict>
+				<key>Font</key>
+				<string>Helvetica</string>
+				<key>Size</key>
+				<real>12</real>
+			</dict>
+			<key>Head</key>
+			<dict>
+				<key>ID</key>
+				<integer>295</integer>
+			</dict>
+			<key>ID</key>
+			<integer>300</integer>
+			<key>Points</key>
+			<array>
+				<string>{774, 576.51599999999985}</string>
+				<string>{1752, 685.51599999999996}</string>
+			</array>
+			<key>Style</key>
+			<dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>HeadArrow</key>
+					<string>FilledArrow</string>
+					<key>Legacy</key>
+					<false/>
+					<key>TailArrow</key>
+					<string>0</string>
+				</dict>
+			</dict>
+			<key>Tail</key>
+			<dict>
+				<key>ID</key>
+				<integer>299</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>Bounds</key>
+			<string>{{619.51180962192734, 522.65773179480027}, {308.97638075614537, 107.71653641039927}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>FontInfo</key>
+			<dict>
+				<key>Size</key>
+				<real>12</real>
+			</dict>
+			<key>ID</key>
+			<integer>299</integer>
+			<key>Shape</key>
+			<string>HorizontalTriangle</string>
+			<key>Style</key>
+			<dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+			</dict>
+			<key>Text</key>
+			<dict>
+				<key>Text</key>
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;\csgray\c100000;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
+
+\f0\fs24 \cf0 totalfertilityrate1811-1911.dta}</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Class</key>
+			<string>LineGraphic</string>
+			<key>FontInfo</key>
+			<dict>
+				<key>Font</key>
+				<string>Helvetica</string>
+				<key>Size</key>
+				<real>12</real>
+			</dict>
+			<key>Head</key>
+			<dict>
+				<key>ID</key>
+				<integer>295</integer>
+			</dict>
+			<key>ID</key>
+			<integer>298</integer>
+			<key>Points</key>
+			<array>
+				<string>{448, 576.51599999999985}</string>
+				<string>{1752, 685.51599999999996}</string>
+			</array>
+			<key>Style</key>
+			<dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>HeadArrow</key>
+					<string>FilledArrow</string>
+					<key>Legacy</key>
+					<false/>
+					<key>TailArrow</key>
+					<string>0</string>
+				</dict>
+			</dict>
+			<key>Tail</key>
+			<dict>
+				<key>ID</key>
+				<integer>297</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>Bounds</key>
+			<string>{{293.51180962192734, 522.65773179480027}, {308.97638075614537, 107.71653641039927}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>FontInfo</key>
+			<dict>
+				<key>Size</key>
+				<real>12</real>
+			</dict>
+			<key>ID</key>
+			<integer>297</integer>
+			<key>Shape</key>
+			<string>HorizontalTriangle</string>
+			<key>Style</key>
+			<dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+			</dict>
+			<key>Text</key>
+			<dict>
+				<key>Text</key>
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;\csgray\c100000;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
+
+\f0\fs24 \cf0 bonneuil.dta}</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Class</key>
+			<string>LineGraphic</string>
+			<key>FontInfo</key>
+			<dict>
+				<key>Font</key>
+				<string>Helvetica</string>
+				<key>Size</key>
+				<real>12</real>
+			</dict>
+			<key>Head</key>
+			<dict>
+				<key>ID</key>
+				<integer>295</integer>
+			</dict>
+			<key>ID</key>
 			<integer>296</integer>
 			<key>Points</key>
 			<array>
-				<string>{959, 576.50800000000004}</string>
-				<string>{959, 677.50800000000004}</string>
+				<string>{198, 576.51599999999996}</string>
+				<string>{1752, 685.51599999999996}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -93,7 +973,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{888.5, 659.0139967041016}, {141, 36.988006591796875}}</string>
+			<string>{{1681.5, 667.02199670410153}, {141, 36.988006591796875}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -150,8 +1030,8 @@ AssemblageBDD.do}</string>
 			<integer>294</integer>
 			<key>Points</key>
 			<array>
-				<string>{959, 475.50800000000004}</string>
-				<string>{959, 576.50800000000004}</string>
+				<string>{233, 467.51599999999996}</string>
+				<string>{198, 576.51599999999996}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -178,7 +1058,7 @@ AssemblageBDD.do}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{880.49511036750835, 530.41154141672769}, {157.00977926498331, 92.192917166544646}}</string>
+			<string>{{119.49511036750833, 530.41954141672761}, {157.00977926498331, 92.192917166544646}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -239,8 +1119,8 @@ Matrices_TRA_Recens.dta}</string>
 			<integer>292</integer>
 			<key>Points</key>
 			<array>
-				<string>{959, 362.50800000000004}</string>
-				<string>{959, 475.50800000000004}</string>
+				<string>{268, 354.51599999999996}</string>
+				<string>{233, 467.51599999999996}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -267,7 +1147,7 @@ Matrices_TRA_Recens.dta}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{856.90944377794051, 305.11613910892822}, {204.18111244411909, 114.78372178214363}}</string>
+			<string>{{165.90944377794042, 297.12413910892815}, {204.18111244411909, 114.78372178214363}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -320,8 +1200,8 @@ Matrices_TRA_Recens.dta}</string>
 			<integer>290</integer>
 			<key>Points</key>
 			<array>
-				<string>{1505, 362.50800000000004}</string>
-				<string>{959, 475.50800000000004}</string>
+				<string>{1231, 354.51599999999996}</string>
+				<string>{233, 467.51599999999996}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -365,8 +1245,8 @@ Matrices_TRA_Recens.dta}</string>
 			<integer>289</integer>
 			<key>Points</key>
 			<array>
-				<string>{783, 362.50800000000004}</string>
-				<string>{959, 475.50800000000004}</string>
+				<string>{92, 354.51599999999996}</string>
+				<string>{233, 467.51599999999996}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -393,7 +1273,7 @@ Matrices_TRA_Recens.dta}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{726.96456378496543, 312.53063660576407}, {112.07087243006902, 99.95472678847193}}</string>
+			<string>{{35.964563784965492, 304.538636605764}, {112.07087243006902, 99.95472678847193}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -429,7 +1309,7 @@ Matrices_TRA_Recens.dta}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{888.5, 457.0139967041016}, {141, 36.988006591796875}}</string>
+			<string>{{162.5, 449.02199670410153}, {141, 36.988006591796875}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -486,8 +1366,8 @@ Pour TRA_Recens.do}</string>
 			<integer>286</integer>
 			<key>Points</key>
 			<array>
-				<string>{2472, 140.50800000000004}</string>
-				<string>{1331, 249.50800000000004}</string>
+				<string>{4114, 132.51599999999996}</string>
+				<string>{2973, 241.51599999999996}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -514,7 +1394,7 @@ Pour TRA_Recens.do}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{2317.5118096219271, 86.649731794800417}, {308.97638075614537, 107.71653641039927}}</string>
+			<string>{{3959.5118096219271, 78.657731794800341}, {308.97638075614537, 107.71653641039927}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -567,8 +1447,8 @@ Pour TRA_Recens.do}</string>
 			<integer>284</integer>
 			<key>Points</key>
 			<array>
-				<string>{2146, 140.50800000000004}</string>
-				<string>{1331, 249.50800000000004}</string>
+				<string>{3788, 132.51599999999996}</string>
+				<string>{2973, 241.51599999999996}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -595,7 +1475,7 @@ Pour TRA_Recens.do}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{1991.5118096219273, 86.649731794800417}, {308.97638075614537, 107.71653641039927}}</string>
+			<string>{{3633.5118096219271, 78.657731794800341}, {308.97638075614537, 107.71653641039927}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -648,8 +1528,8 @@ Pour TRA_Recens.do}</string>
 			<integer>282</integer>
 			<key>Points</key>
 			<array>
-				<string>{1820, 140.50800000000004}</string>
-				<string>{1331, 249.50800000000004}</string>
+				<string>{3462, 132.51599999999996}</string>
+				<string>{2973, 241.51599999999996}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -676,7 +1556,7 @@ Pour TRA_Recens.do}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{1665.5118096219273, 86.649731794800417}, {308.97638075614537, 107.71653641039927}}</string>
+			<string>{{3307.5118096219271, 78.657731794800341}, {308.97638075614537, 107.71653641039927}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -729,8 +1609,8 @@ Pour TRA_Recens.do}</string>
 			<integer>280</integer>
 			<key>Points</key>
 			<array>
-				<string>{1494, 140.50800000000004}</string>
-				<string>{1331, 249.50800000000004}</string>
+				<string>{3136, 132.51599999999996}</string>
+				<string>{2973, 241.51599999999996}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -757,7 +1637,7 @@ Pour TRA_Recens.do}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{1339.5118096219273, 86.649731794800417}, {308.97638075614537, 107.71653641039927}}</string>
+			<string>{{2981.5118096219271, 78.657731794800341}, {308.97638075614537, 107.71653641039927}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -810,8 +1690,8 @@ Pour TRA_Recens.do}</string>
 			<integer>241</integer>
 			<key>Points</key>
 			<array>
-				<string>{1331, 249.50800000000004}</string>
-				<string>{1505, 362.50800000000004}</string>
+				<string>{2973, 241.51599999999996}</string>
+				<string>{1231, 354.51599999999996}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -838,7 +1718,7 @@ Pour TRA_Recens.do}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{1426.4951103675082, 316.41154141672769}, {157.00977926498331, 92.192917166544646}}</string>
+			<string>{{1152.4951103675085, 308.41954141672761}, {157.00977926498331, 92.192917166544646}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -897,8 +1777,8 @@ Pour TRA_Recens.do}</string>
 			<integer>230</integer>
 			<key>Points</key>
 			<array>
-				<string>{1168, 140.50800000000004}</string>
-				<string>{1331, 249.50800000000004}</string>
+				<string>{2810, 132.51599999999996}</string>
+				<string>{2973, 241.51599999999996}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -925,7 +1805,7 @@ Pour TRA_Recens.do}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{1013.5118096219272, 86.649731794800417}, {308.97638075614537, 107.71653641039927}}</string>
+			<string>{{2655.5118096219271, 78.657731794800341}, {308.97638075614537, 107.71653641039927}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -978,8 +1858,8 @@ Pour TRA_Recens.do}</string>
 			<integer>226</integer>
 			<key>Points</key>
 			<array>
-				<string>{1331, 249.50800000000004}</string>
-				<string>{1331, 362.50800000000004}</string>
+				<string>{2973, 241.51599999999996}</string>
+				<string>{2973, 354.51599999999996}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1006,7 +1886,7 @@ Pour TRA_Recens.do}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{1252.4951103675085, 316.41154141672769}, {157.00977926498331, 92.192917166544646}}</string>
+			<string>{{2894.4951103675085, 308.41954141672761}, {157.00977926498331, 92.192917166544646}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -1067,8 +1947,8 @@ Marges_migrations.dta}</string>
 			<integer>224</integer>
 			<key>Points</key>
 			<array>
-				<string>{1331, 249.50800000000004}</string>
-				<string>{1157, 362.50800000000004}</string>
+				<string>{2973, 241.51599999999996}</string>
+				<string>{3632, 576.51599999999996}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1095,7 +1975,7 @@ Marges_migrations.dta}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{1078.4951103675085, 316.41154141672774}, {157.00977926498331, 92.192917166544646}}</string>
+			<string>{{3553.4951103675085, 530.41954141672761}, {157.00977926498331, 92.192917166544646}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -1156,8 +2036,8 @@ Matrice_complete_1901+1911.dta}</string>
 			<integer>222</integer>
 			<key>Points</key>
 			<array>
-				<string>{842, 140.50800000000004}</string>
-				<string>{1331, 249.50800000000004}</string>
+				<string>{2484, 132.51599999999996}</string>
+				<string>{2973, 241.51599999999996}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1184,7 +2064,7 @@ Matrice_complete_1901+1911.dta}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{687.51180962192734, 86.649731794800417}, {308.97638075614537, 107.71653641039927}}</string>
+			<string>{{2329.5118096219271, 78.657731794800341}, {308.97638075614537, 107.71653641039927}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -1235,8 +2115,8 @@ Matrice_complete_1901+1911.dta}</string>
 			<integer>220</integer>
 			<key>Points</key>
 			<array>
-				<string>{516, 140.50800000000004}</string>
-				<string>{1331, 249.50800000000004}</string>
+				<string>{2158, 132.51599999999996}</string>
+				<string>{2973, 241.51599999999996}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1263,7 +2143,7 @@ Matrice_complete_1901+1911.dta}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{361.51180962192734, 86.649731794800417}, {308.97638075614537, 107.71653641039927}}</string>
+			<string>{{2003.5118096219271, 78.657731794800341}, {308.97638075614537, 107.71653641039927}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -1314,8 +2194,8 @@ Matrice_complete_1901+1911.dta}</string>
 			<integer>218</integer>
 			<key>Points</key>
 			<array>
-				<string>{190, 140.50800000000004}</string>
-				<string>{1331, 249.50800000000004}</string>
+				<string>{1832, 132.51599999999996}</string>
+				<string>{2973, 241.51599999999996}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1342,7 +2222,7 @@ Matrice_complete_1901+1911.dta}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{35.51180962192732, 86.649731794800417}, {308.97638075614537, 107.71653641039927}}</string>
+			<string>{{1677.5118096219273, 78.657731794800341}, {308.97638075614537, 107.71653641039927}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -1376,7 +2256,7 @@ Matrice_complete_1901+1911.dta}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{1260.5, 231.0139967041016}, {141, 36.988006591796875}}</string>
+			<string>{{2902.5, 223.02199670410153}, {141, 36.988006591796875}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -1422,7 +2302,7 @@ Pour matrices et marges recensement.do}</string>
 	<key>GuidesVisible</key>
 	<string>YES</string>
 	<key>HPages</key>
-	<integer>5</integer>
+	<integer>8</integer>
 	<key>ImageCounter</key>
 	<integer>1</integer>
 	<key>KeepToScale</key>
@@ -1472,7 +2352,7 @@ Pour matrices et marges recensement.do}</string>
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2016-11-10 14:15:15 +0000</string>
+	<string>2016-11-15 13:51:11 +0000</string>
 	<key>Modifier</key>
 	<string>Guillaume Daudin</string>
 	<key>NotesVisible</key>
@@ -1550,17 +2430,17 @@ Pour matrices et marges recensement.do}</string>
 		<key>Expanded_Canvases</key>
 		<array/>
 		<key>Frame</key>
-		<string>{{-0, -0}, {1384, 1177}}</string>
+		<string>{{-0, -0}, {1472, 1177}}</string>
 		<key>ShowInfo</key>
 		<true/>
 		<key>Sidebar</key>
 		<true/>
 		<key>SidebarWidth</key>
-		<integer>200</integer>
+		<integer>278</integer>
 		<key>TopSlabHeight</key>
 		<real>250</real>
 		<key>VisibleRegion</key>
-		<string>{{628, -142}, {886, 1067}}</string>
+		<string>{{1694.5, -142}, {896, 1067}}</string>
 		<key>Zoom</key>
 		<real>1</real>
 		<key>ZoomValues</key>
