@@ -7,14 +7,14 @@
 	<key>ApplicationVersion</key>
 	<array>
 		<string>com.omnigroup.OmniGraffle6</string>
-		<string>169.20.0.267128</string>
+		<string>169.23.0.276662</string>
 	</array>
 	<key>AutoAdjust</key>
 	<true/>
 	<key>BackgroundGraphic</key>
 	<dict>
 		<key>Bounds</key>
-		<string>{{0, 0}, {4472.0001983642578, 783}}</string>
+		<string>{{0, 0}, {5031, 783}}</string>
 		<key>Class</key>
 		<string>SolidGraphic</string>
 		<key>ID</key>
@@ -59,14 +59,350 @@
 			<key>Head</key>
 			<dict>
 				<key>ID</key>
+				<integer>338</integer>
+			</dict>
+			<key>ID</key>
+			<integer>339</integer>
+			<key>Points</key>
+			<array>
+				<string>{4039, 625.51199999999994}</string>
+				<string>{4039, 726.51199999999994}</string>
+			</array>
+			<key>Style</key>
+			<dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>HeadArrow</key>
+					<string>FilledArrow</string>
+					<key>Legacy</key>
+					<false/>
+					<key>TailArrow</key>
+					<string>0</string>
+				</dict>
+			</dict>
+			<key>Tail</key>
+			<dict>
+				<key>ID</key>
+				<integer>328</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>Bounds</key>
+			<string>{{3960.4951103675085, 680.41554141672759}, {157.00977926498331, 92.192917166544646}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>FontInfo</key>
+			<dict>
+				<key>Font</key>
+				<string>Helvetica</string>
+				<key>NSKern</key>
+				<real>0.0</real>
+				<key>Size</key>
+				<real>12</real>
+			</dict>
+			<key>ID</key>
+			<integer>338</integer>
+			<key>Shape</key>
+			<string>Circle</string>
+			<key>Style</key>
+			<dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+			</dict>
+			<key>Text</key>
+			<dict>
+				<key>Align</key>
+				<integer>0</integer>
+				<key>Text</key>
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf810
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf0 \expnd0\expndtw0\kerning0
+Donn\'e9es_pour_TRARE.dta}</string>
+				<key>VerticalPad</key>
+				<real>0.0</real>
+			</dict>
+		</dict>
+		<dict>
+			<key>Class</key>
+			<string>LineGraphic</string>
+			<key>FontInfo</key>
+			<dict>
+				<key>Font</key>
+				<string>Helvetica</string>
+				<key>Size</key>
+				<real>12</real>
+			</dict>
+			<key>Head</key>
+			<dict>
+				<key>ID</key>
+				<integer>328</integer>
+			</dict>
+			<key>ID</key>
+			<integer>337</integer>
+			<key>Points</key>
+			<array>
+				<string>{3713, 516.51199999999994}</string>
+				<string>{4039, 625.51199999999994}</string>
+			</array>
+			<key>Style</key>
+			<dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>HeadArrow</key>
+					<string>FilledArrow</string>
+					<key>Legacy</key>
+					<false/>
+					<key>TailArrow</key>
+					<string>0</string>
+				</dict>
+			</dict>
+			<key>Tail</key>
+			<dict>
+				<key>ID</key>
+				<integer>319</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>Class</key>
+			<string>LineGraphic</string>
+			<key>FontInfo</key>
+			<dict>
+				<key>Font</key>
+				<string>Helvetica</string>
+				<key>Size</key>
+				<real>12</real>
+			</dict>
+			<key>Head</key>
+			<dict>
+				<key>ID</key>
+				<integer>328</integer>
+			</dict>
+			<key>ID</key>
+			<integer>336</integer>
+			<key>Points</key>
+			<array>
+				<string>{4365, 516.51199999999994}</string>
+				<string>{4039, 625.51199999999994}</string>
+			</array>
+			<key>Style</key>
+			<dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>HeadArrow</key>
+					<string>FilledArrow</string>
+					<key>Legacy</key>
+					<false/>
+					<key>TailArrow</key>
+					<string>0</string>
+				</dict>
+			</dict>
+			<key>Tail</key>
+			<dict>
+				<key>ID</key>
+				<integer>335</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>Bounds</key>
+			<string>{{4210.5118096219276, 462.65373179480036}, {308.97638075614537, 107.71653641039927}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>FontInfo</key>
+			<dict>
+				<key>Size</key>
+				<real>12</real>
+			</dict>
+			<key>ID</key>
+			<integer>335</integer>
+			<key>Shape</key>
+			<string>HorizontalTriangle</string>
+			<key>Style</key>
+			<dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+			</dict>
+			<key>Text</key>
+			<dict>
+				<key>Align</key>
+				<integer>0</integer>
+				<key>Text</key>
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf810
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Mortalit\'e9 Bonneuil.xls}</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Class</key>
+			<string>LineGraphic</string>
+			<key>FontInfo</key>
+			<dict>
+				<key>Font</key>
+				<string>Helvetica</string>
+				<key>Size</key>
+				<real>12</real>
+			</dict>
+			<key>Head</key>
+			<dict>
+				<key>ID</key>
+				<integer>328</integer>
+			</dict>
+			<key>ID</key>
+			<integer>334</integer>
+			<key>Points</key>
+			<array>
+				<string>{4039, 516.51199999999994}</string>
+				<string>{4039, 625.51199999999994}</string>
+			</array>
+			<key>Style</key>
+			<dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>HeadArrow</key>
+					<string>FilledArrow</string>
+					<key>Legacy</key>
+					<false/>
+					<key>TailArrow</key>
+					<string>0</string>
+				</dict>
+			</dict>
+			<key>Tail</key>
+			<dict>
+				<key>ID</key>
+				<integer>331</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>Bounds</key>
+			<string>{{3884.5118096219271, 462.65373179480036}, {308.97638075614537, 107.71653641039927}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>FontInfo</key>
+			<dict>
+				<key>Size</key>
+				<real>12</real>
+			</dict>
+			<key>ID</key>
+			<integer>331</integer>
+			<key>Shape</key>
+			<string>HorizontalTriangle</string>
+			<key>Style</key>
+			<dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+			</dict>
+			<key>Text</key>
+			<dict>
+				<key>Align</key>
+				<integer>0</integer>
+				<key>Text</key>
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf810
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 naissances d\'e9c\'e8s 1801-1861 par 5 ans.xlsx}</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Bounds</key>
+			<string>{{3968.5, 607.01799670410151}, {141, 36.988006591796875}}</string>
+			<key>Class</key>
+			<string>ShapedGraphic</string>
+			<key>FontInfo</key>
+			<dict>
+				<key>Font</key>
+				<string>Helvetica</string>
+				<key>NSKern</key>
+				<real>0.0</real>
+				<key>Size</key>
+				<real>12</real>
+			</dict>
+			<key>ID</key>
+			<integer>328</integer>
+			<key>Style</key>
+			<dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+			</dict>
+			<key>Text</key>
+			<dict>
+				<key>Align</key>
+				<integer>0</integer>
+				<key>Text</key>
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf810
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf0 \expnd0\expndtw0\kerning0
+Pour donn\'e9es TRARE}</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Class</key>
+			<string>LineGraphic</string>
+			<key>FontInfo</key>
+			<dict>
+				<key>Font</key>
+				<string>Helvetica</string>
+				<key>Size</key>
+				<real>12</real>
+			</dict>
+			<key>Head</key>
+			<dict>
+				<key>ID</key>
 				<integer>321</integer>
 			</dict>
 			<key>ID</key>
 			<integer>326</integer>
 			<key>Points</key>
 			<array>
-				<string>{360, 132.48400000000004}</string>
-				<string>{249, 245.48400000000004}</string>
+				<string>{360, 68.512}</string>
+				<string>{249, 181.512}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -93,7 +429,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{257.90944377794045, 75.092139108928222}, {204.18111244411909, 114.78372178214363}}</string>
+			<string>{{257.90944377794045, 11.120139108928191}, {204.18111244411909, 114.78372178214363}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -118,10 +454,10 @@
 				<key>Align</key>
 				<integer>0</integer>
 				<key>Text</key>
-				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf810
 {\fonttbl\f0\fswiss\fcharset0 Helvetica;}
 {\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;\csgray\c100000;}
+{\*\expandedcolortbl;;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 
 \f0\fs24 \cf0 ListeDptTRA.dta}</string>
@@ -146,8 +482,8 @@
 			<integer>324</integer>
 			<key>Points</key>
 			<array>
-				<string>{138, 132.48400000000004}</string>
-				<string>{249, 245.48400000000004}</string>
+				<string>{138, 68.512}</string>
+				<string>{249, 181.512}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -174,7 +510,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{35.909443777940453, 75.092139108928222}, {204.18111244411909, 114.78372178214363}}</string>
+			<string>{{35.909443777940453, 11.120139108928191}, {204.18111244411909, 114.78372178214363}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -199,10 +535,10 @@
 				<key>Align</key>
 				<integer>0</integer>
 				<key>Text</key>
-				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf810
 {\fonttbl\f0\fswiss\fcharset0 Helvetica;}
 {\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;\csgray\c100000;}
+{\*\expandedcolortbl;;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 
 \f0\fs24 \cf0 BaseTRA_Modif.dta}</string>
@@ -227,8 +563,8 @@
 			<integer>322</integer>
 			<key>Points</key>
 			<array>
-				<string>{249, 245.48400000000004}</string>
-				<string>{249, 358.48400000000004}</string>
+				<string>{249, 181.512}</string>
+				<string>{249, 294.512}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -255,7 +591,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{178.5, 226.9899967041016}, {141, 36.988006591796875}}</string>
+			<string>{{178.5, 163.01799670410156}, {141, 36.988006591796875}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -282,10 +618,10 @@
 				<key>Align</key>
 				<integer>0</integer>
 				<key>Text</key>
-				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf810
 {\fonttbl\f0\fswiss\fcharset0 Helvetica;}
 {\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;\csgray\c100000;}
+{\*\expandedcolortbl;;}
 \deftab720
 \pard\pardeftab720\partightenfactor0
 
@@ -312,8 +648,8 @@ Faire Matrices Migrations_TRA.do}</string>
 			<integer>320</integer>
 			<key>Points</key>
 			<array>
-				<string>{3539, 580.48399999999992}</string>
-				<string>{1909, 689.48400000000004}</string>
+				<string>{3713, 516.51199999999994}</string>
+				<string>{1909, 625.51199999999994}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -340,7 +676,7 @@ Faire Matrices Migrations_TRA.do}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{3384.5118096219271, 526.62573179480034}, {308.97638075614537, 107.71653641039927}}</string>
+			<string>{{3558.5118096219271, 462.65373179480036}, {308.97638075614537, 107.71653641039927}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -363,10 +699,10 @@ Faire Matrices Migrations_TRA.do}</string>
 			<key>Text</key>
 			<dict>
 				<key>Text</key>
-				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf810
 {\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
 {\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;\csgray\c100000;}
+{\*\expandedcolortbl;;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
 
 \f0\fs24 \cf0 Dpt Noms-Nums.dta}</string>
@@ -391,8 +727,8 @@ Faire Matrices Migrations_TRA.do}</string>
 			<integer>318</integer>
 			<key>Points</key>
 			<array>
-				<string>{3213, 580.48399999999992}</string>
-				<string>{1909, 689.48400000000004}</string>
+				<string>{3213, 516.51199999999994}</string>
+				<string>{1909, 625.51199999999994}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -419,7 +755,7 @@ Faire Matrices Migrations_TRA.do}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{3058.5118096219271, 526.62573179480034}, {308.97638075614537, 107.71653641039927}}</string>
+			<string>{{3058.5118096219271, 462.65373179480036}, {308.97638075614537, 107.71653641039927}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -442,10 +778,10 @@ Faire Matrices Migrations_TRA.do}</string>
 			<key>Text</key>
 			<dict>
 				<key>Text</key>
-				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf810
 {\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
 {\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;\csgray\c100000;}
+{\*\expandedcolortbl;;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
 
 \f0\fs24 \cf0 eleves_pourBDD.dta}</string>
@@ -470,8 +806,8 @@ Faire Matrices Migrations_TRA.do}</string>
 			<integer>314</integer>
 			<key>Points</key>
 			<array>
-				<string>{2887, 580.48399999999992}</string>
-				<string>{1909, 689.48400000000004}</string>
+				<string>{2887, 516.51199999999994}</string>
+				<string>{1909, 625.51199999999994}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -498,7 +834,7 @@ Faire Matrices Migrations_TRA.do}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{2732.5118096219271, 526.62573179480034}, {308.97638075614537, 107.71653641039927}}</string>
+			<string>{{2732.5118096219271, 462.65373179480036}, {308.97638075614537, 107.71653641039927}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -521,10 +857,10 @@ Faire Matrices Migrations_TRA.do}</string>
 			<key>Text</key>
 			<dict>
 				<key>Text</key>
-				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf810
 {\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
 {\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;\csgray\c100000;}
+{\*\expandedcolortbl;;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
 
 \f0\fs24 \cf0 urban6.dta}</string>
@@ -549,8 +885,8 @@ Faire Matrices Migrations_TRA.do}</string>
 			<integer>312</integer>
 			<key>Points</key>
 			<array>
-				<string>{2561, 580.48399999999992}</string>
-				<string>{1909, 689.48400000000004}</string>
+				<string>{2561, 516.51199999999994}</string>
+				<string>{1909, 625.51199999999994}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -577,7 +913,7 @@ Faire Matrices Migrations_TRA.do}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{2406.5118096219271, 526.62573179480034}, {308.97638075614537, 107.71653641039927}}</string>
+			<string>{{2406.5118096219271, 462.65373179480036}, {308.97638075614537, 107.71653641039927}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -600,10 +936,10 @@ Faire Matrices Migrations_TRA.do}</string>
 			<key>Text</key>
 			<dict>
 				<key>Text</key>
-				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf810
 {\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
 {\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;\csgray\c100000;}
+{\*\expandedcolortbl;;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
 
 \f0\fs24 \cf0 Population masculine et feminine francaise v6.csv}</string>
@@ -628,8 +964,8 @@ Faire Matrices Migrations_TRA.do}</string>
 			<integer>310</integer>
 			<key>Points</key>
 			<array>
-				<string>{2235, 580.48399999999992}</string>
-				<string>{1909, 689.48400000000004}</string>
+				<string>{2235, 516.51199999999994}</string>
+				<string>{1909, 625.51199999999994}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -656,7 +992,7 @@ Faire Matrices Migrations_TRA.do}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{2080.5118096219271, 526.62573179480034}, {308.97638075614537, 107.71653641039927}}</string>
+			<string>{{2080.5118096219271, 462.65373179480036}, {308.97638075614537, 107.71653641039927}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -679,10 +1015,10 @@ Faire Matrices Migrations_TRA.do}</string>
 			<key>Text</key>
 			<dict>
 				<key>Text</key>
-				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf810
 {\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
 {\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;\csgray\c100000;}
+{\*\expandedcolortbl;;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
 
 \f0\fs24 \cf0 industries professions liberales.dta}</string>
@@ -707,8 +1043,8 @@ Faire Matrices Migrations_TRA.do}</string>
 			<integer>308</integer>
 			<key>Points</key>
 			<array>
-				<string>{1909, 580.48399999999992}</string>
-				<string>{1909, 689.48400000000004}</string>
+				<string>{1909, 516.51199999999994}</string>
+				<string>{1909, 625.51199999999994}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -735,7 +1071,7 @@ Faire Matrices Migrations_TRA.do}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{1754.5118096219273, 526.62573179480034}, {308.97638075614537, 107.71653641039927}}</string>
+			<string>{{1754.5118096219273, 462.65373179480036}, {308.97638075614537, 107.71653641039927}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -758,10 +1094,10 @@ Faire Matrices Migrations_TRA.do}</string>
 			<key>Text</key>
 			<dict>
 				<key>Text</key>
-				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf810
 {\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
 {\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;\csgray\c100000;}
+{\*\expandedcolortbl;;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
 
 \f0\fs24 \cf0 dist_culturelle_full.dta}</string>
@@ -786,8 +1122,8 @@ Faire Matrices Migrations_TRA.do}</string>
 			<integer>306</integer>
 			<key>Points</key>
 			<array>
-				<string>{1583, 580.48399999999992}</string>
-				<string>{1909, 689.48400000000004}</string>
+				<string>{1583, 516.51199999999994}</string>
+				<string>{1909, 625.51199999999994}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -814,7 +1150,7 @@ Faire Matrices Migrations_TRA.do}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{1428.5118096219273, 526.62573179480034}, {308.97638075614537, 107.71653641039927}}</string>
+			<string>{{1428.5118096219273, 462.65373179480036}, {308.97638075614537, 107.71653641039927}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -837,10 +1173,10 @@ Faire Matrices Migrations_TRA.do}</string>
 			<key>Text</key>
 			<dict>
 				<key>Text</key>
-				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf810
 {\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
 {\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;\csgray\c100000;}
+{\*\expandedcolortbl;;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
 
 \f0\fs24 \cf0 iv.dta}</string>
@@ -865,8 +1201,8 @@ Faire Matrices Migrations_TRA.do}</string>
 			<integer>304</integer>
 			<key>Points</key>
 			<array>
-				<string>{249, 358.48400000000004}</string>
-				<string>{1909, 689.48400000000004}</string>
+				<string>{249, 294.512}</string>
+				<string>{1909, 625.51199999999994}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -910,8 +1246,8 @@ Faire Matrices Migrations_TRA.do}</string>
 			<integer>303</integer>
 			<key>Points</key>
 			<array>
-				<string>{3789, 580.48400000000004}</string>
-				<string>{1909, 689.48400000000004}</string>
+				<string>{3463, 516.51199999999994}</string>
+				<string>{1909, 625.51199999999994}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -955,8 +1291,8 @@ Faire Matrices Migrations_TRA.do}</string>
 			<integer>302</integer>
 			<key>Points</key>
 			<array>
-				<string>{1257, 580.48399999999992}</string>
-				<string>{1909, 689.48400000000004}</string>
+				<string>{1257, 516.51199999999994}</string>
+				<string>{1909, 625.51199999999994}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -983,7 +1319,7 @@ Faire Matrices Migrations_TRA.do}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{1102.5118096219273, 526.62573179480034}, {308.97638075614537, 107.71653641039927}}</string>
+			<string>{{1102.5118096219273, 462.65373179480036}, {308.97638075614537, 107.71653641039927}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -1006,10 +1342,10 @@ Faire Matrices Migrations_TRA.do}</string>
 			<key>Text</key>
 			<dict>
 				<key>Text</key>
-				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf810
 {\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
 {\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;\csgray\c100000;}
+{\*\expandedcolortbl;;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
 
 \f0\fs24 \cf0 Deux_Matrices_Recensement.dta}</string>
@@ -1034,8 +1370,8 @@ Faire Matrices Migrations_TRA.do}</string>
 			<integer>300</integer>
 			<key>Points</key>
 			<array>
-				<string>{931, 580.48399999999992}</string>
-				<string>{1909, 689.48400000000004}</string>
+				<string>{931, 516.51199999999994}</string>
+				<string>{1909, 625.51199999999994}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1062,7 +1398,7 @@ Faire Matrices Migrations_TRA.do}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{776.51180962192734, 526.62573179480034}, {308.97638075614537, 107.71653641039927}}</string>
+			<string>{{776.51180962192734, 462.65373179480036}, {308.97638075614537, 107.71653641039927}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -1085,10 +1421,10 @@ Faire Matrices Migrations_TRA.do}</string>
 			<key>Text</key>
 			<dict>
 				<key>Text</key>
-				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf810
 {\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
 {\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;\csgray\c100000;}
+{\*\expandedcolortbl;;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
 
 \f0\fs24 \cf0 totalfertilityrate1811-1911.dta}</string>
@@ -1113,8 +1449,8 @@ Faire Matrices Migrations_TRA.do}</string>
 			<integer>298</integer>
 			<key>Points</key>
 			<array>
-				<string>{605, 580.48399999999992}</string>
-				<string>{1909, 689.48400000000004}</string>
+				<string>{605, 516.51199999999994}</string>
+				<string>{1909, 625.51199999999994}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1141,7 +1477,7 @@ Faire Matrices Migrations_TRA.do}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{450.51180962192728, 526.62573179480034}, {308.97638075614537, 107.71653641039927}}</string>
+			<string>{{450.51180962192728, 462.65373179480036}, {308.97638075614537, 107.71653641039927}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -1164,10 +1500,10 @@ Faire Matrices Migrations_TRA.do}</string>
 			<key>Text</key>
 			<dict>
 				<key>Text</key>
-				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf810
 {\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
 {\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;\csgray\c100000;}
+{\*\expandedcolortbl;;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
 
 \f0\fs24 \cf0 bonneuil.dta}</string>
@@ -1192,8 +1528,8 @@ Faire Matrices Migrations_TRA.do}</string>
 			<integer>296</integer>
 			<key>Points</key>
 			<array>
-				<string>{355, 580.48400000000004}</string>
-				<string>{1909, 689.48400000000004}</string>
+				<string>{355, 516.51199999999994}</string>
+				<string>{1909, 625.51199999999994}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1220,7 +1556,7 @@ Faire Matrices Migrations_TRA.do}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{1838.5, 670.9899967041016}, {141, 36.988006591796875}}</string>
+			<string>{{1838.5, 607.01799670410151}, {141, 36.988006591796875}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -1247,10 +1583,10 @@ Faire Matrices Migrations_TRA.do}</string>
 				<key>Align</key>
 				<integer>0</integer>
 				<key>Text</key>
-				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf810
 {\fonttbl\f0\fswiss\fcharset0 Helvetica;}
 {\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;\csgray\c100000;}
+{\*\expandedcolortbl;;}
 \deftab720
 \pard\pardeftab720\partightenfactor0
 
@@ -1277,8 +1613,8 @@ AssemblageBDD.do}</string>
 			<integer>294</integer>
 			<key>Points</key>
 			<array>
-				<string>{390, 471.48400000000004}</string>
-				<string>{355, 580.48400000000004}</string>
+				<string>{390, 407.512}</string>
+				<string>{355, 516.51199999999994}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1305,7 +1641,7 @@ AssemblageBDD.do}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{276.49511036750835, 534.38754141672769}, {157.00977926498331, 92.192917166544646}}</string>
+			<string>{{276.49511036750835, 470.41554141672765}, {157.00977926498331, 92.192917166544646}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -1334,10 +1670,10 @@ AssemblageBDD.do}</string>
 				<key>Align</key>
 				<integer>0</integer>
 				<key>Text</key>
-				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf810
 {\fonttbl\f0\fswiss\fcharset0 Helvetica;}
 {\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;\csgray\c100000;}
+{\*\expandedcolortbl;;}
 \deftab720
 \pard\pardeftab720\partightenfactor0
 
@@ -1366,8 +1702,8 @@ Matrices_TRA_Recens.dta}</string>
 			<integer>292</integer>
 			<key>Points</key>
 			<array>
-				<string>{425, 358.48400000000004}</string>
-				<string>{390, 471.48400000000004}</string>
+				<string>{425, 294.512}</string>
+				<string>{390, 407.512}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1394,7 +1730,7 @@ Matrices_TRA_Recens.dta}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{322.90944377794045, 301.09213910892822}, {204.18111244411909, 114.78372178214363}}</string>
+			<string>{{322.90944377794045, 237.12013910892819}, {204.18111244411909, 114.78372178214363}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -1419,10 +1755,10 @@ Matrices_TRA_Recens.dta}</string>
 				<key>Align</key>
 				<integer>0</integer>
 				<key>Text</key>
-				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf810
 {\fonttbl\f0\fswiss\fcharset0 Helvetica;}
 {\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;\csgray\c100000;}
+{\*\expandedcolortbl;;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 
 \f0\fs24 \cf0 Pour TRA_Recens_`i'_`j'.dta}</string>
@@ -1447,8 +1783,8 @@ Matrices_TRA_Recens.dta}</string>
 			<integer>290</integer>
 			<key>Points</key>
 			<array>
-				<string>{2371, 358.48400000000004}</string>
-				<string>{390, 471.48400000000004}</string>
+				<string>{2208, 294.512}</string>
+				<string>{390, 407.512}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1492,8 +1828,8 @@ Matrices_TRA_Recens.dta}</string>
 			<integer>289</integer>
 			<key>Points</key>
 			<array>
-				<string>{249, 358.48400000000004}</string>
-				<string>{390, 471.48400000000004}</string>
+				<string>{249, 294.512}</string>
+				<string>{390, 407.512}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1520,7 +1856,7 @@ Matrices_TRA_Recens.dta}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{192.96456378496549, 308.50663660576407}, {112.07087243006902, 99.95472678847193}}</string>
+			<string>{{192.96456378496549, 244.53463660576404}, {112.07087243006902, 99.95472678847193}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -1545,10 +1881,10 @@ Matrices_TRA_Recens.dta}</string>
 				<key>Align</key>
 				<integer>0</integer>
 				<key>Text</key>
-				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf810
 {\fonttbl\f0\fswiss\fcharset0 Helvetica;}
 {\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;\csgray\c100000;}
+{\*\expandedcolortbl;;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 
 \f0\fs24 \cf0 Migr_TRA.dta}</string>
@@ -1556,7 +1892,7 @@ Matrices_TRA_Recens.dta}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{319.5, 452.9899967041016}, {141, 36.988006591796875}}</string>
+			<string>{{319.5, 389.01799670410156}, {141, 36.988006591796875}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -1583,10 +1919,10 @@ Matrices_TRA_Recens.dta}</string>
 				<key>Align</key>
 				<integer>0</integer>
 				<key>Text</key>
-				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf810
 {\fonttbl\f0\fswiss\fcharset0 Helvetica;}
 {\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;\csgray\c100000;}
+{\*\expandedcolortbl;;}
 \deftab720
 \pard\pardeftab720\partightenfactor0
 
@@ -1613,8 +1949,8 @@ Pour TRA_Recens.do}</string>
 			<integer>286</integer>
 			<key>Points</key>
 			<array>
-				<string>{4057, 132.48400000000004}</string>
-				<string>{2916, 245.48400000000004}</string>
+				<string>{3894, 68.512}</string>
+				<string>{2753, 181.512}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1641,7 +1977,7 @@ Pour TRA_Recens.do}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{3902.5118096219271, 78.625731794800402}, {308.97638075614537, 107.71653641039927}}</string>
+			<string>{{3739.5118096219271, 14.653731794800358}, {308.97638075614537, 107.71653641039927}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -1666,10 +2002,10 @@ Pour TRA_Recens.do}</string>
 				<key>Align</key>
 				<integer>0</integer>
 				<key>Text</key>
-				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf810
 {\fonttbl\f0\fswiss\fcharset0 Helvetica;}
 {\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;\csgray\c100000;}
+{\*\expandedcolortbl;;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 
 \f0\fs24 \cf0 Calcul accroissement naturel Femmesv4.txt}</string>
@@ -1694,8 +2030,8 @@ Pour TRA_Recens.do}</string>
 			<integer>284</integer>
 			<key>Points</key>
 			<array>
-				<string>{3731, 132.48400000000004}</string>
-				<string>{2916, 245.48400000000004}</string>
+				<string>{3568, 68.512}</string>
+				<string>{2753, 181.512}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1722,7 +2058,7 @@ Pour TRA_Recens.do}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{3576.5118096219271, 78.625731794800402}, {308.97638075614537, 107.71653641039927}}</string>
+			<string>{{3413.5118096219271, 14.653731794800358}, {308.97638075614537, 107.71653641039927}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -1747,10 +2083,10 @@ Pour TRA_Recens.do}</string>
 				<key>Align</key>
 				<integer>0</integer>
 				<key>Text</key>
-				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf810
 {\fonttbl\f0\fswiss\fcharset0 Helvetica;}
 {\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;\csgray\c100000;}
+{\*\expandedcolortbl;;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 
 \f0\fs24 \cf0 Population masculine et feminine francaise v4.txt}</string>
@@ -1775,8 +2111,8 @@ Pour TRA_Recens.do}</string>
 			<integer>282</integer>
 			<key>Points</key>
 			<array>
-				<string>{3405, 132.48400000000004}</string>
-				<string>{2916, 245.48400000000004}</string>
+				<string>{3242, 68.512}</string>
+				<string>{2753, 181.512}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1803,7 +2139,7 @@ Pour TRA_Recens.do}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{3250.5118096219271, 78.625731794800402}, {308.97638075614537, 107.71653641039927}}</string>
+			<string>{{3087.5118096219271, 14.653731794800358}, {308.97638075614537, 107.71653641039927}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -1828,10 +2164,10 @@ Pour TRA_Recens.do}</string>
 				<key>Align</key>
 				<integer>0</integer>
 				<key>Text</key>
-				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf810
 {\fonttbl\f0\fswiss\fcharset0 Helvetica;}
 {\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;\csgray\c100000;}
+{\*\expandedcolortbl;;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 
 \f0\fs24 \cf0 Population masculine et feminine totale.txt}</string>
@@ -1856,8 +2192,8 @@ Pour TRA_Recens.do}</string>
 			<integer>280</integer>
 			<key>Points</key>
 			<array>
-				<string>{3079, 132.48400000000004}</string>
-				<string>{2916, 245.48400000000004}</string>
+				<string>{2916, 68.512}</string>
+				<string>{2753, 181.512}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1884,7 +2220,7 @@ Pour TRA_Recens.do}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{2924.5118096219271, 78.625731794800402}, {308.97638075614537, 107.71653641039927}}</string>
+			<string>{{2761.5118096219271, 14.653731794800358}, {308.97638075614537, 107.71653641039927}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -1909,10 +2245,10 @@ Pour TRA_Recens.do}</string>
 				<key>Align</key>
 				<integer>0</integer>
 				<key>Text</key>
-				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf810
 {\fonttbl\f0\fswiss\fcharset0 Helvetica;}
 {\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;\csgray\c100000;}
+{\*\expandedcolortbl;;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 
 \f0\fs24 \cf0 share of migrants male female v5.txt}</string>
@@ -1937,8 +2273,8 @@ Pour TRA_Recens.do}</string>
 			<integer>241</integer>
 			<key>Points</key>
 			<array>
-				<string>{2916, 245.48400000000004}</string>
-				<string>{2371, 358.48400000000004}</string>
+				<string>{2753, 181.512}</string>
+				<string>{2208, 294.512}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1965,7 +2301,7 @@ Pour TRA_Recens.do}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{2292.4951103675085, 312.38754141672774}, {157.00977926498331, 92.192917166544646}}</string>
+			<string>{{2129.4951103675085, 248.41554141672768}, {157.00977926498331, 92.192917166544646}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -1994,10 +2330,10 @@ Pour TRA_Recens.do}</string>
 				<key>Align</key>
 				<integer>0</integer>
 				<key>Text</key>
-				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf810
 {\fonttbl\f0\fswiss\fcharset0 Helvetica;}
 {\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;\csgray\c100000;}
+{\*\expandedcolortbl;;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 
 \f0\fs24 \cf0 Marges_migrations_done.dta}</string>
@@ -2024,8 +2360,8 @@ Pour TRA_Recens.do}</string>
 			<integer>230</integer>
 			<key>Points</key>
 			<array>
-				<string>{2753, 132.48400000000004}</string>
-				<string>{2916, 245.48400000000004}</string>
+				<string>{2590, 68.512}</string>
+				<string>{2753, 181.512}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -2052,7 +2388,7 @@ Pour TRA_Recens.do}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{2598.5118096219271, 78.625731794800402}, {308.97638075614537, 107.71653641039927}}</string>
+			<string>{{2435.5118096219271, 14.653731794800358}, {308.97638075614537, 107.71653641039927}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -2077,10 +2413,10 @@ Pour TRA_Recens.do}</string>
 				<key>Align</key>
 				<integer>0</integer>
 				<key>Text</key>
-				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf810
 {\fonttbl\f0\fswiss\fcharset0 Helvetica;}
 {\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;\csgray\c100000;}
+{\*\expandedcolortbl;;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 
 \f0\fs24 \cf0 Calcul accroissement naturel Femmes ou Hommesv4.txt}</string>
@@ -2105,8 +2441,8 @@ Pour TRA_Recens.do}</string>
 			<integer>226</integer>
 			<key>Points</key>
 			<array>
-				<string>{2916, 245.48400000000004}</string>
-				<string>{2916, 358.48400000000004}</string>
+				<string>{2753, 181.512}</string>
+				<string>{2753, 294.512}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -2133,7 +2469,7 @@ Pour TRA_Recens.do}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{2837.4951103675085, 312.38754141672774}, {157.00977926498331, 92.192917166544646}}</string>
+			<string>{{2674.4951103675085, 248.41554141672768}, {157.00977926498331, 92.192917166544646}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -2162,10 +2498,10 @@ Pour TRA_Recens.do}</string>
 				<key>Align</key>
 				<integer>0</integer>
 				<key>Text</key>
-				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf810
 {\fonttbl\f0\fswiss\fcharset0 Helvetica;}
 {\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;\csgray\c100000;}
+{\*\expandedcolortbl;;}
 \deftab720
 \pard\pardeftab720\partightenfactor0
 
@@ -2194,8 +2530,8 @@ Marges_migrations.dta}</string>
 			<integer>224</integer>
 			<key>Points</key>
 			<array>
-				<string>{2916, 245.48400000000004}</string>
-				<string>{3789, 580.48400000000004}</string>
+				<string>{2753, 181.512}</string>
+				<string>{3463, 516.51199999999994}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -2222,7 +2558,7 @@ Marges_migrations.dta}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{3710.4951103675085, 534.38754141672769}, {157.00977926498331, 92.192917166544646}}</string>
+			<string>{{3384.4951103675085, 470.41554141672765}, {157.00977926498331, 92.192917166544646}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -2251,10 +2587,10 @@ Marges_migrations.dta}</string>
 				<key>Align</key>
 				<integer>0</integer>
 				<key>Text</key>
-				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf810
 {\fonttbl\f0\fswiss\fcharset0 Helvetica;}
 {\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;\csgray\c100000;}
+{\*\expandedcolortbl;;}
 \deftab720
 \pard\pardeftab720\partightenfactor0
 
@@ -2283,8 +2619,8 @@ Matrice_complete_1901+1911.dta}</string>
 			<integer>222</integer>
 			<key>Points</key>
 			<array>
-				<string>{2427, 132.48400000000004}</string>
-				<string>{2916, 245.48400000000004}</string>
+				<string>{2264, 68.512}</string>
+				<string>{2753, 181.512}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -2311,7 +2647,7 @@ Matrice_complete_1901+1911.dta}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{2272.5118096219271, 78.625731794800402}, {308.97638075614537, 107.71653641039927}}</string>
+			<string>{{2109.5118096219271, 14.653731794800358}, {308.97638075614537, 107.71653641039927}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -2334,10 +2670,10 @@ Matrice_complete_1901+1911.dta}</string>
 			<key>Text</key>
 			<dict>
 				<key>Text</key>
-				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf810
 {\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
 {\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;\csgray\c100000;}
+{\*\expandedcolortbl;;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
 
 \f0\fs24 \cf0 Emigrants1891PourStata1891.txt}</string>
@@ -2362,8 +2698,8 @@ Matrice_complete_1901+1911.dta}</string>
 			<integer>220</integer>
 			<key>Points</key>
 			<array>
-				<string>{2101, 132.48400000000004}</string>
-				<string>{2916, 245.48400000000004}</string>
+				<string>{1938, 68.512}</string>
+				<string>{2753, 181.512}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -2390,7 +2726,7 @@ Matrice_complete_1901+1911.dta}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{1946.5118096219271, 78.625731794800402}, {308.97638075614537, 107.71653641039927}}</string>
+			<string>{{1783.5118096219273, 14.653731794800358}, {308.97638075614537, 107.71653641039927}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -2413,10 +2749,10 @@ Matrice_complete_1901+1911.dta}</string>
 			<key>Text</key>
 			<dict>
 				<key>Text</key>
-				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf810
 {\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
 {\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;\csgray\c100000;}
+{\*\expandedcolortbl;;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
 
 \f0\fs24 \cf0 Matrice complete_1901.dta}</string>
@@ -2441,8 +2777,8 @@ Matrice_complete_1901+1911.dta}</string>
 			<integer>218</integer>
 			<key>Points</key>
 			<array>
-				<string>{1775, 132.48400000000004}</string>
-				<string>{2916, 245.48400000000004}</string>
+				<string>{1612, 68.512}</string>
+				<string>{2753, 181.512}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -2469,7 +2805,7 @@ Matrice_complete_1901+1911.dta}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{1620.5118096219273, 78.625731794800402}, {308.97638075614537, 107.71653641039927}}</string>
+			<string>{{1457.5118096219273, 14.653731794800358}, {308.97638075614537, 107.71653641039927}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -2492,10 +2828,10 @@ Matrice_complete_1901+1911.dta}</string>
 			<key>Text</key>
 			<dict>
 				<key>Text</key>
-				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf810
 {\fonttbl\f0\fnil\fcharset0 HelveticaNeue;}
 {\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;\csgray\c100000;}
+{\*\expandedcolortbl;;}
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc\partightenfactor0
 
 \f0\fs24 \cf0 Matrice complete_1911.dta}</string>
@@ -2503,7 +2839,7 @@ Matrice_complete_1901+1911.dta}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{2845.5, 226.9899967041016}, {141, 36.988006591796875}}</string>
+			<string>{{2682.5, 163.01799670410156}, {141, 36.988006591796875}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -2530,10 +2866,10 @@ Matrice_complete_1901+1911.dta}</string>
 				<key>Align</key>
 				<integer>0</integer>
 				<key>Text</key>
-				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf600
+				<string>{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf810
 {\fonttbl\f0\fswiss\fcharset0 Helvetica;}
 {\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;\csgray\c100000;}
+{\*\expandedcolortbl;;}
 \deftab720
 \pard\pardeftab720\partightenfactor0
 
@@ -2549,7 +2885,7 @@ Pour matrices et marges recensement.do}</string>
 	<key>GuidesVisible</key>
 	<string>YES</string>
 	<key>HPages</key>
-	<integer>8</integer>
+	<integer>9</integer>
 	<key>ImageCounter</key>
 	<integer>1</integer>
 	<key>KeepToScale</key>
@@ -2599,7 +2935,7 @@ Pour matrices et marges recensement.do}</string>
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2016-11-15 14:00:26 +0000</string>
+	<string>2017-03-02 09:36:42 +0000</string>
 	<key>Modifier</key>
 	<string>Guillaume Daudin</string>
 	<key>NotesVisible</key>
@@ -2632,7 +2968,7 @@ Pour matrices et marges recensement.do}</string>
 		<key>NSPaperSize</key>
 		<array>
 			<string>size</string>
-			<string>{595.00002479553223, 842}</string>
+			<string>{595, 842}</string>
 		</array>
 		<key>NSPrintReverseOrientation</key>
 		<array>
@@ -2677,7 +3013,7 @@ Pour matrices et marges recensement.do}</string>
 		<key>Expanded_Canvases</key>
 		<array/>
 		<key>Frame</key>
-		<string>{{-0, 17}, {1022, 1160}}</string>
+		<string>{{-0, 76}, {1920, 1101}}</string>
 		<key>ShowInfo</key>
 		<true/>
 		<key>Sidebar</key>
@@ -2687,15 +3023,15 @@ Pour matrices et marges recensement.do}</string>
 		<key>TopSlabHeight</key>
 		<real>250</real>
 		<key>VisibleRegion</key>
-		<string>{{23, -133}, {446, 1050}}</string>
+		<string>{{115.32257975822434, -407.00000000000006}, {2167.741918811937, 1598.3870844811233}}</string>
 		<key>Zoom</key>
-		<real>1</real>
+		<real>0.62000000476837158</real>
 		<key>ZoomValues</key>
 		<array>
 			<array>
 				<string>Canevas 1</string>
-				<real>1</real>
-				<real>0.5</real>
+				<real>0.62000000476837158</real>
+				<real>0.62</real>
 			</array>
 		</array>
 	</dict>
