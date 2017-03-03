@@ -234,6 +234,37 @@ if "`data'"=="TRAR" {
 }
 
 
+
+
+*-------------------------------
+*Matrice de migration TRARextended (21-51)
+if "`data'"=="TRARE" {
+
+
+	use "~/Documents/Recherche/Migrations/Construction BDD/Donnees migrations/Matrices_TRARE.dta", clear
+	rename nbr_TRARE nbr
+
+	
+	if "`sexe'"=="t" {
+		local new = _N + 1
+        set obs `new'
+		replace sexe="t" in `new'
+		fillin sexe annee dptorigine dptresid
+		egen tot = total(nbr), by(dptorigine dptresid annee)
+		replace nbr=tot if sex=="t" & nbr==.
+		drop if dptresid==. | dptorigine==. | annee==.
+		drop _fillin
+	}
+	else {
+		display "Nous n'avons que les TRARE pour tout le monde !!
+		blif
+	}
+
+
+	save "$dir/BDD_prov1_`data'_`sexe'.dta", replace
+}
+
+
 *-------------------------------------Ici, on met la fécondité
 
 use "$dir/BDD_prov1_`data'_`sexe'.dta", clear
@@ -693,6 +724,7 @@ drop if (dpt==54 | dpt==90) & annee_obs==1861
 	
 save "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", replace
 
+
 erase "$dir/blouk.dta"
 *****************************************************************************************************************************************
 
@@ -720,6 +752,7 @@ rename year annee_obs
 drop _merge
 
 save "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", replace
+
 *----------------------------VARIABLES DÉMOGRAPHIQUES SUPPLÉMENTAIRES
 
 
@@ -733,8 +766,18 @@ reshape wide pop, i(dptresid annee_obs) j(sexe) string
 rename popf pop_f
 rename popm pop_m
 generate pop_t = pop_f+pop_m
-joinby dptresid annee_obs using "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta"
+
+joinby dptresid annee_obs using "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", unmatched(using)
+
+use "$dir/Donnees accroissement naturel/Calcul accroissement naturel et relatif 1801-1911.dta", clear
+keep dptresid population*
+
+reshape long population,i(dptresid) j(annee_obs)
+rename population pop_t
+joinby dptresid annee_obs using "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", unmatched(using)
+drop _merge
 save "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", replace
+
 
  
  
@@ -797,6 +840,24 @@ save "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.d
 sort dptresid annee_obs
 
 save "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", replace
+
+
+
+*------------------------BAD CONTROLS
+
+use "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", replace
+
+*rename dptresid dpt_resid
+
+joinby dptresid annee_obs using "$dir/Data divers/badcontrols2.dta", unmatched (master)
+drop _merge
+
+*rename dpt_resid dptresid
+
+sort dptresid annee_obs
+
+save "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", replace
+
 
 
 
@@ -977,7 +1038,7 @@ drop year
 
 label data "data `data' sexe `sexe' paris `paris' instrument `instrument' pondération `ponderation' norme `norme' fécondité `fert'"
 
-
+if "`data'"=="TRARE" append using "$dir/BDD_TRAR_`fert'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'_var.dta"
 
 save "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'_var.dta", replace
 
@@ -1001,10 +1062,11 @@ erase "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.
 
 end
 
+*faire_BDD TRARE Coal t P o migr lin
 
 
-faire_BDD TRAR TFR t P p migr lin
-
+faire_BDD TRAR TFR t P o migr lin
+/*
 
 foreach data in TRAR RE TRA {
 	foreach fert in Coal TFR {
@@ -1022,6 +1084,10 @@ foreach data in TRAR RE TRA {
 		}
 	}
 }
+
+
+
+
 
 
 

@@ -14,7 +14,7 @@
 	<key>BackgroundGraphic</key>
 	<dict>
 		<key>Bounds</key>
-		<string>{{0, 0}, {2236, 1566}}</string>
+		<string>{{0, 0}, {2236, 2349}}</string>
 		<key>Class</key>
 		<string>SolidGraphic</string>
 		<key>ID</key>
@@ -62,11 +62,56 @@
 				<integer>295</integer>
 			</dict>
 			<key>ID</key>
+			<integer>350</integer>
+			<key>Points</key>
+			<array>
+				<string>{661, 808}</string>
+				<string>{1029, 1601}</string>
+			</array>
+			<key>Style</key>
+			<dict>
+				<key>shadow</key>
+				<dict>
+					<key>Draws</key>
+					<string>NO</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>HeadArrow</key>
+					<string>FilledArrow</string>
+					<key>Legacy</key>
+					<false/>
+					<key>TailArrow</key>
+					<string>0</string>
+				</dict>
+			</dict>
+			<key>Tail</key>
+			<dict>
+				<key>ID</key>
+				<integer>343</integer>
+			</dict>
+		</dict>
+		<dict>
+			<key>Class</key>
+			<string>LineGraphic</string>
+			<key>FontInfo</key>
+			<dict>
+				<key>Font</key>
+				<string>Helvetica</string>
+				<key>Size</key>
+				<real>12</real>
+			</dict>
+			<key>Head</key>
+			<dict>
+				<key>ID</key>
+				<integer>295</integer>
+			</dict>
+			<key>ID</key>
 			<integer>349</integer>
 			<key>Points</key>
 			<array>
-				<string>{1147, 808}</string>
-				<string>{1060, 1463}</string>
+				<string>{1135, 808}</string>
+				<string>{1029, 1601}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -110,8 +155,8 @@
 			<integer>348</integer>
 			<key>Points</key>
 			<array>
-				<string>{935, 1190}</string>
-				<string>{1060, 1463}</string>
+				<string>{923, 1259}</string>
+				<string>{1029, 1601}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -155,8 +200,8 @@
 			<integer>347</integer>
 			<key>Points</key>
 			<array>
-				<string>{935, 917}</string>
-				<string>{935, 1190}</string>
+				<string>{923, 917}</string>
+				<string>{923, 1259}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -183,7 +228,7 @@
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{856.49511036750835, 1143.9035414167276}, {157.00977926498331, 92.192917166544646}}</string>
+			<string>{{844.49511036750835, 1212.9035414167276}, {157.00977926498331, 92.192917166544646}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -244,8 +289,8 @@ Matrices_TRA_Recens.dta}</string>
 			<integer>345</integer>
 			<key>Points</key>
 			<array>
-				<string>{1147, 808}</string>
-				<string>{935, 917}</string>
+				<string>{1135, 808}</string>
+				<string>{923, 917}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -289,8 +334,8 @@ Matrices_TRA_Recens.dta}</string>
 			<integer>344</integer>
 			<key>Points</key>
 			<array>
-				<string>{673, 808}</string>
-				<string>{935, 917}</string>
+				<string>{661, 808}</string>
+				<string>{923, 917}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -317,7 +362,7 @@ Matrices_TRA_Recens.dta}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{544.56693044553595, 754.14173179480031}, {256.86613910892817, 107.71653641039927}}</string>
+			<string>{{532.56693044553595, 754.14173179480031}, {256.86613910892817, 107.71653641039927}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -370,8 +415,8 @@ Matrices_TRA_Recens.dta}</string>
 			<integer>342</integer>
 			<key>Points</key>
 			<array>
-				<string>{897, 808}</string>
-				<string>{935, 917}</string>
+				<string>{885, 808}</string>
+				<string>{923, 917}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -416,7 +461,7 @@ Matrices_TRA_Recens.dta}</string>
 			<key>Points</key>
 			<array>
 				<string>{1070, 586}</string>
-				<string>{935, 917}</string>
+				<string>{923, 917}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -443,7 +488,7 @@ Matrices_TRA_Recens.dta}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{864.5, 898.50599670410156}, {141, 36.988006591796875}}</string>
+			<string>{{852.5, 898.50599670410156}, {141, 36.988006591796875}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -500,8 +545,8 @@ Pour TRARE.do}</string>
 			<integer>339</integer>
 			<key>Points</key>
 			<array>
-				<string>{615, 699}</string>
-				<string>{897, 808}</string>
+				<string>{609, 699}</string>
+				<string>{885, 808}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -528,7 +573,7 @@ Pour TRARE.do}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{818.49511036750835, 761.90354141672765}, {157.00977926498331, 92.192917166544646}}</string>
+			<string>{{806.49511036750835, 761.90354141672765}, {157.00977926498331, 92.192917166544646}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -590,7 +635,7 @@ Donn\'e9es_pour_TRARE.dta}</string>
 			<key>Points</key>
 			<array>
 				<string>{190, 586}</string>
-				<string>{615, 699}</string>
+				<string>{609, 699}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -635,7 +680,7 @@ Donn\'e9es_pour_TRARE.dta}</string>
 			<key>Points</key>
 			<array>
 				<string>{842, 586}</string>
-				<string>{615, 699}</string>
+				<string>{609, 699}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -716,7 +761,7 @@ Donn\'e9es_pour_TRARE.dta}</string>
 			<key>Points</key>
 			<array>
 				<string>{516, 586}</string>
-				<string>{615, 699}</string>
+				<string>{609, 699}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -779,7 +824,7 @@ Donn\'e9es_pour_TRARE.dta}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{544.5, 680.50599670410156}, {141, 36.988006591796875}}</string>
+			<string>{{538.5, 680.50599670410156}, {141, 36.988006591796875}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -1084,7 +1129,7 @@ Faire Matrices Migrations_TRA.do}</string>
 			<key>Points</key>
 			<array>
 				<string>{190, 586}</string>
-				<string>{1060, 1463}</string>
+				<string>{1029, 1601}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1163,7 +1208,7 @@ Faire Matrices Migrations_TRA.do}</string>
 			<key>Points</key>
 			<array>
 				<string>{1070, 586}</string>
-				<string>{1060, 1463}</string>
+				<string>{1029, 1601}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1207,8 +1252,8 @@ Faire Matrices Migrations_TRA.do}</string>
 			<integer>303</integer>
 			<key>Points</key>
 			<array>
-				<string>{1755, 1190}</string>
-				<string>{1060, 1463}</string>
+				<string>{1839, 1259}</string>
+				<string>{1029, 1601}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1252,8 +1297,8 @@ Faire Matrices Migrations_TRA.do}</string>
 			<integer>300</integer>
 			<key>Points</key>
 			<array>
-				<string>{1383, 1190}</string>
-				<string>{1060, 1463}</string>
+				<string>{1419, 1259}</string>
+				<string>{1029, 1601}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1280,7 +1325,7 @@ Faire Matrices Migrations_TRA.do}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{1106.9409355586911, 972.59841977653559}, {552.11812888261807, 434.80316044692881}}</string>
+			<string>{{1095.1476251735935, 971.99212705481239}, {647.70474965281301, 574.01574589037511}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -1318,12 +1363,13 @@ industries professions liberales.dta\
 Population masculine et feminine francaise \
 v6.csv\
 urban6.dta\
-eleves_pourBDD.dta}</string>
+eleves_pourBDD.dta\
+badcontrols2.dta}</string>
 			</dict>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{989.49999999999989, 1444.5059967041016}, {141, 36.988006591796875}}</string>
+			<string>{{958.49999999999989, 1582.5059967041016}, {141, 36.988006591796875}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -1380,8 +1426,8 @@ AssemblageBDD.do}</string>
 			<integer>294</integer>
 			<key>Points</key>
 			<array>
-				<string>{1182, 699}</string>
-				<string>{1147, 808}</string>
+				<string>{1170, 699}</string>
+				<string>{1135, 808}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1408,7 +1454,7 @@ AssemblageBDD.do}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{1068.4951103675082, 761.90354141672765}, {157.00977926498331, 92.192917166544646}}</string>
+			<string>{{1056.4951103675082, 761.90354141672765}, {157.00977926498331, 92.192917166544646}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -1470,7 +1516,7 @@ Matrices_TRA_Recens.dta}</string>
 			<key>Points</key>
 			<array>
 				<string>{1246, 586}</string>
-				<string>{1182, 699}</string>
+				<string>{1170, 699}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1550,8 +1596,8 @@ Matrices_TRA_Recens.dta}</string>
 			<integer>290</integer>
 			<key>Points</key>
 			<array>
-				<string>{1561, 586}</string>
-				<string>{1182, 699}</string>
+				<string>{1609, 586}</string>
+				<string>{1170, 699}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1596,7 +1642,7 @@ Matrices_TRA_Recens.dta}</string>
 			<key>Points</key>
 			<array>
 				<string>{1070, 586}</string>
-				<string>{1182, 699}</string>
+				<string>{1170, 699}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1659,7 +1705,7 @@ Matrices_TRA_Recens.dta}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{1111.5, 680.50599670410156}, {141, 36.988006591796875}}</string>
+			<string>{{1099.5, 680.50599670410156}, {141, 36.988006591796875}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -1716,8 +1762,8 @@ Pour TRA_Recens.do}</string>
 			<integer>241</integer>
 			<key>Points</key>
 			<array>
-				<string>{1831, 473}</string>
-				<string>{1561, 586}</string>
+				<string>{1903, 473}</string>
+				<string>{1609, 586}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1744,7 +1790,7 @@ Pour TRA_Recens.do}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{1482.4951103675085, 539.90354141672765}, {157.00977926498331, 92.192917166544646}}</string>
+			<string>{{1530.4951103675085, 539.90354141672765}, {157.00977926498331, 92.192917166544646}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -1803,8 +1849,8 @@ Pour TRA_Recens.do}</string>
 			<integer>230</integer>
 			<key>Points</key>
 			<array>
-				<string>{1831, 227}</string>
-				<string>{1831, 473}</string>
+				<string>{1903, 227}</string>
+				<string>{1903, 473}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1831,7 +1877,7 @@ Pour TRA_Recens.do}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{1593.015739357706, 35.889761619117337}, {475.96852128458772, 382.22047676176533}}</string>
+			<string>{{1665.0157393577063, 35.889761619117337}, {475.96852128458772, 382.22047676176533}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -1899,8 +1945,8 @@ Matrice complete_1901.dta}</string>
 			<integer>226</integer>
 			<key>Points</key>
 			<array>
-				<string>{1831, 473}</string>
-				<string>{1831, 586}</string>
+				<string>{1903, 473}</string>
+				<string>{1903, 586}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -1927,7 +1973,7 @@ Matrice complete_1901.dta}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{1752.4951103675085, 539.90354141672765}, {157.00977926498331, 92.192917166544646}}</string>
+			<string>{{1824.4951103675085, 539.90354141672765}, {157.00977926498331, 92.192917166544646}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -1988,8 +2034,8 @@ Marges_migrations.dta}</string>
 			<integer>224</integer>
 			<key>Points</key>
 			<array>
-				<string>{1831, 473}</string>
-				<string>{1755, 1190}</string>
+				<string>{1903, 473}</string>
+				<string>{1839, 1259}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -2016,7 +2062,7 @@ Marges_migrations.dta}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{1676.4951103675082, 1143.9035414167276}, {157.00977926498331, 92.192917166544646}}</string>
+			<string>{{1760.4951103675085, 1212.9035414167276}, {157.00977926498331, 92.192917166544646}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -2060,7 +2106,7 @@ Matrice_complete_1901+1911.dta}</string>
 		</dict>
 		<dict>
 			<key>Bounds</key>
-			<string>{{1760.5, 454.50599670410156}, {141, 36.988006591796875}}</string>
+			<string>{{1832.5, 454.50599670410156}, {141, 36.988006591796875}}</string>
 			<key>Class</key>
 			<string>ShapedGraphic</string>
 			<key>FontInfo</key>
@@ -2156,7 +2202,7 @@ Pour matrices et marges recensement.do}</string>
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2017-03-03 10:37:30 +0000</string>
+	<string>2017-03-03 11:16:30 +0000</string>
 	<key>Modifier</key>
 	<string>Guillaume Daudin</string>
 	<key>NotesVisible</key>
@@ -2196,16 +2242,6 @@ Pour matrices et marges recensement.do}</string>
 			<string>coded</string>
 			<string>BAtzdHJlYW10eXBlZIHoA4QBQISEhAhOU051bWJlcgCEhAdOU1ZhbHVlAISECE5TT2JqZWN0AIWEASqEhAFxlwCG</string>
 		</array>
-		<key>NSPrinter</key>
-		<array>
-			<string>coded</string>
-			<string>BAtzdHJlYW10eXBlZIHoA4QBQISEhAlOU1ByaW50ZXIAhIQITlNPYmplY3QAhZKEhIQITlNTdHJpbmcBlIQBKxdIUCBDb2xvciBMYXNlckpldCAyNjAwboaG</string>
-		</array>
-		<key>NSPrinterName</key>
-		<array>
-			<string>string</string>
-			<string>HP Color LaserJet 2600n</string>
-		</array>
 		<key>NSRightMargin</key>
 		<array>
 			<string>float</string>
@@ -2236,7 +2272,7 @@ Pour matrices et marges recensement.do}</string>
 	<key>UseEntirePage</key>
 	<false/>
 	<key>VPages</key>
-	<integer>2</integer>
+	<integer>3</integer>
 	<key>WindowInfo</key>
 	<dict>
 		<key>CurrentSheet</key>
@@ -2254,7 +2290,7 @@ Pour matrices et marges recensement.do}</string>
 		<key>TopSlabHeight</key>
 		<real>250</real>
 		<key>VisibleRegion</key>
-		<string>{{0, -16}, {2167.741918811937, 1598.3870844811233}}</string>
+		<string>{{67.741934962873032, 106.45161208451478}, {2167.741918811937, 1598.3870844811231}}</string>
 		<key>Zoom</key>
 		<real>0.62000000476837158</real>
 		<key>ZoomValues</key>
