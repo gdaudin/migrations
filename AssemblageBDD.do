@@ -859,6 +859,27 @@ drop _merge
 
 sort dptresid annee_obs
 
+
+
+
+save "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", replace
+
+
+*---------------------------- Revue de deux mondes (qui dépend de BAD Controls)
+
+
+use "$dir/BDD_prov_fert_`fert'.dta"
+
+keep if dpt_num==75
+drop dpt
+rename f_obs f_obs_paris
+
+joinby annee using  "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", unmatched(both)
+drop _merge
+
+gen rd2M_fecParis = f_obs_paris*revuedesdeuxmondes_newsstand
+
+
 save "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.dta", replace
 
 
@@ -1049,6 +1070,11 @@ label data drop
 
 saveold "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'_var_old.dta", version(13) replace
 
+
+
+
+****Nettoyage
+
 erase  "$dir/BDD_prov_fert_`fert'.dta"
 
 erase  "$dir/BDD_prov1_`data'_`sexe'.dta"
@@ -1068,10 +1094,13 @@ erase "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.
 
 end
 
+
+faire_BDD TRAR Coal t P o migr lin
+
 faire_BDD TRARE Coal t P o migr lin
 
 
-faire_BDD TRAR Coal t P o migr lin
+
 /*
 
 foreach data in TRAR RE TRA {
