@@ -119,7 +119,7 @@ foreach annee of num 1841(-10)1821 {
 	erase "~/Documents/Recherche/Migrations/Construction BDD/temp_Matrices_TRARE_`annee'.dta"
 }
 
-save "~/Documents/Recherche/Migrations/Construction BDD/Matrices_TRARE.dta"
+save "$dir/Donnees migrations/Matrices_TRARE.dta", replace
 
 erase "$dir/temp_popu+matr_TRA.dta"
 erase "$dir/temp_population.dta" 
