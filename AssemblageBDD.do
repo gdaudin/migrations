@@ -621,7 +621,7 @@ save "$dir/BDD_prov3_`data'_`fert'_`sexe'_`instrument'_`paris'.dta", replace
 use "$dir/BDD_prov3_`data'_`fert'_`sexe'_`instrument'_`paris'", clear
 
 drop if f_obs==.
-drop if f_obs_min50y==.
+if "`data'" !="TRARE" drop if f_obs_min50y==.
 
 collapse (sum) pop_migr pop_immob, by(dptresid annee_obs f_obs f_obs_min50y)
 *Le f_obs est uniquement là pour qu'il soit gardé
@@ -1047,7 +1047,7 @@ save "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'_v
 
 label data drop
 
-save "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'_var.dta", version(13) replace
+saveold "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'_var_old.dta", version(13) replace
 
 erase  "$dir/BDD_prov_fert_`fert'.dta"
 
@@ -1068,10 +1068,10 @@ erase "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'.
 
 end
 
-*faire_BDD TRARE Coal t P o migr lin
+faire_BDD TRARE Coal t P o migr lin
 
 
-faire_BDD TRAR TFR t P o migr lin
+faire_BDD TRAR Coal t P o migr lin
 /*
 
 foreach data in TRAR RE TRA {
