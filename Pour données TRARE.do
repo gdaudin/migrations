@@ -130,36 +130,38 @@ foreach end_per of num 1860(-10)1820 {
 	
 	gen naissances_de_jeunes_`start_per'_`end_per'=naissances if annee_naissance<=`end_per' & annee_naissance>`end_per'-20
 	
-	replace deces_de_jeunes_`start_per'_`end_per' = deces_de_jeunes_`start_per'_`end_per'+naissances*quotien_mort0_1   if annee_naissance>=`start_per' & annee_naissance<=`end_per'
+	replace deces_de_jeunes_`start_per'_`end_per' = deces_de_jeunes_`start_per'_`end_per'+naissances*quotien_mort0_1  if annee_naissance>=`start_per' & annee_naissance<=`end_per'
 	
-	replace deces_de_jeunes_`start_per'_`end_per' = deces_de_jeunes_`start_per'_`end_per'+naissances*quotien_mort1_4/4 if annee_naissance>=`start_per'-1 & annee_naissance<=`start_per'-1
-	replace deces_de_jeunes_`start_per'_`end_per' = deces_de_jeunes_`start_per'_`end_per'+naissances*quotien_mort1_4/4 if annee_naissance>=`start_per'-2 & annee_naissance<=`start_per'-2
-	replace deces_de_jeunes_`start_per'_`end_per' = deces_de_jeunes_`start_per'_`end_per'+naissances*quotien_mort1_4/4 if annee_naissance>=`start_per'-3 & annee_naissance<=`start_per'-3
-	replace deces_de_jeunes_`start_per'_`end_per' = deces_de_jeunes_`start_per'_`end_per'+naissances*quotien_mort1_4/4 if annee_naissance>=`start_per'-4 & annee_naissance<=`start_per'-4
+	replace deces_de_jeunes_`start_per'_`end_per' = deces_de_jeunes_`start_per'_`end_per'+naissances*quotien_mort1_4/4 if annee_naissance>=`start_per'-1 & annee_naissance<=`end_per'-1
+	replace deces_de_jeunes_`start_per'_`end_per' = deces_de_jeunes_`start_per'_`end_per'+naissances*quotien_mort1_4/4 if annee_naissance>=`start_per'-2 & annee_naissance<=`end_per'-2
+	replace deces_de_jeunes_`start_per'_`end_per' = deces_de_jeunes_`start_per'_`end_per'+naissances*quotien_mort1_4/4 if annee_naissance>=`start_per'-3 & annee_naissance<=`end_per'-3
+	replace deces_de_jeunes_`start_per'_`end_per' = deces_de_jeunes_`start_per'_`end_per'+naissances*quotien_mort1_4/4 if annee_naissance>=`start_per'-4 & annee_naissance<=`end_per'-4
 	
-	replace deces_de_jeunes_`start_per'_`end_per' = deces_de_jeunes_`start_per'_`end_per'+naissances*quotien_mort5/5 if annee_naissance>=`start_per'-5 & annee_naissance<=`start_per'-5
-	replace deces_de_jeunes_`start_per'_`end_per' = deces_de_jeunes_`start_per'_`end_per'+naissances*quotien_mort5/5 if annee_naissance>=`start_per'-6 & annee_naissance<=`start_per'-6
-	replace deces_de_jeunes_`start_per'_`end_per' = deces_de_jeunes_`start_per'_`end_per'+naissances*quotien_mort5/5 if annee_naissance>=`start_per'-7 & annee_naissance<=`start_per'-7
-	replace deces_de_jeunes_`start_per'_`end_per' = deces_de_jeunes_`start_per'_`end_per'+naissances*quotien_mort5/5 if annee_naissance>=`start_per'-8 & annee_naissance<=`start_per'-8
-	replace deces_de_jeunes_`start_per'_`end_per' = deces_de_jeunes_`start_per'_`end_per'+naissances*quotien_mort5/5 if annee_naissance>=`start_per'-9 & annee_naissance<=`start_per'-9
+	replace deces_de_jeunes_`start_per'_`end_per' = deces_de_jeunes_`start_per'_`end_per'+naissances*quotien_mort5/5 if annee_naissance>=`start_per'-5 & annee_naissance<=`end_per'-5
+	replace deces_de_jeunes_`start_per'_`end_per' = deces_de_jeunes_`start_per'_`end_per'+naissances*quotien_mort5/5 if annee_naissance>=`start_per'-6 & annee_naissance<=`end_per'-6
+	replace deces_de_jeunes_`start_per'_`end_per' = deces_de_jeunes_`start_per'_`end_per'+naissances*quotien_mort5/5 if annee_naissance>=`start_per'-7 & annee_naissance<=`end_per'-7
+	replace deces_de_jeunes_`start_per'_`end_per' = deces_de_jeunes_`start_per'_`end_per'+naissances*quotien_mort5/5 if annee_naissance>=`start_per'-8 & annee_naissance<=`end_per'-8
+	replace deces_de_jeunes_`start_per'_`end_per' = deces_de_jeunes_`start_per'_`end_per'+naissances*quotien_mort5/5 if annee_naissance>=`start_per'-9 & annee_naissance<=`end_per'-9
 	
-	replace deces_de_jeunes_`start_per'_`end_per' = deces_de_jeunes_`start_per'_`end_per'+naissances*quotien_mort10/5 if annee_naissance>=`start_per'-10 & annee_naissance<=`start_per'-10
-	replace deces_de_jeunes_`start_per'_`end_per' = deces_de_jeunes_`start_per'_`end_per'+naissances*quotien_mort10/5 if annee_naissance>=`start_per'-10 & annee_naissance<=`start_per'-11
-	replace deces_de_jeunes_`start_per'_`end_per' = deces_de_jeunes_`start_per'_`end_per'+naissances*quotien_mort10/5 if annee_naissance>=`start_per'-10 & annee_naissance<=`start_per'-12
-	replace deces_de_jeunes_`start_per'_`end_per' = deces_de_jeunes_`start_per'_`end_per'+naissances*quotien_mort10/5 if annee_naissance>=`start_per'-10 & annee_naissance<=`start_per'-13
-	replace deces_de_jeunes_`start_per'_`end_per' = deces_de_jeunes_`start_per'_`end_per'+naissances*quotien_mort10/5 if annee_naissance>=`start_per'-10 & annee_naissance<=`start_per'-14
+	replace deces_de_jeunes_`start_per'_`end_per' = deces_de_jeunes_`start_per'_`end_per'+naissances*quotien_mort10/5 if annee_naissance>=`start_per'-10 & annee_naissance<=`end_per'-10
+	replace deces_de_jeunes_`start_per'_`end_per' = deces_de_jeunes_`start_per'_`end_per'+naissances*quotien_mort10/5 if annee_naissance>=`start_per'-10 & annee_naissance<=`end_per'-11
+	replace deces_de_jeunes_`start_per'_`end_per' = deces_de_jeunes_`start_per'_`end_per'+naissances*quotien_mort10/5 if annee_naissance>=`start_per'-10 & annee_naissance<=`end_per'-12
+	replace deces_de_jeunes_`start_per'_`end_per' = deces_de_jeunes_`start_per'_`end_per'+naissances*quotien_mort10/5 if annee_naissance>=`start_per'-10 & annee_naissance<=`end_per'-13
+	replace deces_de_jeunes_`start_per'_`end_per' = deces_de_jeunes_`start_per'_`end_per'+naissances*quotien_mort10/5 if annee_naissance>=`start_per'-10 & annee_naissance<=`end_per'-14
 	
-	replace deces_de_jeunes_`start_per'_`end_per' = deces_de_jeunes_`start_per'_`end_per'+naissances*quotien_mort15/5 if annee_naissance>=`start_per'-10 & annee_naissance<=`start_per'-15
-	replace deces_de_jeunes_`start_per'_`end_per' = deces_de_jeunes_`start_per'_`end_per'+naissances*quotien_mort15/5 if annee_naissance>=`start_per'-10 & annee_naissance<=`start_per'-16
-	replace deces_de_jeunes_`start_per'_`end_per' = deces_de_jeunes_`start_per'_`end_per'+naissances*quotien_mort15/5 if annee_naissance>=`start_per'-10 & annee_naissance<=`start_per'-17
-	replace deces_de_jeunes_`start_per'_`end_per' = deces_de_jeunes_`start_per'_`end_per'+naissances*quotien_mort15/5 if annee_naissance>=`start_per'-10 & annee_naissance<=`start_per'-18
-	replace deces_de_jeunes_`start_per'_`end_per' = deces_de_jeunes_`start_per'_`end_per'+naissances*quotien_mort15/5 if annee_naissance>=`start_per'-10 & annee_naissance<=`start_per'-19
+	replace deces_de_jeunes_`start_per'_`end_per' = deces_de_jeunes_`start_per'_`end_per'+naissances*quotien_mort15/5 if annee_naissance>=`start_per'-10 & annee_naissance<=`end_per'-15
+	replace deces_de_jeunes_`start_per'_`end_per' = deces_de_jeunes_`start_per'_`end_per'+naissances*quotien_mort15/5 if annee_naissance>=`start_per'-10 & annee_naissance<=`end_per'-16
+	replace deces_de_jeunes_`start_per'_`end_per' = deces_de_jeunes_`start_per'_`end_per'+naissances*quotien_mort15/5 if annee_naissance>=`start_per'-10 & annee_naissance<=`end_per'-17
+	replace deces_de_jeunes_`start_per'_`end_per' = deces_de_jeunes_`start_per'_`end_per'+naissances*quotien_mort15/5 if annee_naissance>=`start_per'-10 & annee_naissance<=`end_per'-18
+	replace deces_de_jeunes_`start_per'_`end_per' = deces_de_jeunes_`start_per'_`end_per'+naissances*quotien_mort15/5 if annee_naissance>=`start_per'-10 & annee_naissance<=`end_per'-19
 
 }
 		
 	
 	
 collapse (sum) deces_de_jeunes* naissances_de_jeunes*, by(dpt_num)
+format * %9.0fc
+blif
 
 
 foreach annee of num 1821(10)1861 {
@@ -245,6 +247,7 @@ label var nbr_de_jeunes "Nombres de jeunes en t"
 label var naissances_de_jeunes "Naissances entre t-1 et t-10"
 
 rename dpt_num dptresid
+drop if dptresid==74 | dptresid==73 | dptresid==6
 
 save  "$dir/Données_pour_TRARE.dta", replace
 
@@ -256,26 +259,7 @@ save  "$dir/Données_pour_TRARE.dta", replace
 
 
 
-use "$dir/Donnees migrations/Matrices_TRA_Recens.dta", clear
 
-keep if annee==1861
-collapse (sum) nbr_TRA_recens,by(annee dptresid dptorigine)
-
-egen nbr_TRAR_resi=sum(nbr_TRA_recens), by(annee dptresid)
-egen nbr_TRAR_orig=sum(nbr_TRA_recens), by(annee dptorigine)
-
-merge m:1 dptresid annee using "$dir/Données_pour_TRARE.dta"
-drop if _merge==2
-drop _merge
-
-generate nbr_TRA_orig_1851 = nbr_TRA_recens*(1+deces_de_vieux/(nbr_TRAR_resi-nbr_de_jeunes))
-replace nbr_TRA_orig_1851 = nbr_TRA_orig_1851 + deces_de_jeunes - naissances_de_jeunes if dptorigine==dptresid 
-
-collapse (sum) nbr_TRA_orig_1851, by(dptorigine)
-gen annee = 1851
-rename nbr_TRA_orig_1851 nbr_TRA_orig
-
-save  "$dir/TRARE_orig_1851.dta", replace
 
 
 
