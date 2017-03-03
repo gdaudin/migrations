@@ -270,15 +270,7 @@ if "`data'"=="TRARE" {
 use "$dir/BDD_prov1_`data'_`sexe'.dta", clear
 
 
-**La fertilité observée
-rename dptresid dpt_num
-replace annee=1871 if annee==1872
-joinby dpt_num annee using "$dir/BDD_prov_fert_`fert'.dta", unmatched(master) _merge(_merge)
-*v25 : unmatched(both)
 
-drop if f_obs==.
-rename dpt_num dptresid
-drop _merge
 
 
 **La fertilité observée -50 ans
@@ -294,8 +286,6 @@ joinby dpt_num annee using "$dir/BDD_prov_fert_`fert'.dta", unmatched(master) _m
 rename dpt_num dptresid
 rename f_obs f_obs_min50y
 drop _merge annee
-
-
 
 
 **La fertilité d'origine à -30
@@ -370,6 +360,19 @@ rename dpt_num dptorigine
 drop annee _merge dpt
 rename f_obs f_ori
 
+
+
+**La fertilité observée
+rename dptresid dpt_num
+rename annee_obs annee
+replace annee=1871 if annee==1872
+joinby dpt_num annee using "$dir/BDD_prov_fert_`fert'.dta", unmatched(master) _merge(_merge)
+rename annee annee_obs
+*v25 : unmatched(both)
+
+drop if f_obs==.
+rename dpt_num dptresid
+drop _merge
 
 
 save "$dir/BDD_prov2_`data'_`fert'_`sexe'.dta", replace
@@ -1042,6 +1045,9 @@ if "`data'"=="TRARE" append using "$dir/BDD_TRAR_`fert'_`sexe'_`instrument'_`par
 
 save "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'_var.dta", replace
 
+label data drop
+
+save "$dir/BDD_`data'_`fert'_`sexe'_`instrument'_`paris'_`norme'_`ponderation'_var.dta", version(13) replace
 
 erase  "$dir/BDD_prov_fert_`fert'.dta"
 
