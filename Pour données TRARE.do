@@ -128,7 +128,8 @@ foreach end_per of num 1860(-10)1820 {
 
 	local start_per = `end_per'-9
 	
-	gen naissances_de_jeunes_`start_per'_`end_per'=naissances if annee_naissance<=`end_per' & annee_naissance>`end_per'-20
+	gen naissances_de_jeunes20_`start_per'_`end_per'=naissances if annee_naissance<=`end_per' & annee_naissance>`end_per'-20
+	gen naissances_de_jeunes10_`start_per'_`end_per'=naissances if annee_naissance<=`end_per' & annee_naissance>=`start_per'
 	
 	replace deces_de_jeunes_`start_per'_`end_per' = deces_de_jeunes_`start_per'_`end_per'+naissances*quotien_mort0_1  if annee_naissance>=`start_per' & annee_naissance<=`end_per'
 	
@@ -157,11 +158,11 @@ foreach end_per of num 1860(-10)1820 {
 
 }
 		
+format * %9.0fc
+
 	
 	
 collapse (sum) deces_de_jeunes* naissances_de_jeunes*, by(dpt_num)
-format * %9.0fc
-blif
 
 
 foreach annee of num 1821(10)1861 {
@@ -169,10 +170,10 @@ foreach annee of num 1821(10)1861 {
 	local start_per = `annee'-10
 	local end_per = `annee'-1
 	
-	gen nbr_de_jeunes_`annee' = naissances_de_jeunes_`start_per'_`end_per'-deces_de_jeunes_`start_per'_`end_per'
+	gen nbr_de_jeunes_`annee' = naissances_de_jeunes20_`start_per'_`end_per'-deces_de_jeunes_`start_per'_`end_per'
 }
 
-keep dpt_num deces_de_jeunes* nbr_de_jeunes* naissances_de_jeunes_*
+keep dpt_num deces_de_jeunes* nbr_de_jeunes* naissances_de_jeunes*
 
 
 *****Nous avons obtenu le nbr de jeunes (donc stayers) vivant dans chaque département à chaque recensement
@@ -220,31 +221,34 @@ foreach annee of num 1821(10)1861 {
 	local end_per = `annee'-1
 	
 	rename deces_de_jeunes_`start_per'_`end_per' deces_de_jeunes_`annee'
-	label var deces_de_jeunes_`annee' "Décès de jeunes de `start_per' à `end_per'"
 	
-	rename naissances_de_jeunes_`start_per'_`end_per' naissances_de_jeunes_`annee'
-	label var naissances_de_jeunes_`annee' "Naissances de `start_per' à `end_per'"
+	
+	rename naissances_de_jeunes10_`start_per'_`end_per' naissances_de_jeunes10_`annee'
+	rename naissances_de_jeunes20_`start_per'_`end_per' naissances_de_jeunes20_`annee'
+	
 	
 	gen deces_de_vieux_`annee' = deces_`annee' - deces_de_jeunes_`annee'
-	label var deces_de_vieux_`annee' "Décès de vieux de `start_per' à `end_per'"
+	
 	
 	
 }
 
 
-reshape long nbr_de_jeunes_ deces_de_vieux_ deces_de_jeunes_ deces_ naissances_de_jeunes_, i(dpt_num) j(annee)
+reshape long nbr_de_jeunes_ deces_de_vieux_ deces_de_jeunes_ deces_ naissances_de_jeunes10_ naissances_de_jeunes20_, i(dpt_num) j(annee)
 
 rename nbr_de_jeunes_ nbr_de_jeunes
 rename deces_ deces
 rename deces_de_vieux_ deces_de_vieux
 rename deces_de_jeunes_ deces_de_jeunes
-rename naissances_de_jeunes_ naissances_de_jeunes 
+rename naissances_de_jeunes10_ naissances_de_jeunes10
+rename naissances_de_jeunes20_ naissances_de_jeunes20 
 
 label var deces_de_vieux "Décès entre t-1 et t-10 de personnes âgées de + de 20 ans"
 label var deces_de_jeunes "Décès entre t-1 et t-10 de personnes âgées de - de 20 ans"
 label var deces "Décès entre t-1 et t-10"
 label var nbr_de_jeunes "Nombres de jeunes en t"
-label var naissances_de_jeunes "Naissances entre t-1 et t-10"
+label var naissances_de_jeunes10 "Naissances entre t-1 et t-10"
+label var naissances_de_jeunes20 "Naissances entre t-1 et t-20"
 
 rename dpt_num dptresid
 drop if dptresid==74 | dptresid==73 | dptresid==6
