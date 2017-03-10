@@ -1,0 +1,7 @@
+note
+
+the excel file data 30 year v2 comes from the "C:\Documents and Settings\user\My Documents\Welfare State\princeton project" folder
+
+Le fichier "stata master england+wales" en format stata est renomme "englandfertility.dta"
+
+Les donnees stata viennent du fichier excel situe dans "C:\Documents and Settings\user\My Documents\Migrations\data\convergence england"

@@ -1,0 +1,66 @@
+-----------------------------------------------------------------------------------------------------------
+       log:  C:\Documents and Settings\user\My Documents\Migrations\data\convergence england\Convergence En
+> gland&W.txt
+  log type:  text
+ opened on:  25 May 2012, 23:19:55
+
+. do "C:\Documents and Settings\user\My Documents\Migrations\data\convergence england\Convergence England&W
+> .do"
+
+. **Conditional convergence England and Wales
+. 
+. use "C:\Documents and Settings\user\My Documents\Migrations\data\convergence england\englandfertility.dta
+> ", clear
+
+. 
+. drop if year>1911
+(138 observations deleted)
+
+. 
+. tsset id year, delta(10)
+       panel variable:  id (strongly balanced)
+        time variable:  year, 1851 to 1911
+                delta:  10 units
+
+. 
+. gen fert_obs= indexoftotalfertilityif
+
+. 
+. generate chg_fert = (exp(F.fert_obs)-exp(fert_obs))/exp(fert_obs)
+(46 missing values generated)
+
+. 
+. xi : reg chg_fert fert_obs i.year
+i.year            _Iyear_1851-1911    (naturally coded; _Iyear_1851 omitted)
+
+      Source |       SS       df       MS              Number of obs =     276
+-------------+------------------------------           F(  6,   269) =  187.10
+       Model |  .161229141     6  .026871524           Prob > F      =  0.0000
+    Residual |  .038634996   269  .000143625           R-squared     =  0.8067
+-------------+------------------------------           Adj R-squared =  0.8024
+       Total |  .199864138   275  .000726779           Root MSE      =  .01198
+
+------------------------------------------------------------------------------
+    chg_fert |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+    fert_obs |    -.02016   .0221303    -0.91   0.363    -.0637306    .0234105
+ _Iyear_1861 |  -.0085748   .0025192    -3.40   0.001    -.0135348   -.0036149
+ _Iyear_1871 |  -.0255515   .0025381   -10.07   0.000    -.0305485   -.0205546
+ _Iyear_1881 |  -.0601751   .0025061   -24.01   0.000    -.0651092    -.055241
+ _Iyear_1891 |  -.0536464   .0026386   -20.33   0.000    -.0588413   -.0484514
+ _Iyear_1901 |  -.0600662   .0030292   -19.83   0.000    -.0660302   -.0541022
+ _Iyear_1911 |  (dropped)
+       _cons |   .0217217   .0080131     2.71   0.007     .0059454     .037498
+------------------------------------------------------------------------------
+
+. 
+end of do-file
+
+. clear
+
+. log close
+       log:  C:\Documents and Settings\user\My Documents\Migrations\data\convergence england\Convergence En
+> gland&W.txt
+  log type:  text
+ closed on:  25 May 2012, 23:20:02
+-----------------------------------------------------------------------------------------------------------

@@ -1,0 +1,8 @@
+note
+
+the excel file data 30 year v2 comes from the "C:\Documents and Settings\user\My Documents\Welfare State\princeton project" folder
+
+Le fichier "stata master england+wales" en format stata est renomme "englandfertility.dta"
+
+
+le fichier stata "countries&capitals" sert a la construction du graphique du meme nom et est issue du feuillet "joli tableau" du dossier excel "data30yearv2" 

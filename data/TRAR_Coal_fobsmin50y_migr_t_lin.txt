@@ -1,0 +1,71 @@
+		(1)	(2)	(3)	(4)	(5)	(6)	(7)	(8)	(9)	(10)	(11)	(12)	(13)	(14)	(15)	(16)	(17)	(18)	(19)	(20)
+VARIABLES	LABELS	log(Fertility) (t-50)	log(Fertility) (t-50)	log(Fertility) (t-50)	log(Fertility) (t-50)	log(Fertility) (t-50)	log(Fertility) (t-50)	log(Fertility) (t-50)	log(Fertility) (t-50)	log(Fertility) (t-50)	log(Fertility) (t-50)	log(Fertility) (t-50)	log(Fertility) (t-50)	log(Fertility) (t-50)	log(Fertility) (t-50)	log(Fertility) (t-50)	log(Fertility) (t-50)	log(Fertility) (t-50)	log(Fertility) (t-50)	log(Fertility) (t-50)	log(Fertility) (t-50)
+																					
+norme_dest	Emigrants' Residence Norm (t)	-0.00352					-0.149					-0.402					-0.295				
+		[0.144]					[0.138]					[0.316]					[0.304]				
+norme_ori	Immigrants' Birthplace Norm (t)	-0.0813					-0.188					0.347					-0.149				
+		[0.129]					[0.121]					[0.336]					[0.364]				
+norm_dest_x_lnp_pop	Emigrants' Residence Norm (t) * Share of Emigrants(t)	0.547					0.874					-0.473					-0.227				
+		[0.936]					[0.871]					[1.165]					[1.217]				
+norm_ori_x_lnp_pop	Immigrants' Birthplace Norm (t)* Share of Immigrants (t)	0.0405					0.328					0.429					1.192				
+		[1.118]					[1.078]					[1.053]					[0.983]				
+lnp_pop_emigr	Share of Emigrants (t)	1.151					1.697					-0.522					-0.285				
+		[1.515]					[1.356]					[1.658]					[1.711]				
+lnp_pop_immigr	Share of Immigrants (t)	0.173					0.149					-0.220					0.439				
+		[1.449]					[1.344]					[1.466]					[1.352]				
+revuedesdeuxmondes_newsstand	Revue des Deux Mondes Outlets						-0.0445										-0.0435				
+							[0.0443]										[0.0444]				
+rd2M_fecParis	Revue des Deux Mondes Outlets* Fertility of Seine						-0.0194										-0.0181				
+							[0.0279]										[0.0273]				
+lifeexpectancy15	Life Expectancy Age 15 (t)						0.0252*										0.0279**				
+							[0.0141]										[0.0138]				
+mortalityratio_1	Infant Mortality (t)						0.936**										1.067**				
+							[0.447]										[0.430]				
+urban	log(Urban) (t)						-0.131										-0.225				
+							[0.192]										[0.152]				
+lnp_industrie	log(Industries) (t)						0.00968										0.00303				
+							[0.00925]										[0.0101]				
+lnp_professionsliberales	log(Professionals) (t)						-0.00931										-0.0101				
+							[0.0170]										[0.0181]				
+lnwomen_education_10yb	log(Female Education (t))						-0.111										-0.129**				
+							[0.0672]										[0.0575]				
+lnmen_education_10yb	log(Male Education (t))						-0.00839										-0.00677				
+							[0.0614]										[0.0554]				
+lnpropfillescongreganistes	log(Share of Girls in Primary Catholic Schools) (t)						-0.0474*										-0.0363				
+							[0.0280]										[0.0299]				
+lnpropgarconscongreganistes	log(Share of Boys in Primary Catholic Schools) (t)						0.0379*										0.0251				
+							[0.0198]										[0.0206]				
+o.revuedesdeuxmondes_newsstand	Revue des Deux Mondes Outlets = o,						-										-				
+																					
+o.rd2M_fecParis	Revue des Deux Mondes Outlets* Fertility of Seine = o,						-										-				
+																					
+_Iannee_obs_1871	annee_obs==1871	-0.0358					-0.0261										0.459**				
+		[0.0233]					[0.0374]										[0.188]				
+_Iannee_obs_1881	annee_obs==1881	-0.0810***					-0.00541					0.000355					0.519***				
+		[0.0297]					[0.0332]					[0.0155]					[0.189]				
+_Iannee_obs_1891	annee_obs==1891	-0.196***					-0.135***					-0.0927***					0.402**				
+		[0.0417]					[0.0453]					[0.0340]					[0.190]				
+_Iannee_obs_1901	annee_obs==1901	-0.208***					-0.135**					-0.108***					0.400**				
+		[0.0593]					[0.0614]					[0.0328]					[0.178]				
+_Iannee_obs_1911	annee_obs==1911	-0.284***					-0.538***					-0.201***									
+		[0.0688]					[0.178]					[0.0430]									
+_nl_1			-0.121	-0.201	-0.0875	-0.0123		-0.337	-0.322	-0.238	-0.0993		-0.299	0.176	0.282	-0.127		-0.246	0.0845	-0.329	-0.352
+			[0.334]	[0.344]	[0.278]	[0.338]		[0.312]	[0.320]	[0.266]	[0.326]		[0.529]	[0.433]	[0.419]	[0.311]		[0.515]	[0.453]	[0.444]	[0.291]
+_Iannee_obs_1861	annee_obs==1861											0.0683**					0.502***				
+												[0.0302]					[0.187]				
+o._Iannee_obs_1871	annee_obs==1871 = o,											-									
+																					
+o._Iannee_obs_1911	annee_obs==1911 = o,																-				
+																					
+Constant	Constant	-1.103***					-2.857***					-1.033***					-3.543***				
+		[0.231]					[0.810]					[0.291]					[0.968]				
+																					
+Observations		486	486	486	486	486	486	486	486	486	486	486	486	486	486	486	486	486	486	486	486
+R-squared		0.545					0.579					0.553					0.590				
+Number of dptresid		81					81					81					81				
+Within R2		0.5					0.579					0.6					0.590				
+Adjusted R2		0.5					0.559					0.5					0.571				
+F-stat		22.6					22.625					27.9					20.910				
+Prob>F-stat		0.0					0.000					0.0					0.000				
+Robust standard errors in brackets																					
+*** p<0.01, ** p<0.05, * p<0.1																					

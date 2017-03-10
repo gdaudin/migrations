@@ -1,0 +1,109 @@
+----------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  C:\Users\USER\Documents\Migrations\data\predict\sum_TRAR__TFR_f_o_P_migr_lin_var_oldpredict18
+> 61.log
+  log type:  text
+ opened on:   4 Mar 2017, 22:15:10
+
+. use "C:\Users\USER\Documents\Migrations\data\predict\TRAR__TFR_f_o_P_migr_lin_var_oldpredict1861.dta",cl
+> ear
+(drop)
+
+. do "C:\Users\USER\Documents\Migrations\data\predict\\pearson.do"
+
+.  keep if cylin==1
+(0 observations deleted)
+
+.  sort annee_obs
+
+.  by annee_obs: egen pearsonstat=sum((ef_obs_predict-ef_obs)^2/ef_obs_predict)
+
+.  
+. 
+end of do-file
+
+. sum ef_obs ef_obs_predict ef_obs_counterfactual_ori0 ef_obs_counterfactual_dest0 ef_obs_counterfactual_d
+> eor0 pearsonstat if annee_obs==1861 & cylin==1 
+
+    Variable |       Obs        Mean    Std. Dev.       Min        Max
+-------------+--------------------------------------------------------
+      ef_obs |        80     .026159    .0037672   .0188756   .0344905
+ef_obs_pre~t |        80    .0259894    .0022755   .0206902   .0304074
+ef_obs_co~i0 |        80    .0259894    .0022755   .0206902   .0304074
+ef_obs_co~t0 |        80    .0259894    .0022755   .0206902   .0304074
+ef_obs_co~r0 |        80    .0259894    .0022755   .0206902   .0304074
+-------------+--------------------------------------------------------
+ pearsonstat |        80    .0329774           0   .0329774   .0329774
+
+. sum ef_obs ef_obs_predict ef_obs_counterfactual_ori0 ef_obs_counterfactual_dest0 ef_obs_counterfactual_d
+> eor0 pearsonstat if annee_obs==1871 & cylin==1 
+
+    Variable |       Obs        Mean    Std. Dev.       Min        Max
+-------------+--------------------------------------------------------
+      ef_obs |        80    .0271736    .0043523   .0195716    .038335
+ef_obs_pre~t |        80    .0268995    .0019514   .0222191    .031433
+ef_obs_co~i0 |        80     .026538    .0020058   .0218089   .0307645
+ef_obs_co~t0 |        80     .027378    .0019894   .0228352   .0316207
+ef_obs_co~r0 |        80    .0270167    .0019636   .0224137   .0309602
+-------------+--------------------------------------------------------
+ pearsonstat |        80    .0422956           0   .0422956   .0422956
+
+. sum ef_obs ef_obs_predict ef_obs_counterfactual_ori0 ef_obs_counterfactual_dest0 ef_obs_counterfactual_d
+> eor0 pearsonstat if annee_obs==1881 & cylin==1 
+
+    Variable |       Obs        Mean    Std. Dev.       Min        Max
+-------------+--------------------------------------------------------
+      ef_obs |        80    .0251972    .0039449   .0178452   .0362959
+ef_obs_pre~t |        80    .0249681    .0018113   .0200346   .0303881
+ef_obs_co~i0 |        80    .0247918    .0020676   .0197409   .0299931
+ef_obs_co~t0 |        80    .0261201    .0019399    .021236   .0309654
+ef_obs_co~r0 |        80    .0258326    .0020331   .0209247   .0301113
+-------------+--------------------------------------------------------
+ pearsonstat |        80    .0388568           0   .0388568   .0388568
+
+. sum ef_obs ef_obs_predict ef_obs_counterfactual_ori0 ef_obs_counterfactual_dest0 ef_obs_counterfactual_d
+> eor0 pearsonstat if annee_obs==1891 & cylin==1 
+
+    Variable |       Obs        Mean    Std. Dev.       Min        Max
+-------------+--------------------------------------------------------
+      ef_obs |        80    .0225525     .004109   .0078118   .0346525
+ef_obs_pre~t |        80    .0221911    .0014242   .0194044    .027045
+ef_obs_co~i0 |        80    .0224065    .0016893   .0194593   .0270409
+ef_obs_co~t0 |        80    .0239144    .0015581   .0204999   .0285095
+ef_obs_co~r0 |        80     .023844    .0015892   .0204336    .027964
+-------------+--------------------------------------------------------
+ pearsonstat |        80    .0514624           0   .0514624   .0514624
+
+. sum ef_obs ef_obs_predict ef_obs_counterfactual_ori0 ef_obs_counterfactual_dest0 ef_obs_counterfactual_d
+> eor0 pearsonstat if annee_obs==1901 & cylin==1 
+
+    Variable |       Obs        Mean    Std. Dev.       Min        Max
+-------------+--------------------------------------------------------
+      ef_obs |        80    .0221136    .0032372   .0159741   .0329541
+ef_obs_pre~t |        80    .0219393    .0014776   .0191235   .0268009
+ef_obs_co~i0 |        80    .0220965    .0017536   .0191132   .0274345
+ef_obs_co~t0 |        80     .024372    .0014997   .0206257   .0285998
+ef_obs_co~r0 |        80     .024218    .0015557   .0205881   .0288292
+-------------+--------------------------------------------------------
+ pearsonstat |        80    .0367435           0   .0367435   .0367435
+
+. sum ef_obs ef_obs_predict ef_obs_counterfactual_ori0 ef_obs_counterfactual_dest0 ef_obs_counterfactual_d
+> eor0 pearsonstat if annee_obs==1911 & cylin==1 
+
+    Variable |       Obs        Mean    Std. Dev.       Min        Max
+-------------+--------------------------------------------------------
+      ef_obs |        80    .0187735    .0028265    .013104   .0280462
+ef_obs_pre~t |        80    .0186185    .0013241   .0160744   .0232293
+ef_obs_co~i0 |        80    .0193785    .0016884   .0165476   .0255951
+ef_obs_co~t0 |        80    .0212965    .0013879   .0182022   .0247482
+ef_obs_co~r0 |        80    .0217679    .0015184     .01868   .0271467
+-------------+--------------------------------------------------------
+ pearsonstat |        80    .0289735           0   .0289735   .0289735
+
+. log close
+      name:  <unnamed>
+       log:  C:\Users\USER\Documents\Migrations\data\predict\sum_TRAR__TFR_f_o_P_migr_lin_var_oldpredict18
+> 61.log
+  log type:  text
+ closed on:   4 Mar 2017, 22:15:10
+----------------------------------------------------------------------------------------------------------

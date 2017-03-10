@@ -1,0 +1,63 @@
+		(1)	(2)	(3)
+VARIABLES	LABELS	log(Fertility) (t)	log(Fertility) (t)	log(Fertility) (t)
+				
+norme_dest	Emigrants' Residence Norm (t)	0.265***	0.0915*	0.589***
+		[0.0768]	[0.0474]	[0.122]
+norme_ori	Immigrants' Birthplace Norm (t)	0.0786	0.00783	0.130
+		[0.0821]	[0.0838]	[0.121]
+norm_dest_x_lnp_pop	Emigrants' Residence Norm (t) * Share of Emigrants(t)	-0.369	-0.458	-1.908***
+		[0.448]	[0.529]	[0.646]
+norm_ori_x_lnp_pop	Immigrants' Birthplace Norm (t)* Share of Immigrants (t)	1.073	0.528	1.446
+		[0.857]	[0.769]	[1.026]
+lnp_pop_emigr	Share of Emigrants (t)	-0.742*	-0.669	-3.016***
+		[0.426]	[0.405]	[1.076]
+lnp_pop_immigr	Share of Immigrants (t)	1.937*	0.954	3.387**
+		[0.982]	[0.812]	[1.388]
+_Iannee_obs_1831	annee_obs==1831	-0.0340***	-0.0356***	
+		[0.0115]	[0.0108]	
+_Iannee_obs_1841	annee_obs==1841	-0.0621***	-0.117***	
+		[0.0220]	[0.0186]	
+_Iannee_obs_1851	annee_obs==1851	-0.0510**	-0.117***	
+		[0.0219]	[0.0181]	
+_Iannee_obs_1861	annee_obs==1861	-0.0982***		0.0213
+		[0.0249]		[0.0186]
+_Iannee_obs_1871	annee_obs==1871	-0.137***		
+		[0.0355]		
+_Iannee_obs_1881	annee_obs==1881	-0.135***		-0.0135
+		[0.0318]		[0.0155]
+_Iannee_obs_1891	annee_obs==1891	-0.226***		-0.0885***
+		[0.0423]		[0.0192]
+_Iannee_obs_1901	annee_obs==1901	-0.214***		-0.0900***
+		[0.0471]		[0.0286]
+_Iannee_obs_1911	annee_obs==1911	-0.221***		-0.101***
+		[0.0590]		[0.0362]
+o._Iannee_obs_1861	annee_obs==1861 = o,		-	
+				
+o._Iannee_obs_1871	annee_obs==1871 = o,		-	-
+				
+o._Iannee_obs_1881	annee_obs==1881 = o,		-	
+				
+o._Iannee_obs_1891	annee_obs==1891 = o,		-	
+				
+o._Iannee_obs_1901	annee_obs==1901 = o,		-	
+				
+o._Iannee_obs_1911	annee_obs==1911 = o,		-	
+				
+o._Iannee_obs_1831	annee_obs==1831 = o,			-
+				
+o._Iannee_obs_1841	annee_obs==1841 = o,			-
+				
+o._Iannee_obs_1851	annee_obs==1851 = o,			-
+				
+Constant	Constant	-0.708***	-0.902***	-0.414**
+		[0.123]	[0.105]	[0.204]
+				
+Observations		800	320	480
+R-squared		0.724	0.507	0.649
+Number of dptresid		80	80	80
+Within R2		0.7	0.5	0.6
+Adjusted R2		0.7	0.5	0.6
+F-stat		40.4	22.8	44.1
+Prob>F-stat		0.0	0.0	0.0
+Robust standard errors in brackets				
+*** p<0.01, ** p<0.05, * p<0.1				

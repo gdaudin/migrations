@@ -1,0 +1,99 @@
+		(1)	(2)	(3)	(4)	(5)	(6)	(7)	(8)
+VARIABLES	LABELS	log(Fertility) (t)	log(Fertility) (t)	log(Fertility) (t)	log(Fertility) (t)	log(Fertility) (t)	log(Fertility) (t)	log(Fertility) (t)	log(Fertility) (t)
+									
+norme_dest	Emigrants' Residence Norm (t)	0.475**		0.319*		0.440		0.845**	
+		[0.213]		[0.177]		[0.311]		[0.322]	
+norme_ori	Immigrants' Birthplace Norm (t)	0.154		-0.0118		0.735**		0.145	
+		[0.136]		[0.119]		[0.291]		[0.285]	
+norm_dest_x_lnp_pop	Emigrants' Residence Norm (t) * Share of Emigrants(t)	-1.521		-0.865		-1.116		-1.811	
+		[1.344]		[1.130]		[1.443]		[1.303]	
+norm_ori_x_lnp_pop	Immigrants' Birthplace Norm (t)* Share of Immigrants (t)	-0.0131		0.586		-1.062		-0.302	
+		[1.203]		[0.909]		[0.907]		[0.733]	
+lnp_pop_emigr	Share of Emigrants (t)	-2.802		-1.115		-1.417		-2.328	
+		[2.061]		[1.846]		[2.039]		[1.852]	
+lnp_pop_immigr	Share of Immigrants (t)	1.180		1.824		-0.535		-0.160	
+		[1.581]		[1.258]		[1.197]		[1.179]	
+lifeexpectancy15	Life Expectancy Age 15 (t)			-0.0158				-0.0154	
+				[0.0103]				[0.00931]	
+mortalityratio_1	Infant Mortality (t)			0.712**				0.635**	
+				[0.331]				[0.312]	
+urban	log(Urban) (t)			0.417**				0.629***	
+				[0.185]				[0.139]	
+lnp_industrie	log(Industries) (t)			-0.0116				-0.000585	
+				[0.00702]				[0.00729]	
+lnp_professionsliberales	log(Professionals) (t)			-0.0143				-0.00310	
+				[0.0138]				[0.0120]	
+lnwomen_education_10yb	log(Female Education (t))			-0.0525				-0.0376	
+				[0.0533]				[0.0487]	
+lnmen_education_10yb	log(Male Education (t))			-0.00897				0.0132	
+				[0.0525]				[0.0521]	
+lnpropfillescongreganistes	log(Share of Girls in Primary Catholic Schools) (t)			0.0295				0.0327*	
+				[0.0196]				[0.0196]	
+lnpropgarconscongreganistes	log(Share of Boys in Primary Catholic Schools) (t)			-0.0286				-0.0140	
+				[0.0174]				[0.0152]	
+revuedesdeuxmondes_newsstand	Revue des Deux Mondes Outlets			0.0355				-0.0210	
+				[0.0376]				[0.0376]	
+rd2M_fecParis	Revue des Deux Mondes Outlets* Fertility of Seine			0.0270				-0.00240	
+				[0.0226]				[0.0230]	
+o._Iannee_obs_1871	annee_obs==1871 = o,			-	-			-	-
+									
+_Iannee_obs_1881	annee_obs==1881	0.121***	0.178***	0.0994***	0.0683*	0.0711**	0.193***	0.0743*	0.106***
+		[0.0215]	[0.0139]	[0.0341]	[0.0371]	[0.0345]	[0.0201]	[0.0403]	[0.0396]
+_Iannee_obs_1891	annee_obs==1891			0.0469	-0.00969			0.0580	0.00670
+				[0.0379]	[0.0239]			[0.0395]	[0.0265]
+_Iannee_obs_1901	annee_obs==1901	0.0424**	0.0599***	0.0622	0.0293	0.0284	0.0550**	0.103*	0.0244
+		[0.0200]	[0.0176]	[0.0518]	[0.0293]	[0.0271]	[0.0262]	[0.0592]	[0.0424]
+_Iannee_obs_1911	annee_obs==1911	0.0114	0.00112	0.445***	-0.0322	-0.00927	-0.0316	0.459***	-0.0155
+		[0.0333]	[0.0301]	[0.143]	[0.0517]	[0.0339]	[0.0252]	[0.145]	[0.0572]
+L.norme_dest	Emigrants' Residence Norm (t) = L,	0.182	0.567***	0.0441	0.379***	0.811**	1.091***	0.426	1.036***
+		[0.209]	[0.144]	[0.181]	[0.139]	[0.350]	[0.279]	[0.275]	[0.243]
+L.norme_ori	Immigrants' Birthplace Norm (t) = L,	0.0683	0.198*	-0.0440	-0.0169	-0.0366	0.219	-0.238	-0.247
+		[0.113]	[0.118]	[0.0944]	[0.117]	[0.302]	[0.319]	[0.259]	[0.333]
+L.norm_dest_x_lnp_pop	Emigrants' Residence Norm (t) * Share of Emigrants(t) = L,	-0.170	-2.306**	0.111	-1.731*	-3.283**	-4.979***	-1.645	-4.397***
+		[1.701]	[1.085]	[1.482]	[1.033]	[1.362]	[1.025]	[1.488]	[1.147]
+L.norm_ori_x_lnp_pop	Immigrants' Birthplace Norm (t)* Share of Immigrants (t) = L,	1.475	1.131	1.720**	1.895*	1.580**	1.078	1.588**	1.813**
+		[1.009]	[1.097]	[0.701]	[0.982]	[0.665]	[0.686]	[0.638]	[0.863]
+L.lnp_pop_emigr	Share of Emigrants (t) = L,	0.246	-3.096*	0.213	-2.286	-4.859***	-6.803***	-2.460	-6.028***
+		[2.468]	[1.622]	[2.222]	[1.450]	[1.828]	[1.525]	[2.017]	[1.680]
+L.lnp_pop_immigr	Share of Immigrants (t) = L,	2.534*	2.786**	2.474**	3.601***	3.595***	3.728***	3.069***	4.160***
+		[1.354]	[1.346]	[0.988]	[1.226]	[0.861]	[1.040]	[0.817]	[1.160]
+L.lifeexpectancy15	Life Expectancy Age 15 (t) = L,			-0.0193	0.0222			-0.0205	0.0185
+				[0.0145]	[0.0153]			[0.0148]	[0.0163]
+L.mortalityratio_1	Infant Mortality (t) = L,			-0.511	1.260**			-0.555	1.028*
+				[0.514]	[0.513]			[0.501]	[0.557]
+L.urban	log(Urban) (t) = L,			-0.405***	-0.385***			-0.282*	-0.253*
+				[0.129]	[0.137]			[0.147]	[0.141]
+L.lnp_industrie	log(Industries) (t) = L,			-0.00386	-0.00527			0.000961	0.00793
+				[0.00879]	[0.0105]			[0.00713]	[0.00940]
+L.lnp_professionsliberales	log(Professionals) (t) = L,			-0.0256**	-0.0246			-0.0191*	-0.0260*
+				[0.0127]	[0.0160]			[0.0103]	[0.0154]
+L.lnwomen_education_10yb	log(Female Education (t)) = L,			0.104**	0.00824			0.112**	0.0183
+				[0.0482]	[0.0459]			[0.0441]	[0.0438]
+L.lnmen_education_10yb	log(Male Education (t)) = L,			-0.177***	-0.179***			-0.168***	-0.178***
+				[0.0577]	[0.0621]			[0.0524]	[0.0532]
+L.lnpropfillescongreganistes	log(Share of Girls in Primary Catholic Schools) (t) = L,			0.00515	0.0133			0.00294	0.0390
+				[0.0317]	[0.0370]			[0.0347]	[0.0420]
+L.lnpropgarconscongreganistes	log(Share of Boys in Primary Catholic Schools) (t) = L,			-0.00601	-0.0270			-0.00174	-0.0206
+				[0.0127]	[0.0184]			[0.0115]	[0.0171]
+L.revuedesdeuxmondes_newsstand	Revue des Deux Mondes Outlets = L,			0.0759**	0.0830*			0.0732**	0.0485
+				[0.0333]	[0.0429]			[0.0346]	[0.0423]
+L.rd2M_fecParis	Revue des Deux Mondes Outlets* Fertility of Seine = L,			0.0523**	0.0562*			0.0489**	0.0282
+				[0.0240]	[0.0301]			[0.0241]	[0.0303]
+_Iannee_obs_1871	annee_obs==1871	0.0965***	0.106***			0.00747	0.0799***		
+		[0.0284]	[0.0252]			[0.0364]	[0.0217]		
+o._Iannee_obs_1891	annee_obs==1891 = o,	-	-			-	-		
+									
+o._Iannee_obs_1861	annee_obs==1861 = o,					-	-	-	-
+									
+Constant	Constant	-0.372	-0.549**	0.114	-2.491***	1.024***	0.0953	1.504	-1.716*
+		[0.297]	[0.257]	[0.946]	[0.878]	[0.373]	[0.247]	[1.060]	[0.957]
+									
+Observations		405	405	405	405	405	405	405	405
+R-squared		0.610	0.566	0.781	0.660	0.674	0.617	0.806	0.686
+Number of dptresid		81	81	81	81	81	81	81	81
+Within R2		0.610	0.566	0.781	0.660	0.674	0.617	0.806	0.686
+Adjusted R2		0.594	0.555	0.758	0.641	0.661	0.607	0.786	0.669
+F-stat		29.183	36.847	38.488	38.320	38.396	41.112	78.830	40.987
+Prob>F-stat		0.000	0.000	0.000	0.000	0.000	0.000	0.000	0.000
+Robust standard errors in brackets									
+*** p<0.01, ** p<0.05, * p<0.1									

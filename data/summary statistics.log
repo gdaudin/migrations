@@ -1,0 +1,589 @@
+----------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  C:\Users\User\Documents\summary statistics.log
+  log type:  text
+ opened on:   6 Mar 2017, 13:46:29
+
+. 
+. 
+. set more off
+
+. 
+. 
+. ******** COALE FERTILITY INDEX
+. 
+. *** Determinants of the fertility decline in France, 1861-1911: all migrants (Main Table - Table 2)
+. use "C:\Users\User\Documents\Migrations\files\BDD 2017 03 03\BDD_TRAR_Coal_t_o_P_migr_lin_var_old.dta", 
+> clear
+(drop)
+
+. gen ef_obs=exp(f_obs)
+(20 missing values generated)
+
+. gen enorme_dest=exp(norme_dest)
+
+. gen enorme_ori=exp(norme_ori)
+
+. sum ef_obs enorme_dest   enorme_ori p_pop_emigr p_pop_immigr if cylin==1
+
+    Variable |       Obs        Mean    Std. Dev.       Min        Max
+-------------+--------------------------------------------------------
+      ef_obs |       486    .2736091    .0589865       .158       .566
+ enorme_dest |       486    .2574046    .0380844    .168326   .3947867
+  enorme_ori |       486    .2739337    .0350005   .2069003    .422303
+ p_pop_emigr |       486    .1688439    .0737595   .0308414   .4674101
+p_pop_immigr |       486    .1233904    .0814305   .0056287   .5543509
+
+. sum f_obs_min50y  if cylin==1
+
+    Variable |       Obs        Mean    Std. Dev.       Min        Max
+-------------+--------------------------------------------------------
+f_obs_min50y |       486    .3604961    .0993033       .205       .871
+
+. 
+. 
+. *use "C:\Users\User\Documents\Migrations\files\BDD 2017 03 03\BDD_TRAR_Coal_t_p_P_migr_lin_var_old.dta",
+>  clear
+. *do "C:\Users\User\Documents\Migrations\data\variabledefs.do"
+. *do "C:\Users\User\Documents\Migrations\data\TRAR_Coal_migr_t_lin.do"
+. 
+. 
+. 
+. ***The fertility decline in France, 1861-1911: only male migration
+. use "C:\Users\User\Documents\Migrations\files\BDD 2017 03 03\BDD_TRAR_Coal_m_o_P_migr_lin_var_old.dta", 
+> clear
+(drop)
+
+. gen ef_obs=exp(f_obs)
+(20 missing values generated)
+
+. gen enorme_dest=exp(norme_dest)
+
+. gen enorme_ori=exp(norme_ori)
+
+. sum ef_obs enorme_dest   enorme_ori p_pop_emigr p_pop_immigr if cylin==1
+
+    Variable |       Obs        Mean    Std. Dev.       Min        Max
+-------------+--------------------------------------------------------
+      ef_obs |       486    .2736091    .0589865       .158       .566
+ enorme_dest |       486    .2593261    .0420483   .1725044   .4840595
+  enorme_ori |       486    .2731776     .039722   .1895261   .4587506
+ p_pop_emigr |       486    .1823642    .0793221   .0392301   .5186887
+p_pop_immigr |       486    .1357309    .0887041   .0093235   .6157105
+
+. sum f_obs_min50y  if cylin==1
+
+    Variable |       Obs        Mean    Std. Dev.       Min        Max
+-------------+--------------------------------------------------------
+f_obs_min50y |       486    .3604961    .0993033       .205       .871
+
+. 
+. 
+. *use "C:\Users\User\Documents\Migrations\files\BDD 2017 03 03\BDD_TRAR_Coal_m_p_P_migr_lin_var_old.dta",
+>  clear
+. *do "C:\Users\User\Documents\Migrations\data\variabledefs.do"
+. *do "C:\Users\User\Documents\Migrations\data\TRAR_Coal_migr_m_lin.do"
+. 
+. 
+. 
+. ***The fertility decline in France, 1861-1911: only female migration
+. use "C:\Users\User\Documents\Migrations\files\BDD 2017 03 03\BDD_TRAR_Coal_f_o_P_migr_lin_var_old.dta", 
+> clear
+(drop)
+
+. gen ef_obs=exp(f_obs)
+(20 missing values generated)
+
+. gen enorme_dest=exp(norme_dest)
+
+. gen enorme_ori=exp(norme_ori)
+
+. sum ef_obs enorme_dest   enorme_ori p_pop_emigr p_pop_immigr if cylin==1
+
+    Variable |       Obs        Mean    Std. Dev.       Min        Max
+-------------+--------------------------------------------------------
+      ef_obs |       486    .2736091    .0589865       .158       .566
+ enorme_dest |       486    .2550719    .0391415   .1610199   .3896735
+  enorme_ori |       486    .2750686    .0396495   .1979633   .4959759
+ p_pop_emigr |       486    .1637213     .075678   .0221379   .4713181
+p_pop_immigr |       486    .1186535    .0865549   .0020438   .5825908
+
+. 
+. 
+. *use "C:\Users\User\Documents\Migrations\files\BDD 2017 03 03\BDD_TRAR_Coal_f_p_P_migr_lin_var_old.dta",
+>  clear
+. *do "C:\Users\User\Documents\Migrations\data\variabledefs.do"
+. *do "C:\Users\User\Documents\Migrations\data\TRAR_Coal_migr_f_lin.do"
+. 
+. 
+. 
+. 
+. ***The fertility decline in France, 1861-1911, excluding migration to and from Seine (Paris and suburbs)
+. use "C:\Users\User\Documents\Migrations\files\BDD 2017 03 03\BDD_TRAR_Coal_t_o_SP_migr_lin_var_old.dta",
+>  clear
+(drop)
+
+. gen ef_obs=exp(f_obs)
+(20 missing values generated)
+
+. gen enorme_dest=exp(norme_dest)
+(6 missing values generated)
+
+. gen enorme_ori=exp(norme_ori)
+(6 missing values generated)
+
+. sum ef_obs enorme_dest   enorme_ori p_pop_emigr p_pop_immigr if cylin==1
+
+    Variable |       Obs        Mean    Std. Dev.       Min        Max
+-------------+--------------------------------------------------------
+      ef_obs |       480    .2741625    .0588777        .16       .566
+ enorme_dest |       480    .2664583    .0370566   .1683282   .4367796
+  enorme_ori |       480    .2761749     .034167   .2068941   .4223757
+ p_pop_emigr |       480    .1271214    .0639862   .0111063   .4672363
+p_pop_immigr |       480    .1110853    .0596578   .0056233   .3720712
+
+. 
+. 
+. *use "C:\Users\User\Documents\Migrations\files\BDD 2017 03 03\BDD_TRAR_Coal_t_p_SP_migr_lin_var_old.dta"
+> , clear
+. *do "C:\Users\User\Documents\Migrations\data\variabledefs.do"
+. *do "C:\Users\User\Documents\Migrations\data\TRAR_Coal_migr_t_SP_lin.do"
+. 
+. 
+. ***************** TOTAL FERTILITY RATE
+. 
+. *** Determinants of the fertility decline in France, 1861-1911: all migrants (Main Table - Table 2)
+. use "C:\Users\User\Documents\Migrations\files\BDD 2017 03 03\BDD_TRAR_TFR_t_o_P_migr_lin_var_old.dta", c
+> lear
+(drop)
+
+. gen ef_obs=exp(f_obs)
+(25 missing values generated)
+
+. gen enorme_dest=exp(norme_dest)
+
+. gen enorme_ori=exp(norme_ori)
+(10 missing values generated)
+
+. sum ef_obs enorme_dest   enorme_ori p_pop_emigr p_pop_immigr if cylin==1
+
+    Variable |       Obs        Mean    Std. Dev.       Min        Max
+-------------+--------------------------------------------------------
+      ef_obs |       480    .0236616    .0046855   .0078118    .038335
+ enorme_dest |       480    .0245293    .0036402    .015081   .0343936
+  enorme_ori |       480    .0240671    .0036107   .0155572   .0470924
+ p_pop_emigr |       480      .16844    .0736492   .0308414   .4669965
+p_pop_immigr |       480    .1240674    .0817035   .0056287   .5543509
+
+. 
+. *use "C:\Users\User\Documents\Migrations\files\BDD 2017 03 03\BDD_TRAR_TFR_t_p_P_migr_lin_var_old.dta", 
+> clear
+. *do "C:\Users\User\Documents\Migrations\data\variabledefs.do"
+. *do "C:\Users\User\Documents\Migrations\data\TRAR_TFR_migr_t_lin.do"
+. 
+. 
+. ***The fertility decline in France, 1861-1911: only male migration
+. use "C:\Users\User\Documents\Migrations\files\BDD 2017 03 03\BDD_TRAR_TFR_m_o_P_migr_lin_var_old.dta", c
+> lear
+(drop)
+
+. gen ef_obs=exp(f_obs)
+(25 missing values generated)
+
+. gen enorme_dest=exp(norme_dest)
+
+. gen enorme_ori=exp(norme_ori)
+(10 missing values generated)
+
+. sum ef_obs enorme_dest   enorme_ori p_pop_emigr p_pop_immigr if cylin==1
+
+    Variable |       Obs        Mean    Std. Dev.       Min        Max
+-------------+--------------------------------------------------------
+      ef_obs |       480    .0236616    .0046855   .0078118    .038335
+ enorme_dest |       480    .0246244    .0037836   .0136536   .0376694
+  enorme_ori |       480     .023991    .0039887   .0147616   .0525607
+ p_pop_emigr |       480    .1816943    .0790017   .0392301   .5182126
+p_pop_immigr |       480    .1363842    .0890529   .0093235   .6157105
+
+. 
+. *use "C:\Users\User\Documents\Migrations\files\BDD 2017 03 03\BDD_TRAR_TFR_m_p_P_migr_lin_var_old.dta", 
+> clear
+. *do "C:\Users\User\Documents\Migrations\data\variabledefs.do"
+. *do "C:\Users\User\Documents\Migrations\data\TRAR_TFR_migr_m_lin.do"
+. 
+. 
+. 
+. ***The fertility decline in France, 1861-1911: only female migration
+. use "C:\Users\User\Documents\Migrations\files\BDD 2017 03 03\BDD_TRAR_TFR_f_o_P_migr_lin_var_old.dta", c
+> lear
+(drop)
+
+. gen ef_obs=exp(f_obs)
+(25 missing values generated)
+
+. gen enorme_dest=exp(norme_dest)
+
+. gen enorme_ori=exp(norme_ori)
+(10 missing values generated)
+
+. sum ef_obs enorme_dest   enorme_ori p_pop_emigr p_pop_immigr if cylin==1
+
+    Variable |       Obs        Mean    Std. Dev.       Min        Max
+-------------+--------------------------------------------------------
+      ef_obs |       480    .0236616    .0046855   .0078118    .038335
+ enorme_dest |       480    .0244204    .0038154   .0140192   .0332536
+  enorme_ori |       480    .0241442    .0038714   .0151589   .0470483
+ p_pop_emigr |       480    .1635965    .0760595    .021749   .4709175
+p_pop_immigr |       480    .1194286    .0868084   .0020438   .5825908
+
+. 
+. *use "C:\Users\User\Documents\Migrations\files\BDD 2017 03 03\BDD_TRAR_TFR_f_p_P_migr_lin_var_old.dta", 
+> clear
+. *do "C:\Users\User\Documents\Migrations\data\variabledefs.do"
+. *do "C:\Users\User\Documents\Migrations\data\TRAR_TFR_migr_f_lin.do"
+. 
+. 
+. 
+. 
+. ***The fertility decline in France, 1861-1911, excluding migration to and from Seine (Paris and suburbs)
+. use "C:\Users\User\Documents\Migrations\files\BDD 2017 03 03\BDD_TRAR_TFR_t_o_SP_migr_lin_var_old.dta", 
+> clear
+(drop)
+
+. gen ef_obs=exp(f_obs)
+(25 missing values generated)
+
+. gen enorme_dest=exp(norme_dest)
+(6 missing values generated)
+
+. gen enorme_ori=exp(norme_ori)
+(16 missing values generated)
+
+. sum ef_obs enorme_dest   enorme_ori p_pop_emigr p_pop_immigr if cylin==1
+
+    Variable |       Obs        Mean    Std. Dev.       Min        Max
+-------------+--------------------------------------------------------
+      ef_obs |       474    .0236202    .0046699   .0078118    .038335
+ enorme_dest |       474    .0238153    .0034043   .0142359   .0347713
+  enorme_ori |       474    .0239837    .0035993   .0155564   .0471276
+ p_pop_emigr |       474    .1265665    .0638856   .0111063   .4668227
+p_pop_immigr |       474    .1116167     .059835   .0056233   .3720712
+
+. 
+. *use "C:\Users\User\Documents\Migrations\files\BDD 2017 03 03\BDD_TRAR_TFR_t_p_SP_migr_lin_var_old.dta",
+>  clear
+. *do "C:\Users\User\Documents\Migrations\data\variabledefs.do"
+. *do "C:\Users\User\Documents\Migrations\data\TRAR_TFR_migr_t_SP_lin.do"
+. 
+. 
+. ** TRARE
+. 
+. *** Determinants of the fertility decline in France, 1821-1911: all migrants 
+. use "C:\Users\User\Documents\Migrations\files\BDD 2017 03 03\BDD_TRARE_Coal_t_o_P_migr_lin_var_old.dta",
+>  clear
+(drop)
+
+. do "C:\Users\User\Documents\Migrations\data\variabledefs.do"
+
+. 
+. *do "C:\Users\User\Documents\Migrations\data\variabledefs.do"
+. 
+. tsset  dptresid annee_obs, delta(10)
+       panel variable:  dptresid (unbalanced)
+        time variable:  annee_obs, 1821 to 1911
+                delta:  10 units
+
+. 
+. label drop _all
+
+. 
+. ******************************
+. 
+. label var f_obs "log(Fertility) (t)"
+
+. label var lag1_f_obs "log(Fertility) (t-1)"
+
+. label var p_industrie "Industries t-1"
+
+. label var p_professionsliberales "Professionals (t)"
+
+. label var    lifeexpectancy15 "Life Expectancy at Age 30 (t)"
+
+. label var mortalityratio_1 "Infant Mortality (t)"
+
+. label var urban "log(Urban) (t)"
+
+. label var lnp_industrie "log(Industries) (t)"
+
+. label var lnp_professionsliberales "log(Professionals) (t)"
+
+. gen lag1_mortalityratio_1=L1.mortalityratio_1 
+(255 missing values generated)
+
+. label var lag1_mortalityratio_1  "Infant Mortality (t-1)"
+
+. gen lag1_urban=L1.urban
+(255 missing values generated)
+
+. label var lag1_urban "log(Urban) (t-1)"
+
+. label var lag1_lnp_industrie "log (Industries) (t-1)"
+
+. label var lag1_lnp_professionsliberales "log(Professionals) (t-1)"
+
+. 
+. 
+. *******************************
+. 
+. *********************************************************************
+. gen lag1_lifexpectancy15=L1.lifeexpectancy15
+(255 missing values generated)
+
+. label var lag1_lifexpectancy15 "Life Expectancy Age 15 (t-1)"
+
+. label var lifeexpectancy15 "Life Expectancy Age 15 (t)"
+
+. 
+. 
+. *gen lnpropelevescongreganistes=log(propelevescongreganistes)
+. *gen lnpropfillescongreganistes=log(propfillescongreganistes)
+. *gen lnpropgarconscongreganistes=log(garconscongreganistes)
+. label var lnpropelevescongreganistes "log(Share of Pupils in Primary Catholic Schools) (t)"
+
+. label var lnpropfillescongreganistes "log(Share of Girls in Primary Catholic Schools) (t)"
+
+. label var lnpropgarconscongreganistes "log(Share of Boys in Primary Catholic Schools) (t)"
+
+. 
+. 
+. 
+. label var lnwomen_education_10yb "log(Female Education (t))"
+
+. label var lag1_lnwomen_education_10yb  "log(Female Education (t-1))"
+
+. label var lnmen_education_10yb "log(Male Education (t))"
+
+. label var lag1_lnmen_education_10yb "log(Male Education (t-1))"
+
+. 
+. gen  female_not_recognized=1-femalerecognized
+(333 missing values generated)
+
+. gen  male_not_recognized=1-malerecognized
+(333 missing values generated)
+
+. gen  children_not_recognized=1- childrenrecognized
+(333 missing values generated)
+
+. 
+. replace children_not_recognized = log(1+children_not_recognized)
+(515 real changes made)
+
+. replace female_not_recognized= log(1+female_not_recognized)
+(514 real changes made)
+
+. replace male_not_recognized= log(1+male_not_recognized)
+(515 real changes made)
+
+. 
+. 
+. replace  totalnumberofperiodicals= log(1+ totalnumberofperiodicals)
+totalnumberofperiodicals was int now float
+(515 real changes made)
+
+. replace childrenrecognized = log(1+childrenrecognized)
+(514 real changes made)
+
+. replace femalerecognized= log(1+femalerecognized)
+(514 real changes made)
+
+. replace malerecognized= log(1+malerecognized)
+(514 real changes made)
+
+. replace childrenoutwedlock = log(1+childrenoutwedlock)
+(514 real changes made)
+
+. replace femaleoutwedlock = log(1+femaleoutwedlock)
+(515 real changes made)
+
+. replace maleoutwedlock = log(1+maleoutwedlock)
+(515 real changes made)
+
+. replace mariesf3539= log(1+mariesf3539)
+(515 real changes made)
+
+. replace mariesm3539= log(1+mariesm3539)
+(515 real changes made)
+
+. replace mariesf3034 = log(1+mariesf3034)
+(515 real changes made)
+
+. replace mariesm3034= log(1+mariesm3034)
+(515 real changes made)
+
+. replace mariesf2529 = log(1+mariesf2529)
+(515 real changes made)
+
+. replace mariesm2529 = log(1+mariesm2529)
+(515 real changes made)
+
+. replace mariesf2024 = log(1+mariesf2024)
+(515 real changes made)
+
+. replace mariesm2024= log(1+mariesm2024)
+(515 real changes made)
+
+. 
+. 
+. label var rd2M_fecParis "Revue des Deux Mondes Outlets* Fertility of Seine"
+
+. label var revuedesdeuxmondes_newsstand "Revue des Deux Mondes Outlets"
+
+. 
+. 
+. label var norme_dest "Emigrants' Residence Norm (t)"
+
+. label var norme_ori   "Immigrants' Birthplace Norm (t)"
+
+. label var norm_dest_x_lnp_pop "Emigrants' Residence Norm (t) * Share of Emigrants(t)"
+
+. label var norm_ori_x_lnp_pop "Immigrants' Birthplace Norm (t)* Share of Immigrants (t)"
+
+. label var lnp_pop_emigr "Share of Emigrants (t)"
+
+. label var lnp_pop_immigr "Share of Immigrants (t)"
+
+. 
+. 
+. label var eglise "New Catholic Church"
+
+. label var egliseorthodoxe "New Orthodox Church"
+
+. label var templeprotestant "New Protestant Temple"
+
+. label var logemaconnique "New Freemason Lodge"
+
+. 
+end of do-file
+
+. 
+. drop if dptresid==90
+(5 observations deleted)
+
+. drop if dptresid==74
+(6 observations deleted)
+
+. drop if dptresid==73
+(6 observations deleted)
+
+. drop if dptresid==56
+(10 observations deleted)
+
+. drop if dptresid==55
+(10 observations deleted)
+
+. drop if dptresid==54
+(5 observations deleted)
+
+. drop if dptresid==6
+(6 observations deleted)
+
+. 
+. gen ef_obs=exp(f_obs)
+
+. gen enorme_dest=exp(norme_dest)
+
+. gen enorme_ori=exp(norme_ori)
+
+. sum ef_obs enorme_dest   enorme_ori p_pop_emigr p_pop_immigr 
+
+    Variable |       Obs        Mean    Std. Dev.       Min        Max
+-------------+--------------------------------------------------------
+      ef_obs |       800    .3075738     .087387       .158        .82
+ enorme_dest |       800    .3064911     .083543    .168326   .7739807
+  enorme_ori |       800    .3031968    .0531439   .2069003   .5096753
+ p_pop_emigr |       800    .1463195    .0957642   .0009314   1.258491
+p_pop_immigr |       800    .1143671    .0929571    .000192   1.068753
+
+. 
+. 
+. ******************* CONTROL VARIABLES
+. ***use "C:\Users\User\Documents\Migrations\files\BDD 2017 03 03\BDD_TRAR_Coal_t_o_P_migr_lin_var_old.dta
+> ", clear
+. use "C:\Users\User\Documents\Migrations\files\BDD 2017 03 03\BDD_TRAR_Coal_t_o_P_migr_lin_var_old.dta", 
+> clear
+(drop)
+
+. 
+. sum lifeexpectancy15 mortalityratio_1 urban   p_industrie  p_professionsliberales  women_education_10yb 
+> men_education_10yb if cylin==1
+
+    Variable |       Obs        Mean    Std. Dev.       Min        Max
+-------------+--------------------------------------------------------
+lifeexpec~15 |       486    48.72351    7.553017   34.75857   65.91477
+mortalityr~1 |       486    .2166735     .107954      .0193      .6263
+       urban |       486    .2804831     .161695      .0815          1
+ p_industrie |       486    .2106378    .1336424   .0012161   .6765597
+p_professi~s |       486    .0265079    .0161923   .0008677    .159826
+-------------+--------------------------------------------------------
+women_educ~b |       486    .4985419    .1356414   .0746446   .7921753
+men_educat~b |       486    .5277654    .1293874       .149      1.071
+
+. sum propfillescongreganistes propgarconscongreganistes revuedesdeuxmondes_newsstand if cylin==1
+
+    Variable |       Obs        Mean    Std. Dev.       Min        Max
+-------------+--------------------------------------------------------
+propfilles~s |       486    .4365249     .182497   .0259372   .9390621
+propgarcon~s |       486    .1664132    .1219415   .0101736   .7271073
+revuedesde~d |       486    .5967078    .8160184          0          4
+
+. **** 
+. gen  female_not_recognized=1-femalerecognized
+(5 missing values generated)
+
+. gen  male_not_recognized=1-malerecognized
+(5 missing values generated)
+
+. gen  children_not_recognized=1- childrenrecognized
+(5 missing values generated)
+
+. 
+. 
+. 
+. sum totalnumberofperiodicals eglise egliseorthodoxe templeprotestant if cylin==1
+
+    Variable |       Obs        Mean    Std. Dev.       Min        Max
+-------------+--------------------------------------------------------
+totalnumbe~s |       486    51.30864    253.4487          2       4021
+      eglise |       486    .5061728    .9901385          0         11
+egliseorth~e |       486    .0041152    .0640839          0          1
+templeprot~t |       486    .0288066     .179327          0          2
+
+. sum childrenoutwedlock children_not_recognized mariesm2024 mariesf2024 mariesm2529 mariesf2529 mariesm30
+> 34 mariesf3034 mariesm3539 mariesf3539 if cylin==1
+
+    Variable |       Obs        Mean    Std. Dev.       Min        Max
+-------------+--------------------------------------------------------
+childrenou~k |       486    .0634784    .0545906          0          1
+children_n~d |       486    .6637912    .1846157   .0950413          1
+ mariesm2024 |       486    .1193772    .0564875   .0208609   .4305827
+ mariesf2024 |       486    .4615496    .1423765    .172491   .8989573
+ mariesm2529 |       486    .4880857    .1131202   .0718349   .8711928
+-------------+--------------------------------------------------------
+ mariesf2529 |       486    .6987721     .091045   .2766783   .8679703
+ mariesm3034 |       486     .677756    .1319656   .2480761   .8595656
+ mariesf3034 |       486    .7723593    .0702825   .4718066   .9679351
+ mariesm3539 |       486     .767873    .0940291   .3449534   .9186964
+ mariesf3539 |       486    .7863817     .064765   .5352097   1.332995
+
+. 
+. 
+. 
+. clear
+
+. log close
+      name:  <unnamed>
+       log:  C:\Users\User\Documents\summary statistics.log
+  log type:  text
+ closed on:   6 Mar 2017, 13:46:29
+----------------------------------------------------------------------------------------------------------

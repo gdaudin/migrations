@@ -1,0 +1,63 @@
+		(1)	(2)	(3)
+VARIABLES	LABELS	log(Fertility) (t)	log(Fertility) (t)	log(Fertility) (t)
+				
+norme_dest	Emigrants' Residence Norm (t)	0.0700	0.0254	0.307**
+		[0.117]	[0.101]	[0.152]
+norme_ori	Immigrants' Birthplace Norm (t)	0.137	0.181*	0.157
+		[0.0968]	[0.106]	[0.120]
+norm_dest_x_lnp_pop	Emigrants' Residence Norm (t) * Share of Emigrants(t)	0.795	-0.0961	-0.315
+		[0.539]	[0.974]	[0.453]
+norm_ori_x_lnp_pop	Immigrants' Birthplace Norm (t)* Share of Immigrants (t)	0.440	-0.949	0.686
+		[0.605]	[1.013]	[0.530]
+lnp_pop_emigr	Share of Emigrants (t)	2.717	-0.281	-2.123
+		[1.865]	[3.364]	[1.769]
+lnp_pop_immigr	Share of Immigrants (t)	1.472	-3.467	3.470*
+		[2.140]	[3.493]	[1.985]
+_Iannee_obs_1831	annee_obs==1831	-0.0379***	-0.0435***	
+		[0.00979]	[0.00816]	
+_Iannee_obs_1841	annee_obs==1841	-0.0745***	-0.0982***	
+		[0.0164]	[0.0142]	
+_Iannee_obs_1851	annee_obs==1851	-0.0871***	-0.115***	
+		[0.0159]	[0.0136]	
+_Iannee_obs_1861	annee_obs==1861	-0.135***		-0.0208*
+		[0.0207]		[0.0119]
+_Iannee_obs_1871	annee_obs==1871	-0.106***		
+		[0.0195]		
+_Iannee_obs_1881	annee_obs==1881	-0.147***		-0.0284*
+		[0.0270]		[0.0147]
+_Iannee_obs_1891	annee_obs==1891	-0.220***		-0.0908**
+		[0.0445]		[0.0346]
+_Iannee_obs_1901	annee_obs==1901	-0.206***		-0.0777*
+		[0.0450]		[0.0405]
+_Iannee_obs_1911	annee_obs==1911	-0.291***		-0.152**
+		[0.0688]		[0.0618]
+o._Iannee_obs_1861	annee_obs==1861 = o,		-	
+				
+o._Iannee_obs_1871	annee_obs==1871 = o,		-	-
+				
+o._Iannee_obs_1881	annee_obs==1881 = o,		-	
+				
+o._Iannee_obs_1891	annee_obs==1891 = o,		-	
+				
+o._Iannee_obs_1901	annee_obs==1901 = o,		-	
+				
+o._Iannee_obs_1911	annee_obs==1911 = o,		-	
+				
+o._Iannee_obs_1831	annee_obs==1831 = o,			-
+				
+o._Iannee_obs_1841	annee_obs==1841 = o,			-
+				
+o._Iannee_obs_1851	annee_obs==1851 = o,			-
+				
+Constant	Constant	-2.746***	-2.741***	-1.933***
+		[0.568]	[0.548]	[0.577]
+				
+Observations		800	320	480
+R-squared		0.786	0.540	0.793
+Number of dptresid		80	80	80
+Within R2		0.8	0.5	0.8
+Adjusted R2		0.8	0.5	0.8
+F-stat		137.0	21.9	117.5
+Prob>F-stat		0.0	0.0	0.0
+Robust standard errors in brackets				
+*** p<0.01, ** p<0.05, * p<0.1				

@@ -1,0 +1,829 @@
+----------------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  C:\Users\User\Documents\Master_TRARE_Coal_lin.log
+  log type:  text
+ opened on:   5 Mar 2017, 13:02:25
+
+. 
+. *** Determinants of the fertility decline in France, 1821-1911: all migrants 
+. use "C:\Users\User\Documents\Migrations\files\BDD 2017 03 03\BDD_TRARE_Coal_t_o_P_migr_lin_var_old.dta",
+>  clear
+(drop)
+
+. do "C:\Users\User\Documents\Migrations\data\variabledefs.do"
+
+. 
+. *do "C:\Users\User\Documents\Migrations\data\variabledefs.do"
+. 
+. tsset  dptresid annee_obs, delta(10)
+       panel variable:  dptresid (unbalanced)
+        time variable:  annee_obs, 1821 to 1911
+                delta:  10 units
+
+. 
+. label drop _all
+
+. 
+. ******************************
+. 
+. label var f_obs "log(Fertility) (t)"
+
+. label var lag1_f_obs "log(Fertility) (t-1)"
+
+. label var p_industrie "Industries t-1"
+
+. label var p_professionsliberales "Professionals (t)"
+
+. label var    lifeexpectancy15 "Life Expectancy at Age 30 (t)"
+
+. label var mortalityratio_1 "Infant Mortality (t)"
+
+. label var urban "log(Urban) (t)"
+
+. label var lnp_industrie "log(Industries) (t)"
+
+. label var lnp_professionsliberales "log(Professionals) (t)"
+
+. gen lag1_mortalityratio_1=L1.mortalityratio_1 
+(255 missing values generated)
+
+. label var lag1_mortalityratio_1  "Infant Mortality (t-1)"
+
+. gen lag1_urban=L1.urban
+(255 missing values generated)
+
+. label var lag1_urban "log(Urban) (t-1)"
+
+. label var lag1_lnp_industrie "log (Industries) (t-1)"
+
+. label var lag1_lnp_professionsliberales "log(Professionals) (t-1)"
+
+. 
+. 
+. *******************************
+. 
+. *********************************************************************
+. gen lag1_lifexpectancy15=L1.lifeexpectancy15
+(255 missing values generated)
+
+. label var lag1_lifexpectancy15 "Life Expectancy Age 15 (t-1)"
+
+. label var lifeexpectancy15 "Life Expectancy Age 15 (t)"
+
+. 
+. 
+. *gen lnpropelevescongreganistes=log(propelevescongreganistes)
+. *gen lnpropfillescongreganistes=log(propfillescongreganistes)
+. *gen lnpropgarconscongreganistes=log(garconscongreganistes)
+. label var lnpropelevescongreganistes "log(Share of Pupils in Primary Catholic Schools) (t)"
+
+. label var lnpropfillescongreganistes "log(Share of Girls in Primary Catholic Schools) (t)"
+
+. label var lnpropgarconscongreganistes "log(Share of Boys in Primary Catholic Schools) (t)"
+
+. 
+. 
+. 
+. label var lnwomen_education_10yb "log(Female Education (t))"
+
+. label var lag1_lnwomen_education_10yb  "log(Female Education (t-1))"
+
+. label var lnmen_education_10yb "log(Male Education (t))"
+
+. label var lag1_lnmen_education_10yb "log(Male Education (t-1))"
+
+. 
+. gen  female_not_recognized=1-femalerecognized
+(333 missing values generated)
+
+. gen  male_not_recognized=1-malerecognized
+(333 missing values generated)
+
+. gen  children_not_recognized=1- childrenrecognized
+(333 missing values generated)
+
+. 
+. replace children_not_recognized = log(1+children_not_recognized)
+(515 real changes made)
+
+. replace female_not_recognized= log(1+female_not_recognized)
+(514 real changes made)
+
+. replace male_not_recognized= log(1+male_not_recognized)
+(515 real changes made)
+
+. 
+. 
+. replace  totalnumberofperiodicals= log(1+ totalnumberofperiodicals)
+totalnumberofperiodicals was int now float
+(515 real changes made)
+
+. replace childrenrecognized = log(1+childrenrecognized)
+(514 real changes made)
+
+. replace femalerecognized= log(1+femalerecognized)
+(514 real changes made)
+
+. replace malerecognized= log(1+malerecognized)
+(514 real changes made)
+
+. replace childrenoutwedlock = log(1+childrenoutwedlock)
+(514 real changes made)
+
+. replace femaleoutwedlock = log(1+femaleoutwedlock)
+(515 real changes made)
+
+. replace maleoutwedlock = log(1+maleoutwedlock)
+(515 real changes made)
+
+. replace mariesf3539= log(1+mariesf3539)
+(515 real changes made)
+
+. replace mariesm3539= log(1+mariesm3539)
+(515 real changes made)
+
+. replace mariesf3034 = log(1+mariesf3034)
+(515 real changes made)
+
+. replace mariesm3034= log(1+mariesm3034)
+(515 real changes made)
+
+. replace mariesf2529 = log(1+mariesf2529)
+(515 real changes made)
+
+. replace mariesm2529 = log(1+mariesm2529)
+(515 real changes made)
+
+. replace mariesf2024 = log(1+mariesf2024)
+(515 real changes made)
+
+. replace mariesm2024= log(1+mariesm2024)
+(515 real changes made)
+
+. 
+. 
+. label var rd2M_fecParis "Revue des Deux Mondes Outlets* Fertility of Seine"
+
+. label var revuedesdeuxmondes_newsstand "Revue des Deux Mondes Outlets"
+
+. 
+. 
+. label var norme_dest "Emigrants' Residence Norm (t)"
+
+. label var norme_ori   "Immigrants' Birthplace Norm (t)"
+
+. label var norm_dest_x_lnp_pop "Emigrants' Residence Norm (t) * Share of Emigrants(t)"
+
+. label var norm_ori_x_lnp_pop "Immigrants' Birthplace Norm (t)* Share of Immigrants (t)"
+
+. label var lnp_pop_emigr "Share of Emigrants (t)"
+
+. label var lnp_pop_immigr "Share of Immigrants (t)"
+
+. 
+. 
+. label var eglise "New Catholic Church"
+
+. label var egliseorthodoxe "New Orthodox Church"
+
+. label var templeprotestant "New Protestant Temple"
+
+. label var logemaconnique "New Freemason Lodge"
+
+. 
+end of do-file
+
+. 
+. drop if dptresid==90
+(5 observations deleted)
+
+. drop if dptresid==74
+(6 observations deleted)
+
+. drop if dptresid==73
+(6 observations deleted)
+
+. drop if dptresid==56
+(10 observations deleted)
+
+. drop if dptresid==55
+(10 observations deleted)
+
+. drop if dptresid==54
+(5 observations deleted)
+
+. drop if dptresid==6
+(6 observations deleted)
+
+. 
+. do "C:\Users\User\Documents\Migrations\data\TRARE_Coal_migr_t_lin.do"
+
+. 
+. set more off
+
+. 
+. tsset  dptresid annee_obs, delta(10)
+       panel variable:  dptresid (strongly balanced)
+        time variable:  annee_obs, 1821 to 1911
+                delta:  10 units
+
+. 
+. label drop _all
+
+. 
+. **** 1821-1911
+. ** Column 1 
+. xi: xtreg  f_obs norme_dest   norme_ori norm_dest_x_lnp_pop   norm_ori_x_lnp_pop lnp_pop_emigr lnp_pop_i
+> mmigr  i.annee_obs   , fe robust  cluster(dptresid)
+i.annee_obs       _Iannee_obs_1821-1911(naturally coded; _Iannee_obs_1821 omitted)
+
+Fixed-effects (within) regression               Number of obs      =       800
+Group variable: dptresid                        Number of groups   =        80
+
+R-sq:  within  = 0.7245                         Obs per group: min =        10
+       between = 0.0409                                        avg =      10.0
+       overall = 0.3970                                        max =        10
+
+                                                F(15,79)           =     40.37
+corr(u_i, Xb)  = -0.0137                        Prob > F           =    0.0000
+
+                                     (Std. Err. adjusted for 80 clusters in dptresid)
+-------------------------------------------------------------------------------------
+                    |               Robust
+              f_obs |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+--------------------+----------------------------------------------------------------
+         norme_dest |   .2646045   .0768065     3.45   0.001      .111725     .417484
+          norme_ori |   .0786178   .0820932     0.96   0.341    -.0847846    .2420203
+norm_dest_x_lnp_pop |  -.3685624   .4475571    -0.82   0.413    -1.259403    .5222777
+ norm_ori_x_lnp_pop |   1.073326   .8568881     1.25   0.214    -.6322669    2.778919
+      lnp_pop_emigr |   -.741683   .4261427    -1.74   0.086    -1.589899    .1065328
+     lnp_pop_immigr |   1.936696   .9819927     1.97   0.052    -.0179119    3.891303
+   _Iannee_obs_1831 |  -.0339667   .0115357    -2.94   0.004    -.0569278   -.0110055
+   _Iannee_obs_1841 |  -.0620878   .0219667    -2.83   0.006    -.1058114   -.0183642
+   _Iannee_obs_1851 |  -.0510046   .0219145    -2.33   0.023    -.0946243   -.0073849
+   _Iannee_obs_1861 |  -.0981934   .0248602    -3.95   0.000    -.1476764   -.0487104
+   _Iannee_obs_1871 |  -.1373008   .0354855    -3.87   0.000     -.207933   -.0666687
+   _Iannee_obs_1881 |  -.1349048   .0318133    -4.24   0.000    -.1982276   -.0715819
+   _Iannee_obs_1891 |  -.2257431   .0422958    -5.34   0.000    -.3099308   -.1415554
+   _Iannee_obs_1901 |  -.2135053   .0471358    -4.53   0.000    -.3073268   -.1196837
+   _Iannee_obs_1911 |  -.2212982    .059022    -3.75   0.000    -.3387786   -.1038178
+              _cons |  -.7075519   .1232863    -5.74   0.000    -.9529471   -.4621567
+--------------------+----------------------------------------------------------------
+            sigma_u |  .17575602
+            sigma_e |  .10419196
+                rho |  .73995289   (fraction of variance due to u_i)
+-------------------------------------------------------------------------------------
+
+. generate f=Fden(e(df_m),e(df_r),e(F))
+
+. outreg2 using TRARE_Coal_migr_t_lin,br addstat(Within R2, e(r2), Adjusted R2, e(r2_a), F-stat, e(F), Pro
+> b>F-stat, f) adec(1)   label excel
+TRARE_Coal_migr_t_lin.xml
+dir : seeout
+
+. drop f
+
+. 
+. **** 1821-1851
+. ** Column 2 
+. xi: xtreg  f_obs norme_dest   norme_ori norm_dest_x_lnp_pop   norm_ori_x_lnp_pop lnp_pop_emigr lnp_pop_i
+> mmigr  i.annee_obs  if annee_obs<1861 , fe robust  cluster(dptresid)
+i.annee_obs       _Iannee_obs_1821-1911(naturally coded; _Iannee_obs_1821 omitted)
+note: _Iannee_obs_1861 omitted because of collinearity
+note: _Iannee_obs_1871 omitted because of collinearity
+note: _Iannee_obs_1881 omitted because of collinearity
+note: _Iannee_obs_1891 omitted because of collinearity
+note: _Iannee_obs_1901 omitted because of collinearity
+note: _Iannee_obs_1911 omitted because of collinearity
+
+Fixed-effects (within) regression               Number of obs      =       320
+Group variable: dptresid                        Number of groups   =        80
+
+R-sq:  within  = 0.5074                         Obs per group: min =         4
+       between = 0.1846                                        avg =       4.0
+       overall = 0.1711                                        max =         4
+
+                                                F(9,79)            =     22.84
+corr(u_i, Xb)  = 0.1410                         Prob > F           =    0.0000
+
+                                     (Std. Err. adjusted for 80 clusters in dptresid)
+-------------------------------------------------------------------------------------
+                    |               Robust
+              f_obs |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+--------------------+----------------------------------------------------------------
+         norme_dest |   .0914741   .0474252     1.93   0.057    -.0029235    .1858717
+          norme_ori |   .0078258   .0837841     0.09   0.926    -.1589423     .174594
+norm_dest_x_lnp_pop |  -.4579564    .528871    -0.87   0.389    -1.510648    .5947349
+ norm_ori_x_lnp_pop |   .5277195   .7686819     0.69   0.494    -1.002304    2.057743
+      lnp_pop_emigr |  -.6687996   .4046941    -1.65   0.102    -1.474323    .1367239
+     lnp_pop_immigr |   .9544469   .8117276     1.18   0.243    -.6612564     2.57015
+   _Iannee_obs_1831 |  -.0356047   .0107686    -3.31   0.001    -.0570391   -.0141702
+   _Iannee_obs_1841 |  -.1165747   .0186284    -6.26   0.000    -.1536535   -.0794958
+   _Iannee_obs_1851 |  -.1170879   .0181441    -6.45   0.000    -.1532029   -.0809729
+   _Iannee_obs_1861 |          0  (omitted)
+   _Iannee_obs_1871 |          0  (omitted)
+   _Iannee_obs_1881 |          0  (omitted)
+   _Iannee_obs_1891 |          0  (omitted)
+   _Iannee_obs_1901 |          0  (omitted)
+   _Iannee_obs_1911 |          0  (omitted)
+              _cons |  -.9021074   .1048131    -8.61   0.000    -1.110733   -.6934821
+--------------------+----------------------------------------------------------------
+            sigma_u |   .2213816
+            sigma_e |  .07366315
+                rho |  .90031868   (fraction of variance due to u_i)
+-------------------------------------------------------------------------------------
+
+. generate f=Fden(e(df_m),e(df_r),e(F))
+
+. outreg2 using TRARE_Coal_migr_t_lin,br addstat(Within R2, e(r2), Adjusted R2, e(r2_a), F-stat, e(F), Pro
+> b>F-stat, f) adec(1)   label excel
+TRARE_Coal_migr_t_lin.xml
+dir : seeout
+
+. drop f
+
+. 
+. **** 1861-1911
+. ** Column 3 
+. xi: xtreg  f_obs norme_dest   norme_ori norm_dest_x_lnp_pop   norm_ori_x_lnp_pop lnp_pop_emigr lnp_pop_i
+> mmigr  i.annee_obs  if cylin==1 &  annee_obs>1851 , fe robust  cluster(dptresid)
+i.annee_obs       _Iannee_obs_1821-1911(naturally coded; _Iannee_obs_1821 omitted)
+note: _Iannee_obs_1831 omitted because of collinearity
+note: _Iannee_obs_1841 omitted because of collinearity
+note: _Iannee_obs_1851 omitted because of collinearity
+note: _Iannee_obs_1871 omitted because of collinearity
+
+Fixed-effects (within) regression               Number of obs      =       480
+Group variable: dptresid                        Number of groups   =        80
+
+R-sq:  within  = 0.6495                         Obs per group: min =         6
+       between = 0.0832                                        avg =       6.0
+       overall = 0.0260                                        max =         6
+
+                                                F(11,79)           =     44.07
+corr(u_i, Xb)  = -0.4846                        Prob > F           =    0.0000
+
+                                     (Std. Err. adjusted for 80 clusters in dptresid)
+-------------------------------------------------------------------------------------
+                    |               Robust
+              f_obs |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+--------------------+----------------------------------------------------------------
+         norme_dest |   .5885525   .1218312     4.83   0.000     .3460536    .8310513
+          norme_ori |    .130391   .1214575     1.07   0.286    -.1113642    .3721462
+norm_dest_x_lnp_pop |   -1.90845   .6456347    -2.96   0.004    -3.193554   -.6233466
+ norm_ori_x_lnp_pop |    1.44554   1.026478     1.41   0.163    -.5976123    3.488693
+      lnp_pop_emigr |  -3.016353   1.076406    -2.80   0.006    -5.158885   -.8738202
+     lnp_pop_immigr |    3.38665    1.38836     2.44   0.017     .6231893    6.150111
+   _Iannee_obs_1831 |          0  (omitted)
+   _Iannee_obs_1841 |          0  (omitted)
+   _Iannee_obs_1851 |          0  (omitted)
+   _Iannee_obs_1861 |   .0212625   .0185654     1.15   0.256     -.015691     .058216
+   _Iannee_obs_1871 |          0  (omitted)
+   _Iannee_obs_1881 |  -.0134565   .0154559    -0.87   0.387    -.0442207    .0173076
+   _Iannee_obs_1891 |  -.0884743   .0191853    -4.61   0.000    -.1266617   -.0502868
+   _Iannee_obs_1901 |  -.0899917   .0285945    -3.15   0.002    -.1469077   -.0330758
+   _Iannee_obs_1911 |  -.1013749    .036225    -2.80   0.006    -.1734789   -.0292708
+              _cons |  -.4138758   .2036149    -2.03   0.045    -.8191611   -.0085905
+--------------------+----------------------------------------------------------------
+            sigma_u |  .21517387
+            sigma_e |  .07768573
+                rho |  .88468351   (fraction of variance due to u_i)
+-------------------------------------------------------------------------------------
+
+. generate f=Fden(e(df_m),e(df_r),e(F))
+
+. outreg2 using TRARE_Coal_migr_t_lin,br addstat(Within R2, e(r2), Adjusted R2, e(r2_a), F-stat, e(F), Pro
+> b>F-stat, f) adec(1)   label excel
+TRARE_Coal_migr_t_lin.xml
+dir : seeout
+
+. drop f
+
+. 
+. 
+. 
+. 
+end of do-file
+
+. 
+. 
+. ***The fertility decline in France, 1821-1911: only male migration
+. *use "C:\Users\User\Documents\Migrations\files\BDD 2017 03 03\BDD_TRARE_Coal_m_o_P_migr_lin_var_old.dta"
+> , clear
+. *do "C:\Users\User\Documents\Migrations\data\variabledefs.do"
+. *do "C:\Users\User\Documents\Migrations\data\TRARE_Coal_migr_f_lin.do"
+. 
+. ***The fertility decline in France, 1821-1911: only female migration
+. *use "C:\Users\User\Documents\Migrations\files\BDD 2017 03 03\BDD_TRARE_Coal_f_o_P_migr_lin_var_old.dta"
+> , clear
+. *do "C:\Users\User\Documents\Migrations\data\variabledefs.do"
+. *do "C:\Users\User\Documents\Migrations\data\TRARE_Coal_migr_f_lin.do"
+. 
+. ***The fertility decline in France, 1821-1911, excluding migration to and from Seine (Paris and suburbs)
+. use "C:\Users\User\Documents\Migrations\files\BDD 2017 03 03\BDD_TRARE_Coal_t_o_SP_migr_lin_var_old.dta"
+> , clear
+(drop)
+
+. do "C:\Users\User\Documents\Migrations\data\variabledefs.do"
+
+. 
+. *do "C:\Users\User\Documents\Migrations\data\variabledefs.do"
+. 
+. tsset  dptresid annee_obs, delta(10)
+       panel variable:  dptresid (unbalanced)
+        time variable:  annee_obs, 1821 to 1911
+                delta:  10 units
+
+. 
+. label drop _all
+
+. 
+. ******************************
+. 
+. label var f_obs "log(Fertility) (t)"
+
+. label var lag1_f_obs "log(Fertility) (t-1)"
+
+. label var p_industrie "Industries t-1"
+
+. label var p_professionsliberales "Professionals (t)"
+
+. label var    lifeexpectancy15 "Life Expectancy at Age 30 (t)"
+
+. label var mortalityratio_1 "Infant Mortality (t)"
+
+. label var urban "log(Urban) (t)"
+
+. label var lnp_industrie "log(Industries) (t)"
+
+. label var lnp_professionsliberales "log(Professionals) (t)"
+
+. gen lag1_mortalityratio_1=L1.mortalityratio_1 
+(255 missing values generated)
+
+. label var lag1_mortalityratio_1  "Infant Mortality (t-1)"
+
+. gen lag1_urban=L1.urban
+(255 missing values generated)
+
+. label var lag1_urban "log(Urban) (t-1)"
+
+. label var lag1_lnp_industrie "log (Industries) (t-1)"
+
+. label var lag1_lnp_professionsliberales "log(Professionals) (t-1)"
+
+. 
+. 
+. *******************************
+. 
+. *********************************************************************
+. gen lag1_lifexpectancy15=L1.lifeexpectancy15
+(255 missing values generated)
+
+. label var lag1_lifexpectancy15 "Life Expectancy Age 15 (t-1)"
+
+. label var lifeexpectancy15 "Life Expectancy Age 15 (t)"
+
+. 
+. 
+. *gen lnpropelevescongreganistes=log(propelevescongreganistes)
+. *gen lnpropfillescongreganistes=log(propfillescongreganistes)
+. *gen lnpropgarconscongreganistes=log(garconscongreganistes)
+. label var lnpropelevescongreganistes "log(Share of Pupils in Primary Catholic Schools) (t)"
+
+. label var lnpropfillescongreganistes "log(Share of Girls in Primary Catholic Schools) (t)"
+
+. label var lnpropgarconscongreganistes "log(Share of Boys in Primary Catholic Schools) (t)"
+
+. 
+. 
+. 
+. label var lnwomen_education_10yb "log(Female Education (t))"
+
+. label var lag1_lnwomen_education_10yb  "log(Female Education (t-1))"
+
+. label var lnmen_education_10yb "log(Male Education (t))"
+
+. label var lag1_lnmen_education_10yb "log(Male Education (t-1))"
+
+. 
+. gen  female_not_recognized=1-femalerecognized
+(333 missing values generated)
+
+. gen  male_not_recognized=1-malerecognized
+(333 missing values generated)
+
+. gen  children_not_recognized=1- childrenrecognized
+(333 missing values generated)
+
+. 
+. replace children_not_recognized = log(1+children_not_recognized)
+(515 real changes made)
+
+. replace female_not_recognized= log(1+female_not_recognized)
+(514 real changes made)
+
+. replace male_not_recognized= log(1+male_not_recognized)
+(515 real changes made)
+
+. 
+. 
+. replace  totalnumberofperiodicals= log(1+ totalnumberofperiodicals)
+totalnumberofperiodicals was int now float
+(515 real changes made)
+
+. replace childrenrecognized = log(1+childrenrecognized)
+(514 real changes made)
+
+. replace femalerecognized= log(1+femalerecognized)
+(514 real changes made)
+
+. replace malerecognized= log(1+malerecognized)
+(514 real changes made)
+
+. replace childrenoutwedlock = log(1+childrenoutwedlock)
+(514 real changes made)
+
+. replace femaleoutwedlock = log(1+femaleoutwedlock)
+(515 real changes made)
+
+. replace maleoutwedlock = log(1+maleoutwedlock)
+(515 real changes made)
+
+. replace mariesf3539= log(1+mariesf3539)
+(515 real changes made)
+
+. replace mariesm3539= log(1+mariesm3539)
+(515 real changes made)
+
+. replace mariesf3034 = log(1+mariesf3034)
+(515 real changes made)
+
+. replace mariesm3034= log(1+mariesm3034)
+(515 real changes made)
+
+. replace mariesf2529 = log(1+mariesf2529)
+(515 real changes made)
+
+. replace mariesm2529 = log(1+mariesm2529)
+(515 real changes made)
+
+. replace mariesf2024 = log(1+mariesf2024)
+(515 real changes made)
+
+. replace mariesm2024= log(1+mariesm2024)
+(515 real changes made)
+
+. 
+. 
+. label var rd2M_fecParis "Revue des Deux Mondes Outlets* Fertility of Seine"
+
+. label var revuedesdeuxmondes_newsstand "Revue des Deux Mondes Outlets"
+
+. 
+. 
+. label var norme_dest "Emigrants' Residence Norm (t)"
+
+. label var norme_ori   "Immigrants' Birthplace Norm (t)"
+
+. label var norm_dest_x_lnp_pop "Emigrants' Residence Norm (t) * Share of Emigrants(t)"
+
+. label var norm_ori_x_lnp_pop "Immigrants' Birthplace Norm (t)* Share of Immigrants (t)"
+
+. label var lnp_pop_emigr "Share of Emigrants (t)"
+
+. label var lnp_pop_immigr "Share of Immigrants (t)"
+
+. 
+. 
+. label var eglise "New Catholic Church"
+
+. label var egliseorthodoxe "New Orthodox Church"
+
+. label var templeprotestant "New Protestant Temple"
+
+. label var logemaconnique "New Freemason Lodge"
+
+. 
+end of do-file
+
+. 
+. drop if dptresid==90
+(5 observations deleted)
+
+. drop if dptresid==74
+(6 observations deleted)
+
+. drop if dptresid==73
+(6 observations deleted)
+
+. drop if dptresid==56
+(10 observations deleted)
+
+. drop if dptresid==55
+(10 observations deleted)
+
+. drop if dptresid==54
+(5 observations deleted)
+
+. drop if dptresid==6
+(6 observations deleted)
+
+. 
+. do "C:\Users\User\Documents\Migrations\data\TRARE_Coal_migr_t_SP_lin.do"
+
+. 
+. set more off
+
+. 
+. tsset  dptresid annee_obs, delta(10)
+       panel variable:  dptresid (strongly balanced)
+        time variable:  annee_obs, 1821 to 1911
+                delta:  10 units
+
+. 
+. label drop _all
+
+. 
+. **** 1821-1911
+. ** Column 1 
+. xi: xtreg  f_obs norme_dest   norme_ori norm_dest_x_lnp_pop   norm_ori_x_lnp_pop lnp_pop_emigr lnp_pop_i
+> mmigr  i.annee_obs   , fe robust  cluster(dptresid)
+i.annee_obs       _Iannee_obs_1821-1911(naturally coded; _Iannee_obs_1821 omitted)
+
+Fixed-effects (within) regression               Number of obs      =       790
+Group variable: dptresid                        Number of groups   =        79
+
+R-sq:  within  = 0.7226                         Obs per group: min =        10
+       between = 0.0981                                        avg =      10.0
+       overall = 0.4159                                        max =        10
+
+                                                F(15,78)           =     39.89
+corr(u_i, Xb)  = 0.0241                         Prob > F           =    0.0000
+
+                                     (Std. Err. adjusted for 79 clusters in dptresid)
+-------------------------------------------------------------------------------------
+                    |               Robust
+              f_obs |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+--------------------+----------------------------------------------------------------
+         norme_dest |   .2360071   .0731067     3.23   0.002     .0904628    .3815514
+          norme_ori |     .07573   .0895139     0.85   0.400    -.1024784    .2539385
+norm_dest_x_lnp_pop |  -.0246897    .505836    -0.05   0.961    -1.031732    .9823525
+ norm_ori_x_lnp_pop |   1.469742   1.114832     1.32   0.191    -.7497184    3.689203
+      lnp_pop_emigr |  -.3125338   .4957468    -0.63   0.530     -1.29949    .6744224
+     lnp_pop_immigr |   2.278504   1.236111     1.84   0.069     -.182404    4.739411
+   _Iannee_obs_1831 |  -.0342658   .0117793    -2.91   0.005    -.0577167   -.0108149
+   _Iannee_obs_1841 |   -.055951   .0229317    -2.44   0.017    -.1016045   -.0102975
+   _Iannee_obs_1851 |  -.0515584    .020509    -2.51   0.014    -.0923888   -.0107281
+   _Iannee_obs_1861 |  -.0929824   .0256197    -3.63   0.001    -.1439872   -.0419775
+   _Iannee_obs_1871 |  -.1398131   .0310201    -4.51   0.000    -.2015694   -.0780568
+   _Iannee_obs_1881 |  -.1293532   .0308552    -4.19   0.000    -.1907811   -.0679254
+   _Iannee_obs_1891 |  -.2077834   .0433709    -4.79   0.000    -.2941283   -.1214386
+   _Iannee_obs_1901 |  -.1992185   .0463283    -4.30   0.000     -.291451    -.106986
+   _Iannee_obs_1911 |  -.2077765   .0544705    -3.81   0.000     -.316219   -.0993341
+              _cons |  -.7456466   .1274112    -5.85   0.000    -.9993027   -.4919904
+--------------------+----------------------------------------------------------------
+            sigma_u |  .17183289
+            sigma_e |  .10355311
+                rho |  .73358255   (fraction of variance due to u_i)
+-------------------------------------------------------------------------------------
+
+. generate f=Fden(e(df_m),e(df_r),e(F))
+
+. outreg2 using TRARE_Coal_migr_t_SP_lin,br addstat(Within R2, e(r2), Adjusted R2, e(r2_a), F-stat, e(F), 
+> Prob>F-stat, f) adec(1)   label excel
+TRARE_Coal_migr_t_SP_lin.xml
+dir : seeout
+
+. drop f
+
+. 
+. **** 1821-1851
+. ** Column 2 
+. xi: xtreg  f_obs norme_dest   norme_ori norm_dest_x_lnp_pop   norm_ori_x_lnp_pop lnp_pop_emigr lnp_pop_i
+> mmigr  i.annee_obs  if annee_obs<1861 , fe robust  cluster(dptresid)
+i.annee_obs       _Iannee_obs_1821-1911(naturally coded; _Iannee_obs_1821 omitted)
+note: _Iannee_obs_1861 omitted because of collinearity
+note: _Iannee_obs_1871 omitted because of collinearity
+note: _Iannee_obs_1881 omitted because of collinearity
+note: _Iannee_obs_1891 omitted because of collinearity
+note: _Iannee_obs_1901 omitted because of collinearity
+note: _Iannee_obs_1911 omitted because of collinearity
+
+Fixed-effects (within) regression               Number of obs      =       316
+Group variable: dptresid                        Number of groups   =        79
+
+R-sq:  within  = 0.5058                         Obs per group: min =         4
+       between = 0.2271                                        avg =       4.0
+       overall = 0.1735                                        max =         4
+
+                                                F(9,78)            =     23.15
+corr(u_i, Xb)  = 0.1570                         Prob > F           =    0.0000
+
+                                     (Std. Err. adjusted for 79 clusters in dptresid)
+-------------------------------------------------------------------------------------
+                    |               Robust
+              f_obs |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+--------------------+----------------------------------------------------------------
+         norme_dest |   .0707465   .0522599     1.35   0.180     -.033295     .174788
+          norme_ori |   .0041544   .0866799     0.05   0.962     -.168412    .1767208
+norm_dest_x_lnp_pop |  -.2233401   .6577008    -0.34   0.735    -1.532722    1.086042
+ norm_ori_x_lnp_pop |   .6692193   .8353194     0.80   0.425    -.9937738    2.332212
+      lnp_pop_emigr |  -.4414879   .5149795    -0.86   0.394    -1.466733    .5837574
+     lnp_pop_immigr |   1.084355   .8862795     1.22   0.225     -.680092    2.848802
+   _Iannee_obs_1831 |  -.0368138   .0109275    -3.37   0.001    -.0585689   -.0150588
+   _Iannee_obs_1841 |   -.116393   .0189511    -6.14   0.000    -.1541216   -.0786643
+   _Iannee_obs_1851 |  -.1152767   .0165082    -6.98   0.000    -.1481419   -.0824114
+   _Iannee_obs_1861 |          0  (omitted)
+   _Iannee_obs_1871 |          0  (omitted)
+   _Iannee_obs_1881 |          0  (omitted)
+   _Iannee_obs_1891 |          0  (omitted)
+   _Iannee_obs_1901 |          0  (omitted)
+   _Iannee_obs_1911 |          0  (omitted)
+              _cons |  -.9263598   .1093096    -8.47   0.000    -1.143978   -.7087411
+--------------------+----------------------------------------------------------------
+            sigma_u |  .22277228
+            sigma_e |  .07312436
+                rho |  .90273387   (fraction of variance due to u_i)
+-------------------------------------------------------------------------------------
+
+. generate f=Fden(e(df_m),e(df_r),e(F))
+
+. outreg2 using TRARE_Coal_migr_t_SP_lin,br addstat(Within R2, e(r2), Adjusted R2, e(r2_a), F-stat, e(F), 
+> Prob>F-stat, f) adec(1)   label excel
+TRARE_Coal_migr_t_SP_lin.xml
+dir : seeout
+
+. drop f
+
+. 
+. **** 1861-1911
+. ** Column 3 
+. xi: xtreg  f_obs norme_dest   norme_ori norm_dest_x_lnp_pop   norm_ori_x_lnp_pop lnp_pop_emigr lnp_pop_i
+> mmigr  i.annee_obs  if cylin==1 &  annee_obs>1851 , fe robust  cluster(dptresid)
+i.annee_obs       _Iannee_obs_1821-1911(naturally coded; _Iannee_obs_1821 omitted)
+note: _Iannee_obs_1831 omitted because of collinearity
+note: _Iannee_obs_1841 omitted because of collinearity
+note: _Iannee_obs_1851 omitted because of collinearity
+note: _Iannee_obs_1871 omitted because of collinearity
+
+Fixed-effects (within) regression               Number of obs      =       474
+Group variable: dptresid                        Number of groups   =        79
+
+R-sq:  within  = 0.6329                         Obs per group: min =         6
+       between = 0.0363                                        avg =       6.0
+       overall = 0.0833                                        max =         6
+
+                                                F(11,78)           =     39.73
+corr(u_i, Xb)  = -0.2917                        Prob > F           =    0.0000
+
+                                     (Std. Err. adjusted for 79 clusters in dptresid)
+-------------------------------------------------------------------------------------
+                    |               Robust
+              f_obs |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+--------------------+----------------------------------------------------------------
+         norme_dest |   .3630568   .0986145     3.68   0.000     .1667303    .5593832
+          norme_ori |   .1801871   .1363932     1.32   0.190    -.0913509    .4517252
+norm_dest_x_lnp_pop |  -.1185941   .7654607    -0.15   0.877    -1.642509    1.405321
+ norm_ori_x_lnp_pop |   1.304062   1.283203     1.02   0.313    -1.250599    3.858724
+      lnp_pop_emigr |  -.2901715   1.149113    -0.25   0.801    -2.577879    1.997536
+     lnp_pop_immigr |   2.893986   1.769159     1.64   0.106    -.6281403    6.416111
+   _Iannee_obs_1831 |          0  (omitted)
+   _Iannee_obs_1841 |          0  (omitted)
+   _Iannee_obs_1851 |          0  (omitted)
+   _Iannee_obs_1861 |   .0463537   .0128923     3.60   0.001      .020687    .0720203
+   _Iannee_obs_1871 |          0  (omitted)
+   _Iannee_obs_1881 |  -.0043567   .0127545    -0.34   0.734    -.0297491    .0210356
+   _Iannee_obs_1891 |  -.0671372   .0203505    -3.30   0.001    -.1076519   -.0266224
+   _Iannee_obs_1901 |  -.0761639   .0246804    -3.09   0.003    -.1252989    -.027029
+   _Iannee_obs_1911 |  -.0837967    .030428    -2.75   0.007    -.1443743   -.0232191
+              _cons |  -.6776038   .2240768    -3.02   0.003    -1.123706   -.2315012
+--------------------+----------------------------------------------------------------
+            sigma_u |    .188562
+            sigma_e |  .07827491
+                rho |  .85300909   (fraction of variance due to u_i)
+-------------------------------------------------------------------------------------
+
+. generate f=Fden(e(df_m),e(df_r),e(F))
+
+. outreg2 using TRARE_Coal_migr_t_SP_lin,br addstat(Within R2, e(r2), Adjusted R2, e(r2_a), F-stat, e(F), 
+> Prob>F-stat, f) adec(1)   label excel
+TRARE_Coal_migr_t_SP_lin.xml
+dir : seeout
+
+. drop f
+
+. 
+. 
+. 
+end of do-file
+
+. 
+. clear
+
+. log close
+      name:  <unnamed>
+       log:  C:\Users\User\Documents\Master_TRARE_Coal_lin.log
+  log type:  text
+ closed on:   5 Mar 2017, 13:02:26
+----------------------------------------------------------------------------------------------------------
