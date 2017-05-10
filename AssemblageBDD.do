@@ -62,7 +62,7 @@ local ponderation log
 local norme migr
 *ou tous migr30
 local fert Coal
-*ou TFR
+*ou CBR
 
 *_`data'_`sexe'_`paris'_`instrument'
 
@@ -89,7 +89,7 @@ program faire_BDD
 	
 	
 	*data: TRAR, RE ou TRA
-	*fert: Coal ou TFR
+	*fert: Coal ou CBR
 	*sexe: t m f
 	*paris: P ou SP
 	*instrument: p (predicted / instrumented) or o (original / not instrumented)
@@ -115,12 +115,12 @@ if "`fert'"=="Coal" {
 	rename fert_bon f_obs
 }
 
-if "`fert'"=="TFR" {
-	use "$dir/Données fécondité/totalfertilityrate1811-1911.dta", clear
+if "`fert'"=="CBR" {
+	use "$dir/Données fécondité/crudebirthrate1811-1911.dta", clear
 	rename dptresid dpt_num
 	rename annee_obs annee
 	rename dpt_nom dpt
-	rename totalfertilityrate f_obs
+	rename crudebirthrate f_obs
 	drop yearid naissances population
 
 }
@@ -1135,7 +1135,7 @@ end
 
 
 foreach data in TRAR RE TRA {
-	foreach fert in Coal TFR {
+	foreach fert in Coal CBR {
 		foreach sexe in t m f {
 			foreach instrument in o p {
 				foreach paris in P SP 	{
@@ -1151,7 +1151,7 @@ foreach data in TRAR RE TRA {
 	}
 }
 
-foreach fert in Coal TFR {
+foreach fert in Coal CBR {
 	foreach paris in P SP {
 		faire_BDD TRARE `fert' t `paris' o  migr lin
 	}
