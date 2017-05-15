@@ -530,6 +530,8 @@ if "`instrument'"=="p" {
 	
 
 		display "// PANEL //"
+		drop if strpos("06 54 57 67 68 73 74 90",strofreal(dptresid))!=0
+		drop if strpos("06 54 57 67 68 73 74 90",strofreal(dptorigine))!=0
 *		poisson nbr_`j' ln_cout_transport  ln_cout_ref i.dptorigine i.dptresid i.annee_obs if sexe=="`s'", robust cluster(numpanel)
 		poisson nbr ln_cout_transport  /*L.ln_cout_transport*/ i.dptorigine i.dptresid i.annee_obs , robust cluster(numpanel)
 		predict nbr_predict_PANELv1
