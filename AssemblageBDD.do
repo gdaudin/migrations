@@ -533,11 +533,18 @@ if "`instrument'"=="p" {
 		drop if strpos("06 54 57 67 68 73 74 90",strofreal(dptresid))!=0
 		drop if strpos("06 54 57 67 68 73 74 90",strofreal(dptorigine))!=0
 *		poisson nbr_`j' ln_cout_transport  ln_cout_ref i.dptorigine i.dptresid i.annee_obs if sexe=="`s'", robust cluster(numpanel)
-		poisson nbr ln_cout_transport  /*L.ln_cout_transport*/ i.dptorigine i.dptresid i.annee_obs , robust cluster(numpanel)
+		eststo est_`sexe': poisson nbr ln_cout_transport  L.ln_cout_transport i.dptorigine i.dptresid i.annee_obs , ///
+			robust cluster(numpanel) ///
+			
 		predict nbr_predict_PANELv1
 		replace nbr_predict_PANELv1= nbr_predict_PANELv1
 		replace nbr_predict_PANELv1=0 if nbr_predict_PANELv1 <=0 | nbr_predict_PANELv1 ==.
 	
+	
+		estadd scalar stat_de_raph = e(chi2)/e(df_m) 
+		
+		
+		if $just_first_stage==1 exit
 		
 		*Pour interprétation
 		gen delta_cout_transport = (cout_transport-L.cout_transport)/cout_transport
@@ -591,7 +598,7 @@ if "`instrument'"=="p" {
 save "$dir/BDD_prov2b_`data'_`fert'_`sexe'_`instrument'.dta", replace
 
 
-if $just_first_stage==1 blif
+
 *---------------------------------------------------------------------------------
 *Calcul des populations d'immigrés et d'émigrés par département
 use "$dir/BDD_prov2b_`data'_`fert'_`sexe'_`instrument'.dta", clear
@@ -1140,17 +1147,17 @@ end
 global just_first_stage=1
 
 
-foreach fert in Coal CBR {
-	foreach sexe in t m f {
-		faire_BDD TRAR `fert' `sexe' P p migr lin
-	}
+
+foreach sexe in t m f {
+	faire_BDD TRAR Coal `sexe' P p migr lin
 }
 
+esttab est_t est_m est_f using "~/Documents/Recherche/2010 Migrations/Régressions/First_stage_table_paper.csv", ///
+		replace stats(N  N_clust ll chi2 df_m stat_de_raph) drop(*.dpt* *.annee*) ///
+		mtitles(all male female)
 
 
 
-
-/*
 
 
 
