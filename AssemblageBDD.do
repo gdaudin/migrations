@@ -591,7 +591,7 @@ if "`instrument'"=="p" {
 save "$dir/BDD_prov2b_`data'_`fert'_`sexe'_`instrument'.dta", replace
 
 
-blif
+if $just_first_stage==1 blif
 *---------------------------------------------------------------------------------
 *Calcul des populations d'immigrés et d'émigrés par département
 use "$dir/BDD_prov2b_`data'_`fert'_`sexe'_`instrument'.dta", clear
@@ -1135,6 +1135,32 @@ end
 
 
 
+*****Juste le first stage
+
+global just_first_stage=1
+
+
+foreach fert in Coal CBR {
+	foreach sexe in t m f {
+		faire_BDD TRAR `fert' `sexe' P p migr lin
+	}
+}
+
+
+
+
+
+/*
+
+
+
+
+
+
+
+
+
+*****Pour tout faire
 
 
 foreach data in TRAR RE TRA {
@@ -1154,41 +1180,20 @@ foreach data in TRAR RE TRA {
 	}
 }
 
+
+*****************
+
+
+*******Pour test avec et sans Paris, avec Coar and CBR
+
+
 foreach fert in Coal CBR {
 	foreach paris in P SP {
 		faire_BDD TRARE `fert' t `paris' o  migr lin
 	}
 }
 	
-
-
-
-
-
-
-
-
-/*
-
-
-faire_BDD TRAR t P p lin migr 
-
-
-faire_BDD TRAR t P p lin migr30
-faire_BDD TRAR t P o lin migr30
-
-faire_BDD TRAR f P o lin migr
-faire_BDD TRAR f P p lin migr
-
-faire_BDD TRAR m P o lin migr
-faire_BDD TRAR m P p lin migr
-
-faire_BDD TRAR t SP p lin migr
-faire_BDD TRAR t SP o lin migr
-
-
-
-
+****************
 
 
 
