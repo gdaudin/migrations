@@ -75,7 +75,7 @@ local fert Coal
 version 12.1
 clear all
 set memory 1g
-global dir "~/Documents/Recherche/Migrations/Construction BDD"
+global dir "~/Documents/Recherche/2010 Migrations/Construction BDD"
 capture restore
 set more off
 set maxvar 8000
@@ -212,7 +212,7 @@ if "`data'"=="TRA" {
 if "`data'"=="TRAR" {
 
 
-	use "~/Documents/Recherche/Migrations/Construction BDD/Donnees migrations/Matrices_TRA_Recens.dta", clear
+	use "~/Documents/Recherche/2010 Migrations/Construction BDD/Donnees migrations/Matrices_TRA_Recens.dta", clear
 	rename nbr_TRA_recens nbr
 
 	
@@ -241,7 +241,7 @@ if "`data'"=="TRAR" {
 if "`data'"=="TRARE" {
 
 
-	use "~/Documents/Recherche/Migrations/Construction BDD/Donnees migrations/Matrices_TRARE.dta", clear
+	use "~/Documents/Recherche/2010 Migrations/Construction BDD/Donnees migrations/Matrices_TRARE.dta", clear
 	rename nbr_TRARE nbr
 
 	
@@ -591,6 +591,7 @@ if "`instrument'"=="p" {
 save "$dir/BDD_prov2b_`data'_`fert'_`sexe'_`instrument'.dta", replace
 
 
+blif
 *---------------------------------------------------------------------------------
 *Calcul des populations d'immigrés et d'émigrés par département
 use "$dir/BDD_prov2b_`data'_`fert'_`sexe'_`instrument'.dta", clear
