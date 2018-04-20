@@ -25,7 +25,8 @@ merge 1:1 annee_obs dptresid using   "$dir/BDD_`data'_`fert'_`sexe'_p_`paris'_`n
 
 	foreach v in norme_dest   norme_ori norm_dest_x_lnp_pop   norm_ori_x_lnp_pop lnp_pop_emigr lnp_pop_immigr {
 		rename `v' `v'_p
-		corr `v'_o `v'_p
+		corr `v'_o `v'_p if cylin==1
+		areg `v'_p `v'_o i.annee_obs if cylin==1, absorb(dptresid)
 	}
 	
 
@@ -34,7 +35,8 @@ end
 
 
 
-corr_p_o TRAR Coal t P migr30 log
+corr_p_o TRAR Coal t P migr lin
+
 
 
 /*
