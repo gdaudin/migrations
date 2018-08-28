@@ -55,5 +55,23 @@ graph combine graph_France graph_England, title("Fertility evolution and dispers
 
 graph export "~/Dropbox/Migrations/Graph for NTAbstract.pdf", replace
 
-/*
-histogram fert_obs if originalyear >=1869 & originalyear<1921 & fert_obs<=0.5, kdensity by(originalyear) xscale(range(.1 0.5)) yscale(range(0 50)) yline(15(15)45,lcolor(ltbluishgray)) width(0.0125)
+
+
+
+---------------------
+
+clear
+use "~/Documents/Recherche/2010 Migrations/do Github/migrations/data/predict/TRAR__Coal_t_p_P_migr_lin_var_oldpredict1861.dta"
+*replace ef_obs=ef_obs*10
+*replace ef_obs_predict=ef_obs_predict*10
+
+vioplot ef_obs , over(annee_obs) title("Observed") name(Observed, replace) ///
+		yscale(range(0.1 0.6)) ylabel(0.1 (0.1) 0.6) ytitle("Coal Fertility Index") ///
+		xlabel(, angle(vertical)) /// xscale(range(1851 1911)) xlabel(1851 (10) 1911)
+		
+vioplot ef_obs_predict , over(annee_obs) title("Counterfactual") name(Counterfactual, replace) ///
+		yscale(range(0.1 0.6)) ylabel(0.1 (0.1) 0.6) ytitle("Coal Fertility Index") ///
+		xlabel(, angle(vertical)) /// xscale(range(1851 1911)) xlabel(1851 (10) 1911)
+
+graph combine Observed Counterfactual, title(",,,") cols(1)	
+ 
